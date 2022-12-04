@@ -1,6 +1,6 @@
 # Site settings
 title: Hello_shouts
-url: "https://shouts77.github.io"
+url: "https://shouts.github.io"
 baseurl: ""
 description: >
     shouts 블로그
@@ -41,7 +41,7 @@ disqus:
   id: shouts
   shortname: shouts 
 utterances:
-  repo: shouts77/shouts77.github.io
+  repo: shouts77/shouts.github.io
   issue-term: url
   label: Comment
   branch: master
@@ -54,9 +54,9 @@ google_adsense:
   client:
 # client: ca-pub-3675948545737694
 
-blame: "https://github.com/shouts77/shouts77.github.io/blame/master/_wiki"
-edit: "https://github.com/shouts77/shouts77.github.io/edit/master/_wiki"
-issue: "https://github.com/shouts77/shouts77.github.io/issues/new"
+blame: "https://github.com/shouts77/shouts.github.io/blame/master/_wiki"
+edit: "https://github.com/shouts77/shouts.github.io/edit/master/_wiki"
+issue: "https://github.com/shouts77/shouts.github.io/issues/new"
 
 timezone: "Asia/Seoul"
 
