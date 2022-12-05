@@ -18,7 +18,7 @@ latex: true
 {% if site.email %}
         <a href="mailto:{{ site.email }}">Email</a>
 {% endif %}
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+   <!-- <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a> -->
 </div>
 
 ## Motto
