@@ -14,13 +14,18 @@ regenerate: true
             <a href="https://pages.github.com/">Github.io</a>
         </H3>
     </div>
-        기억 보조용 위키
+        이 위키는 John Grib님의
+        <a href="https://johngrib.github.io/" target="_blank">Vimwiki</a>를
+        <a href="https://github.com/johngrib/johngrib-jekyll-skeleton" target="_blank"> fork</a>
+        하여 제작되었습니다.
+        <p>
     <div>
     </div>
     <div>
-        <a href="/blog/">블로그</a>
+        <a href="/blog/">블로그로 이동</a>
         /
-        <a href="/tag/">태그</a>
+        <a href="/tag/">태그 검색</a>
+        <p>
     </div>
     <div class="contact">
 {% if site.github_username %}
@@ -35,7 +40,7 @@ regenerate: true
         <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
     </div>
 </div>
-<div>
+<div class="page-content">
     <H3 class="indent">최근 변경된 문서</H3>
     <ul class="post-list">
 {% assign documents = site.wiki | sort: 'updated' | reverse %}
@@ -61,7 +66,7 @@ regenerate: true
     {% endif %}
 {% endfor %}
     </ul>
-    <h4>
+    <h4 style="margin-left:25px">
         <a href="/recent/">전체 문서 리스트 보기 ({{ site.wiki | size | minus: 1 }} 항목)</a>
     </h4>
 </div>
