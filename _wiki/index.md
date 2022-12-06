@@ -11,6 +11,7 @@ regenerate: true
 
 * [[test-doc]]
 * [[test-doc2]]
+* [[test-doc3]]
 
 ---
 

@@ -13,4 +13,4 @@ latex   : false
 * TOC
 {:toc}
 
-test-doc update function test4.
+test-doc update function test5.
