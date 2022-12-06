@@ -10,6 +10,7 @@ regenerate: true
 ## wiki items
 
 * [[test-doc]]
+* [[test-doc2]]
 
 ---
 
