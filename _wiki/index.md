@@ -11,7 +11,8 @@ regenerate: true
 
 * [[Jupyterhub]]
     * [[Jupyterhub-Project]]
-
+* [[diary]]
+    * [[2022-memo]]
 ---
 
 ## blog posts
