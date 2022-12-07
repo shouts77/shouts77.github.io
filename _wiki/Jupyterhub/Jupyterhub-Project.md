@@ -3,7 +3,7 @@ layout  : wiki
 title   : Jupyterhub-Project 
 summary : 윈도우에서 도커 엔진으로 Jupyterhub 운영이 가능하다.
 date    : 2022-12-07 13:43:48 +0900
-updated : 2022-12-07 15:50:02 +0900
+updated : 2022-12-07 21:31:09 +0900
 tags    : jupyterhub
 toc     : true
 public  : true
@@ -24,7 +24,7 @@ latex   : false
 * Window11 WSL2에 Ubuntu 설치
 * Ubuntu에 Docker Engine 설치
 * Docker Jupyterhub Image로 컨테이너 생성
-* Jupyterhub 서비르를 위해 테스트 중
+* Jupyterhub 서비스를 위해 테스트 중
 
 ## Issues
 * WSL2 사용 시 WSL을 실행할 때 마다 port가 변경되는 부분
