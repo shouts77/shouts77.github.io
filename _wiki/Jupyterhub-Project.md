@@ -1,9 +1,9 @@
 ---
 layout  : wiki
 title   : Jupyterhub-Project 
-summary : 
+summary : 윈도우에서도 도커 데스크탑이 아닌 도커 엔진으로 Jupyterhub 운영이 가능하다
 date    : 2022-12-07 13:43:48 +0900
-updated : 2022-12-07 14:11:51 +0900
+updated : 2022-12-07 15:04:43 +0900
 tags    : #jupyterhub #python #wsl #docker 
 toc     : true
 public  : true
@@ -14,7 +14,8 @@ latex   : false
 {:toc}
 
 ## 개요
-* Window WSL에 우분투를 설치하고 docker-engine(docker-desktop 아님)을 활용해 Jupyterhub를 구축하는 프로젝트이다.
+* Window WSL에 Jupyterhub를 구축하는 프로젝트이다.
+* 유료화로 변경된 도커 데스크탑이 아닌 도커 엔진을 활용하였다.
 
 ## 구축환경
 * Window11 WSL2 + Ubuntu 22.04.1 LTS + Docker Engine with Jupyterhub Image
@@ -34,3 +35,6 @@ latex   : false
     * Jupyterhub proxy와 관련해서 좀 더 살펴 볼 필요 있음
 * 윈도우를 재부팅하지 않고 켜둘 경우 시스템이 중단되는 증상
     * 우선은 매일 윈도우를 자동 리부트하고 스크립트를 실행하여 서비스가 유지될 수 있도록 조치함(2022.12.02)
+
+## 참고문서
+* [도커 데스크톱 없이 구축하는 WSL2와 도커 개발 환경] (https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/)
