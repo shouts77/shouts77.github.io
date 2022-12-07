@@ -9,9 +9,7 @@ regenerate: true
 
 ## wiki items
 
-* [[test-doc]]
-* [[test-doc2]]
-* [[test-doc3]]
+* [[Jupyterhub-Project]]
 
 ---
 
