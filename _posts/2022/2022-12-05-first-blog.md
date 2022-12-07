@@ -3,7 +3,7 @@ layout  : post
 title   : 2022-12-05-Vimwiki에 올리는 첫번째 블로그
 summary : Thank you, John Grib.
 date    : 2022-12-05 21:40:02 +0900
-updated : 2022-12-07 13:35:49 +0900
+updated : 2022-12-08 08:04:44 +0900
 tag     : John_Grib Vimwiki blog
 toc     : true
 comment : true
@@ -23,6 +23,6 @@ John Grib님을 통해 Vim에 대해 관심을 갖기 시작했고,
 이 위키를 운영하면서 Vim에 더 친숙하게 다가갈 수 있기를,
 개발자가 되려는 꿈에 한 걸음 더 다가가기를 바래본다.   
 
-무엇보다고 내가 도전해 볼 수 있도록, 문서로 잘 정리하여 안내해 주신
+무엇보다도 내가 도전해 볼 수 있도록, 문서로 잘 정리하여 안내해 주신
 John Grib님에게 감사드린다.
 
