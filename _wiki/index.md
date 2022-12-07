@@ -10,7 +10,7 @@ regenerate: true
 ## wiki items
 
 * [[Jupyterhub-Project]]
-* [[Jupyterhub]]
+    * [[Jupyterhub]]
 
 ---
 
