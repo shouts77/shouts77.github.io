@@ -3,7 +3,7 @@ layout  : wiki
 title   : Jupyterhub-Project 
 summary : 윈도우에서도 도커 데스크탑이 아닌 도커 엔진으로 Jupyterhub 운영이 가능하다
 date    : 2022-12-07 13:43:48 +0900
-updated : 2022-12-07 15:04:43 +0900
+updated : 2022-12-07 15:08:31 +0900
 tags    : #jupyterhub #python #wsl #docker 
 toc     : true
 public  : true
@@ -37,4 +37,4 @@ latex   : false
     * 우선은 매일 윈도우를 자동 리부트하고 스크립트를 실행하여 서비스가 유지될 수 있도록 조치함(2022.12.02)
 
 ## 참고문서
-* [도커 데스크톱 없이 구축하는 WSL2와 도커 개발 환경] (https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/)
+* [도커 데스크톱 없이 구축하는 WSL2와 도커 개발 환경](https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/)
