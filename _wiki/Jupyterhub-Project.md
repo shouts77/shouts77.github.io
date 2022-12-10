@@ -3,8 +3,8 @@ layout  : wiki
 title   : Jupyterhub-Project 
 summary : 윈도우에서 도커 엔진으로 Jupyterhub 운영이 가능하다.
 date    : 2022-12-07 13:43:48 +0900
-updated : 2022-12-07 21:59:58 +0900
-tags    : jupyterhub
+updated : 2022-12-10 15:02:38 +0900
+tag     : jupyterhub
 toc     : true
 public  : true
 parent  : [[Jupyterhub]] 

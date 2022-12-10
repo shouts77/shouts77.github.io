@@ -1,11 +1,27 @@
 [
  {
+  "name": "[test",
+  "size": 1
+ },
+ {
   "name": "blog",
+  "size": 1
+ },
+ {
+  "name": "diary",
+  "size": 2
+ },
+ {
+  "name": "doc]",
   "size": 1
  },
  {
   "name": "John_Grib",
   "size": 1
+ },
+ {
+  "name": "jupyterhub",
+  "size": 2
  },
  {
   "name": "Vimwiki",
