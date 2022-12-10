@@ -3,8 +3,8 @@ layout  : wiki
 title   : test doc for tags
 summary : test doc 
 date    : 2022-12-10 14:20:19 +0900
-updated : 2022-12-10 14:22:12 +0900
-tags    : test doc 
+updated : 2022-12-10 14:25:36 +0900
+tags    : [test doc]
 toc     : true
 public  : true
 parent  : [[index]]
