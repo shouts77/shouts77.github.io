@@ -3,7 +3,7 @@ layout  : wiki
 title   : Jupyterhub-Project 
 summary : 윈도우에서 도커 엔진으로 Jupyterhub 운영이 가능하다.
 date    : 2022-12-07 13:43:48 +0900
-updated : 2022-12-10 15:13:39 +0900
+updated : 2022-12-11 21:40:11 +0900
 tag     : jupyterhub docker wsl2
 toc     : true
 public  : true
@@ -28,7 +28,7 @@ latex   : false
 
 ## Issues
 * WSL2 사용 시 WSL을 실행할 때 마다 port가 변경되는 부분
-    * [깃헙 WSL 이슈](https://github.com/microsoft/WSL/issues/4150) 내용을 토대로 해결
+    * [깃헙 WSL 이슈](https://github.com/microsoft/WSL/issues/4150){:target="_blank"} 내용을 토대로 해결
 * Docker Volume 사용 시 Jupyterhub proxy port와 충돌(?)되어 서비스 실행 불가
     * Volume 마운트 시에도 같은 증상임
     * 우선은 Volume없이 테스트 중
@@ -37,4 +37,5 @@ latex   : false
     * 우선은 매일 윈도우를 자동 리부트하고 스크립트를 실행하여 서비스가 유지될 수 있도록 조치함(2022.12.02)
 
 ## 참고문서
-* [도커 데스크톱 없이 구축하는 WSL2와 도커 개발 환경](https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/)
+* [도커 데스크톱 없이 구축하는 WSL2와 도커 개발 환경](https://netmarble.engineering/docker-on-wsl2-without-docker-desktop/){:target="_blank"}  
+
