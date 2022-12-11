@@ -11,9 +11,11 @@ regenerate: true
 
 * [[Jupyterhub]]
     * [[Jupyterhub-Project]]
-* [[diary]]
+* [[Diary]]
     * [[2022-memo]]
-
+* [[Study]]
+    * [[C-lang-study]]
+    * [[git]]
 
 ---
 

@@ -4,11 +4,19 @@
   "size": 1
  },
  {
+  "name": "c",
+  "size": 1
+ },
+ {
   "name": "diary",
   "size": 2
  },
  {
   "name": "docker",
+  "size": 1
+ },
+ {
+  "name": "git",
   "size": 1
  },
  {
@@ -18,6 +26,10 @@
  {
   "name": "jupyterhub",
   "size": 2
+ },
+ {
+  "name": "study",
+  "size": 3
  },
  {
   "name": "Vimwiki",
