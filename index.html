@@ -48,19 +48,21 @@ regenerate: true
     {% if doc.public == true and doc.title != 'wiki'%}
         <li>
             <div>
-                <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
-                    <div class="post-meta">
+                <div class="post-item">
+                    <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
+                     <div class="post-meta">
                         {{ doc.updated | date: "%Y.%m.%d" }}
                         -
                         {{ doc.title }}
-                    </div>
+                     </div>
                     <div class="post-excerpt">{{ doc.summary }}</div>
-                    <ul class="tag-list">
+                     <ul class="tag-list">
                         <li class="post-tag">
                             {{ doc.tag }}
                         </li>
-                    </ul>
-                </a>
+                     </ul>
+                    </a>
+                </div>
             </div>
         </li>
     {% endif %}

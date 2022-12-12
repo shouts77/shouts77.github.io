@@ -147,3 +147,7 @@ h6 {
 .post-content h6 {
     &:before { content:"⠟"; }
 }
+
+.post-item:hover {
+    background-color: #E9E9F0;
+}
