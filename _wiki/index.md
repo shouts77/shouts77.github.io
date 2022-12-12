@@ -9,13 +9,16 @@ regenerate: true
 
 ## wiki items
 
-* [[Jupyterhub]]
+* [[Project]]
     * [[Jupyterhub-Project]]
+    * [[Vimwiki-Project]]
 * [[Diary]]
     * [[2022-memo]]
 * [[Study]]
     * [[C-lang-study]]
     * [[git]]
+* [[To-Do]]
+    * [[2022-To-Do]]
 
 ---
 

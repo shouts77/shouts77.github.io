@@ -3,11 +3,11 @@ layout  : wiki
 title   : Jupyterhub-Project 
 summary : 윈도우에서 도커 엔진으로 Jupyterhub 운영이 가능하다.
 date    : 2022-12-07 13:43:48 +0900
-updated : 2022-12-11 21:40:11 +0900
+updated : 2022-12-12 09:15:15 +0900
 tag     : jupyterhub docker wsl2
 toc     : true
 public  : true
-parent  : [[Jupyterhub]] 
+parent  : [[Project]] 
 latex   : false
 ---
 * TOC
