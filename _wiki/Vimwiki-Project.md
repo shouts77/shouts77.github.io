@@ -3,8 +3,8 @@ layout  : wiki
 title   : Vimwiki-Project
 summary : fork한 Vimwiki를 커스터마이징해보자. 
 date    : 2022-12-12 08:23:58 +0900
-updated : 2022-12-12 20:15:26 +0900
-tag     : Vimwiki
+updated : 2022-12-12 21:43:14 +0900
+tag     : vimwiki project
 toc     : true
 public  : true
 parent  : [[Project]]
@@ -25,6 +25,6 @@ latex   : false
     * ~~외부 링크를 표시하는 방법~~(2022.12.12.완료)
     * ~~주석을 다는 부분~~(2022.12.12.완료)
 * 나만의 스타일로 구현할 부분
-    * tag에 배경색을 입혀서 텍스트와 구분해 보면 어떨까
+    * ~~tag에 배경색을 입혀서 텍스트와 구분해 보면 어떨까~~(2022.12.12.완료)
 
 

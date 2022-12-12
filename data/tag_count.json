@@ -28,12 +28,24 @@
   "size": 1
  },
  {
+  "name": "memo",
+  "size": 1
+ },
+ {
+  "name": "project",
+  "size": 3
+ },
+ {
   "name": "study",
   "size": 3
  },
  {
   "name": "Vimwiki",
-  "size": 2
+  "size": 1
+ },
+ {
+  "name": "vimwiki",
+  "size": 1
  },
  {
   "name": "wsl2",
