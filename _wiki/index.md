@@ -14,11 +14,10 @@ regenerate: true
     * [[Vimwiki-Project]]
 * [[Diary]]
     * [[2022-memo]]
+    * [[2022-To-Do]]
 * [[Study]]
     * [[C-lang-study]]
     * [[git]]
-* [[To-Do]]
-    * [[2022-To-Do]]
 
 ---
 
