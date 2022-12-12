@@ -96,6 +96,9 @@ table.gsc-search-box {
 .post-tag a {
     color: #888888;
     text-decoration: none;
+    font-size: 0.9em;
+    border-radius: 8px * 0.75;
+    background-color: rgba(255, 220, 122, 0.5);
 }
 @media (max-width: 1120px) {
     .page-content .wrapper:before {
@@ -121,6 +124,9 @@ ul.tag-list {
     li a {
         padding-right: 5px;
         text-decoration: none;
+        font-size: 0.9em;
+        border-radius: 8px * 0.75;
+        background-color: rgba(255, 220, 122, 0.5);
     }
 }
 
