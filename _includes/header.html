@@ -74,7 +74,10 @@
         <a class="split" href="/about/">me</a>
         <a class="split" id="random-button" href="/wiki/index/#random" onClick="if(typeof random === 'function')random()">random</a>
         <a class="split" href="/wiki/index/">index</a>
+        <button class="button" onclick="menuOpen()">Menu</button>
+<!--
         <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i>
+-->
     </div>
 </header>
 <script>
@@ -96,7 +99,7 @@
         }
     }
 })();
-function myFunction(){
+function menuOpen(){
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
