@@ -18,6 +18,7 @@ regenerate: true
 * [[Study]]
     * [[C-lang-study]]
     * [[git]]
+    * [[Vim]]
 
 ---
 

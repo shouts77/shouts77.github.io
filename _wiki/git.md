@@ -1,9 +1,9 @@
 ---
 layout  : wiki
 title   : Git 공부 
-summary : 
+summary : Git에 대해 알게 된 것을 정리해 보자.
 date    : 2022-12-11 21:05:06 +0900
-updated : 2022-12-11 21:43:06 +0900
+updated : 2022-12-15 22:33:55 +0900
 tag     : git study 
 toc     : true
 public  : true
