@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,800,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 $base-font-family  : Arial;
 $default-font-size : 0.9rem;
@@ -21,17 +22,17 @@ body {
 }
 
 body {
-  font: 400 16px 'Noto Sans KR','Roboto Slab',AppleSDGothicNeo,sans-serif;
-  color: rgba(0, 0, 0, 0.84);
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
-  font-kerning: normal;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+    font: 400 16px 'Noto Sans KR','Roboto Slab',AppleSDGothicNeo,sans-serif;
+    color: rgba(0, 0, 0, 0.84);
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 body, th, td, div, p, li {
@@ -130,7 +131,7 @@ h2 {
 }
 h3 {
     font-size: 1.6em;
-//    font-style: italic;
+    //    font-style: italic;
 }
 .post-content h3 {
     &:before { content:"⠃"; }
@@ -138,7 +139,7 @@ h3 {
 h4 {
     font-size: 1.4em;
     padding-left: 5px;
-//    font-style: italic;
+    //    font-style: italic;
 }
 .post-content h4 {
     &:before { content:"⠋"; }
@@ -146,7 +147,7 @@ h4 {
 h5 {
     font-size: 1.2em;
     padding-left: 10px;
-//    font-style: italic;
+    //    font-style: italic;
 }
 .post-content h5 {
     &:before { content:"⠛"; }
@@ -155,7 +156,7 @@ h6 {
     font-size: 1.0em;
     padding-left: 15px;
     font-weight: bold;
-//    font-style: italic;
+    //    font-style: italic;
 }
 .post-content h6 {
     &:before { content:"⠟"; }
@@ -207,7 +208,7 @@ h6 {
 }
 
 .post-item:hover {
-  background-color: #F1E6FF;
+    background-color: #F1E6FF;
 }
 
 video {
