@@ -4,9 +4,9 @@
   "description": "data generator",
   "main": "generateData.js",
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "yamljs": "^0.3.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo no test found"
   },

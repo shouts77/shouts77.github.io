@@ -68,20 +68,38 @@
 {% endif %}
 
 </head>
-<header>
-    <div class="topnav" id="myTopnav">
-        <a href="{{ site.baseurl }}/">{{ site.title }}</a>
-        <a class="split" href="/about/">me</a>
-        <a class="split" href="/tag/">tag</a>
-        <a class="split" id="random-button" href="/wiki/index/#random" onClick="if(typeof random === 'function')random()">random</a>
-        <a class="split" href="/blog/">blog</a>
-        <a class="split" href="/wiki/index/">index</a>
-        <button class="button" onclick="menuOpen()">Menu</button>
-<!--
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i>
--->
+<nav class="navbar navbar-expand-lg" style="background-color: #E3D0CC;">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="/">{{ site.title }}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/wiki/index/">index</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/">blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="random-button" href="/wiki/index/#random" onClick="if(typeof random === 'function')random()">random</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/tag/">tag</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about/">me</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search" method="get" action="/search/">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
-</header>
+  </div>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <script>
 ;(function(){
     var isCtrl = false;
@@ -101,12 +119,4 @@
         }
     }
 })();
-function menuOpen(){
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-};
 </script>
