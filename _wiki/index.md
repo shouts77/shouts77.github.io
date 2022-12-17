@@ -16,7 +16,7 @@ regenerate: true
     * [[2022-memo]]
     * [[2022-To-Do]]
 * [[Study]]
-    * [[C-lang-study]]
+    * [[C-lang]]
     * [[Git]]
     * [[Vim]]
     * [[Regex]]

@@ -3,7 +3,7 @@ layout  : wiki
 title   : Git 공부 
 summary : Git에 대해 알게 된 것을 정리해 보자.
 date    : 2022-12-11 21:05:06 +0900
-updated : 2022-12-17 00:23:29 +0900
+updated : 2022-12-18 06:58:27 +0900
 tag     : git study 
 toc     : true
 public  : true
@@ -13,10 +13,10 @@ latex   : false
 * TOC
 {:toc}
 
-## 목표
+# 목표
 * git을 자유롭게 활용하기
 
-## 공부한 내용
+# 공부한 내용
 * Pull Request (2022-12-11)
     * github에서 Pull Request(PR)를 하려면 PR용으로 별도의 branch를 만들 필요 있음
     * 지금까지 커밋한 내용 중에서 일부만 PR하려면 별도 branch에 해당 커밋만 cherry-pick하여 push한 후 PR진행하면 됨
