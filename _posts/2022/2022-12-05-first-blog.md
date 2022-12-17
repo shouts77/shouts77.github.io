@@ -3,8 +3,8 @@ layout  : post
 title   : Vimwiki에 올리는 첫번째 블로그
 summary : Thank you, John Grib.
 date    : 2022-12-05 21:40:02 +0900
-updated : 2022-12-17 14:54:21 +0900
-tag     : John_Grib Vimwiki blog
+updated : 2022-12-17 15:04:19 +0900
+tag     : John_Grib vimwiki blog
 toc     : true
 comment : true
 public  : true 
