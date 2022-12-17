@@ -3,8 +3,8 @@ layout  : wiki
 title   : Vimwiki-Project
 summary : fork한 Vimwiki를 커스터마이징해보자. 
 date    : 2022-12-12 08:23:58 +0900
-updated : 2022-12-17 00:26:24 +0900
-tag     : Vimwiki project
+updated : 2022-12-17 14:56:01 +0900
+tag     : vimwiki project
 toc     : true
 public  : true
 parent  : [[Project]]

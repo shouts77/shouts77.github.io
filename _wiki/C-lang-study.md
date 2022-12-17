@@ -3,8 +3,8 @@ layout  : wiki
 title   : C언어 공부 
 summary : C언어 공부 진도를 점검하자.
 date    : 2022-12-11 20:56:45 +0900
-updated : 2022-12-17 00:27:52 +0900
-tag     : C study
+updated : 2022-12-17 14:56:30 +0900
+tag     : c study
 toc     : true
 public  : true
 parent  : [[Study]] 
