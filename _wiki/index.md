@@ -22,7 +22,7 @@ regenerate: true
 
 ---
 
-## blog posts
+## Blog posts
 <div>
     <ul>
 {% for post in site.posts %}
