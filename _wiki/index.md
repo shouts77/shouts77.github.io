@@ -19,6 +19,7 @@ regenerate: true
     * [[C-lang-study]]
     * [[Git]]
     * [[Vim]]
+    * [[Regex]]
 
 ---
 
