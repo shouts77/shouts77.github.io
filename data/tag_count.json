@@ -1,14 +1,10 @@
 [
  {
-  "name": "[John_Grib",
+  "name": "blog",
   "size": 1
  },
  {
-  "name": "blog]",
-  "size": 1
- },
- {
-  "name": "C",
+  "name": "c",
   "size": 1
  },
  {
@@ -21,6 +17,10 @@
  },
  {
   "name": "git",
+  "size": 1
+ },
+ {
+  "name": "John_Grib",
   "size": 1
  },
  {
@@ -44,12 +44,16 @@
   "size": 1
  },
  {
-  "name": "Vim",
+  "name": "vim",
   "size": 1
  },
  {
   "name": "Vimwiki",
-  "size": 2
+  "size": 1
+ },
+ {
+  "name": "vimwiki",
+  "size": 1
  },
  {
   "name": "wsl2",
