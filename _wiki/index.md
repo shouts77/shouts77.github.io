@@ -1,13 +1,13 @@
 ---
 layout  : wikiindex
-title   : wiki
+title   : Wiki
 toc     : true
 public  : true
 comment : false
 regenerate: true
 ---
 
-## wiki items
+## Wiki items
 
 * [[Project]]
     * [[Jupyterhub-Project]]
