@@ -1,9 +1,9 @@
 ---
 layout  : wiki
-title   : 미분류 주제
-summary : 아직 분류하기 애매한 주제를 모아보자.
+title   : Incubating Place
+summary : 아직 문서로 분류하기 애매한 내용을 모아보자.
 date    : 2022-12-18 11:48:39 +0900
-updated : 2022-12-18 11:59:36 +0900
+updated : 2022-12-18 12:27:16 +0900
 tag     : not-yet-classified
 toc     : true
 public  : true
@@ -14,9 +14,9 @@ latex   : false
 {:toc}
 
 # 용도
-* 아직 분류하기 애매한 주제를 모아서 정리하는 페이지
+* 아직 문서로 분류하기 애매한 내용을 모아서 정리하는 페이지
 
-# 미분류 주제
+# 주제
 
 ## URI
 * 참고자료
