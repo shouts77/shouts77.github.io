@@ -3,7 +3,7 @@ layout  : wiki
 title   : Vim
 summary : Vim에 대해 알게 된 것을 정리해 보자. 
 date    : 2022-12-15 22:24:39 +0900
-updated : 2022-12-18 16:09:41 +0900
+updated : 2022-12-18 16:18:59 +0900
 tag     : vim study 
 toc     : true
 public  : true
@@ -27,14 +27,15 @@ latex   : false
 * vim-fzf
     * 숨겨진 파일이 검색되지 않을 경우 대처 방법 (2022-12-18)
         * ag 패키지 설치
-            ```
-            brew install ag
-            ```
-        * fzf 플러그인 관련 설정 추가
-            ```
-            let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
-            ```
-          [참고자료 링크](https://github.com/junegunn/fzf/issues/337)
+          ```
+          brew install ag
+          ```
+          [ag 패키지 소개 자료](https://www.cyberciti.biz/open-source/command-line-hacks/ag-supercharge-string-search-through-directory-hierarchy/)
+        * fzf 플러그인 관련 설정 추가 
+          ```
+          let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
+          ```
+          [설정관련 참조 자료](https://github.com/junegunn/fzf/issues/337)
           
 
 # 자료
