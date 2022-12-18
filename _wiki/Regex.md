@@ -1,9 +1,9 @@
 ---
 layout  : wiki
-title   : 정규식 공부
-summary : 정규식에 대해 공부한 것을 정리해 보자.
+title   : 정규식
+summary : 정규식을 자유롭게 활용해 보자.
 date    : 2022-12-17 22:12:36 +0900
-updated : 2022-12-18 12:00:28 +0900
+updated : 2022-12-18 13:17:01 +0900
 tag     : regex study
 toc     : true
 public  : true

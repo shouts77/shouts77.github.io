@@ -1,9 +1,9 @@
 ---
 layout  : wiki
-title   : C언어 공부 
-summary : C언어 공부 진도를 점검하자.
+title   : C언어 
+summary : C언어를 이해하자.
 date    : 2022-12-11 20:56:45 +0900
-updated : 2022-12-18 12:00:00 +0900
+updated : 2022-12-18 13:15:43 +0900
 tag     : c study
 toc     : true
 public  : true
