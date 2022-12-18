@@ -20,6 +20,7 @@ regenerate: true
     * [[Git]]
     * [[Vim]]
     * [[Regex]]
+    * [[not-yet-classified]]
 
 ---
 

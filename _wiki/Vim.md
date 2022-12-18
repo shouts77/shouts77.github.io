@@ -3,7 +3,7 @@ layout  : wiki
 title   : Vim 공부
 summary : Vim에 대해 알게 된 것을 정리해 보자. 
 date    : 2022-12-15 22:24:39 +0900
-updated : 2022-12-18 07:00:23 +0900
+updated : 2022-12-18 12:00:11 +0900
 tag     : vim study 
 toc     : true
 public  : true
@@ -22,6 +22,7 @@ latex   : false
     * VS Code에서 그랬던 것 처럼 저장할 때마다 자동정렬되게 하면 좋을 것 같음 (BufWrite할 때마다)
 
 # 자료
+
 ## Web
 * 자동완성 기능
     * John Grib, [vim 자동완성 기능 사용하기](https://johngrib.github.io/wiki/vim/auto-completion/)

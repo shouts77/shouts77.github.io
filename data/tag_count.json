@@ -32,12 +32,20 @@
   "size": 1
  },
  {
+  "name": "not-yet-classified",
+  "size": 1
+ },
+ {
   "name": "project",
   "size": 3
  },
  {
+  "name": "regex",
+  "size": 1
+ },
+ {
   "name": "study",
-  "size": 4
+  "size": 5
  },
  {
   "name": "to-do",
