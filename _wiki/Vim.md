@@ -3,7 +3,7 @@ layout  : wiki
 title   : Vim
 summary : Vim에 대해 알게 된 것을 정리해 보자. 
 date    : 2022-12-15 22:24:39 +0900
-updated : 2022-12-18 13:16:10 +0900
+updated : 2022-12-18 16:09:41 +0900
 tag     : vim study 
 toc     : true
 public  : true
@@ -17,9 +17,25 @@ latex   : false
 * Vim을 자유롭게 활용하기
 
 # 공부한 내용
+
+## 기본 기능 관련
 * 코드 자동 정렬 (2022-12-15)
     * 코드를 자동으로 정렬하려면 노멀 상태에서 gg=G라고 입력하면 됨
     * VS Code에서 그랬던 것 처럼 저장할 때마다 자동정렬되게 하면 좋을 것 같음 (BufWrite할 때마다)
+
+## Plugin 사용 관련
+* vim-fzf
+    * 숨겨진 파일이 검색되지 않을 경우 대처 방법 (2022-12-18)
+        * ag 패키지 설치
+            ```
+            brew install ag
+            ```
+        * fzf 플러그인 관련 설정 추가
+            ```
+            let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
+            ```
+          [참고자료 링크](https://github.com/junegunn/fzf/issues/337)
+          
 
 # 자료
 
