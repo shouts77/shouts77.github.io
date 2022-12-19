@@ -3,7 +3,7 @@ layout  : wiki
 title   : Vim
 summary : Vim에 대해 알게 된 것을 정리해 보자. 
 date    : 2022-12-15 22:24:39 +0900
-updated : 2022-12-18 17:37:29 +0900
+updated : 2022-12-19 09:39:56 +0900
 tag     : vim study 
 toc     : true
 public  : true
@@ -38,14 +38,14 @@ latex   : false
           [설정관련 참조 자료](https://github.com/junegunn/fzf/issues/337)
 
 * coc.vim
-    * coc language server extension 관련(2022-12-18)
+    * coc language server extension 관련 (2022-12-18)
         * 설치된 extension 보기 
           ```
           :CocList extensions
           ```
         * 설치된 extension 제거 (예. coc-html을 제거하는 경우)
           ```
-          CocUninstall coc-html
+          :CocUninstall coc-html
           ```
           [참조 자료](https://github.com/neoclide/coc.nvim/issues/1311#issuecomment-547225815)
           
