@@ -3,7 +3,7 @@ layout  : wiki
 title   : Git 
 summary : Git에 대해 알게 된 것을 정리해 보자.
 date    : 2022-12-11 21:05:06 +0900
-updated : 2022-12-18 13:15:53 +0900
+updated : 2022-12-19 18:09:53 +0900
 tag     : git study 
 toc     : true
 public  : true
@@ -31,4 +31,10 @@ latex   : false
     * 참고: [stash관련 명령어](https://gmlwjd9405.github.io/2018/05/18/git-stash.html){:target="_blank"}   
 
 
+# 자료
 
+## 도서
+
+### 0% 0 / 10
+* [o] (2022-12-19) How To use This Book:Intro
+* [ ] Beginning Git: Get Going With Git
