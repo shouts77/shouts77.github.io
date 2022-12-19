@@ -3,7 +3,7 @@ layout  : wiki
 title   : 정규식
 summary : 정규식을 자유롭게 활용해 보자.
 date    : 2022-12-17 22:12:36 +0900
-updated : 2022-12-19 17:47:50 +0900
+updated : 2022-12-19 21:52:06 +0900
 tag     : regex study
 toc     : true
 public  : true
@@ -16,6 +16,18 @@ latex   : false
 # 목표
 * 정규식을 자유롭게 활용하기
 
+# RNT
+* ag와 egrep 차이
+    * ira<span style="color:red">q</span>
+      ```
+      echo iraq | ag 'q[^u]'
+      ```
+    * (검색 안됨)
+      ```
+      echo iraq | egrep 'q[^u]'
+      ```
+
+
 # 자료
 
 ## 도서
@@ -25,7 +37,7 @@ latex   : false
     * [X] (2022-12-18) Solving Real Problems
     * [X] (2022-12-18) Regular Expressions as a Language
     * [X] (2022-12-19) The Regular-Expression Frame of Mind
-    * [ ] Erep Metacharacters
+    * [ ] Egrep Metacharacters
 
 ## Web
 * John Grib, [정규 표현식 기본](https://johngrib.github.io/wiki/regex/basic/)
