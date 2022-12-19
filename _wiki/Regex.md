@@ -1,9 +1,9 @@
 ---
 layout  : wiki
-title   : 정규식
-summary : 정규식을 자유롭게 활용해 보자.
+title   : 정규 표현식
+summary : 정규 표현식을 자유롭게 활용해 보자.
 date    : 2022-12-17 22:12:36 +0900
-updated : 2022-12-19 21:52:06 +0900
+updated : 2022-12-19 22:15:34 +0900
 tag     : regex study
 toc     : true
 public  : true
@@ -14,7 +14,7 @@ latex   : false
 {:toc}
 
 # 목표
-* 정규식을 자유롭게 활용하기
+* 정규 표현식을 자유롭게 활용하기
 
 # RNT
 * ag와 egrep 차이
