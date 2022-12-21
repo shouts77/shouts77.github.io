@@ -3,7 +3,7 @@ layout  : wiki
 title   : test-image 
 summary : 
 date    : 2022-12-21 20:49:57 +0900
-updated : 2022-12-21 21:02:28 +0900
+updated : 2022-12-21 21:09:31 +0900
 tag     : 
 toc     : true
 public  : true
@@ -19,3 +19,6 @@ resource: 4d139ee2-5547-491e-8eaf-4de97026abe2
 ![12388981](https://user-images.githubusercontent.com/12388981/208898903-2f9ebb86-bf1e-4bcf-8535-53fca37a0373.png)
 
 ![12388981](https://user-images.githubusercontent.com/12388981/208900767-ad919e5d-222c-459d-b640-58bde8ee73e9.png)
+
+
+![12388981](https://user-images.githubusercontent.com/12388981/208901968-3f374ce8-8a28-41b4-8425-5ceaa749d7ce.png)
