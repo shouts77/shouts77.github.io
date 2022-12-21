@@ -1,1 +1,16 @@
-{"type":"wiki","title":"Study","summary":"","parent":"index","url":"/wiki/Study","updated":"2022-12-12 10:17:57 +0900","children":["C-lang","Git","incubating","Regex","Vim"]}
+{
+ "type": "wiki",
+ "title": "Study",
+ "summary": "",
+ "parent": "index",
+ "url": "/wiki/Study",
+ "updated": "2022-12-21 11:43:37 +0900",
+ "resource": "82/43c792-a897-4416-87a0-36ddb45d28aa",
+ "children": [
+  "C-lang",
+  "Git",
+  "incubating",
+  "Regex",
+  "Vim"
+ ]
+}

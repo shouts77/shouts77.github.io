@@ -123,9 +123,7 @@
     for (let i = 0; i < links.length; i++) {
         const link = links[i];
         const url = link.getAttribute('href');
-        if (/^(https?:\/\/)?shouts77\.github\.io/.test(url) || /^[\/#]/.test(url)) {
-            // inner link
-        } else if (url == 'javascript:void(0);') {
+        if (/^(https?:\/\/)?johngrib\.github\.io/.test(url) || /^[\/#]/.test(url)) {
             // inner link
         } else {
             // external link
@@ -150,7 +148,7 @@
 
         sup.addEventListener('mouseover', function() {
             const supRect = sup.getBoundingClientRect();
-            const postRect =  document.querySelector('.page-content')
+            const postRect =  document.querySelector('.post-content')
                 .getBoundingClientRect();
 
             tooltip.style.display = "block";
@@ -171,6 +169,8 @@
 
         sup.addEventListener('mouseout', function() {
             tooltip.style.display = "none";
+            tooltip.style.left = null;
+            tooltip.style.right = null;
         });
     }
 })();

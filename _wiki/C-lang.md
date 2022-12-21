@@ -3,8 +3,9 @@ layout  : wiki
 title   : C언어 
 summary : C언어를 이해하자.
 date    : 2022-12-11 20:56:45 +0900
-updated : 2022-12-20 20:39:44 +0900
+updated : 2022-12-21 11:42:32 +0900
 tag     : c study
+resource: ef/623fa9-b252-49a4-961d-61ccc30a70bd
 toc     : true
 public  : true
 parent  : [[Study]] 

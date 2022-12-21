@@ -1,1 +1,13 @@
-{"type":"wiki","title":"Diary","summary":"","parent":"index","url":"/wiki/Diary","updated":"2022-12-10 15:04:26 +0900","children":["2022-memo","2022-To-Do"]}
+{
+ "type": "wiki",
+ "title": "Diary",
+ "summary": "",
+ "parent": "index",
+ "url": "/wiki/Diary",
+ "updated": "2022-12-21 11:42:47 +0900",
+ "resource": "63/394f44-ba9b-4252-8cc2-aadced601b37",
+ "children": [
+  "2022-memo",
+  "2022-To-Do"
+ ]
+}

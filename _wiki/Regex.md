@@ -3,8 +3,9 @@ layout  : wiki
 title   : 정규 표현식
 summary : 정규 표현식을 자유롭게 활용해 보자.
 date    : 2022-12-17 22:12:36 +0900
-updated : 2022-12-20 21:16:31 +0900
+updated : 2022-12-21 11:43:29 +0900
 tag     : regex study
+resource: 0d/54e289-c76c-4572-8de0-baed46b4dc74
 toc     : true
 public  : true
 parent  : [[Study]]

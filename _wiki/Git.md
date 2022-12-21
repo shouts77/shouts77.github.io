@@ -3,8 +3,9 @@ layout  : wiki
 title   : Git 
 summary : Git에 대해 알게 된 것을 정리해 보자.
 date    : 2022-12-11 21:05:06 +0900
-updated : 2022-12-20 08:53:34 +0900
+updated : 2022-12-21 11:42:53 +0900
 tag     : git study 
+resource: 2d/dc08a3-173b-4101-89d2-7386f24beb5b
 toc     : true
 public  : true
 parent  : [[Study]] 

@@ -3,8 +3,9 @@ layout  : wiki
 title   : Vim
 summary : Vim에 대해 알게 된 것을 정리해 보자. 
 date    : 2022-12-15 22:24:39 +0900
-updated : 2022-12-19 09:39:56 +0900
+updated : 2022-12-21 11:43:44 +0900
 tag     : vim study 
+resource: 51/031b60-fad5-498e-a6b3-e9104e7de479
 toc     : true
 public  : true
 parent  : [[Study]] 
