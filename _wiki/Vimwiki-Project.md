@@ -3,7 +3,7 @@ layout  : wiki
 title   : Vimwiki-Project
 summary : fork한 Vimwiki를 커스터마이징해보자. 
 date    : 2022-12-12 08:23:58 +0900
-updated : 2022-12-21 17:23:05 +0900
+updated : 2022-12-21 17:26:22 +0900
 tag     : vimwiki project
 resource: 3b/b4eb4a-08a4-4fa8-a4be-3554856f4561
 toc     : true
@@ -27,7 +27,7 @@ latex   : false
     * [X] (2012-12-12) 주석을 다는 부분
     * [X] (2022-12-21) 2022-12-07에 업데이트된 skeleton 내용 확인 후 적용
 
-* [O] 나만의 스타일로 구현할 부분
+* [X] 나만의 스타일로 구현할 부분
     * [X] (2012-12-12) tag에 배경색을 입혀서 텍스트와 구분해 보면 어떨까.
     * [X] (2012-12-14) responsive top navigation 적용
         * w3schools.com에 있는 예제를 참고했는데 a 태그를 이용했더니 (href="javascript:void(0)") 외부링크로 인식하여 index화면에서 external-link.svg가 보여지는 현상 발생함
