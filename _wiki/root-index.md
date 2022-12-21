@@ -4,7 +4,7 @@ title   : Wiki
 toc     : true
 public  : true
 comment : false
-updated : 2022-12-21 13:01:37 +0900
+updated : 2022-12-21 20:52:32 +0900
 regenerate: true
 ---
 
@@ -22,6 +22,7 @@ regenerate: true
     * [[Vim]]
     * [[Regex]]
     * [[incubating]]
+    * [[test]]
 
 ---
 
