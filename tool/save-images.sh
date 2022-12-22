@@ -11,7 +11,12 @@ FAIL_COUNT=0
 for CHANGED_FILE in $CHANGE_LIST; do
     echo "이미지경로를 교정할 문서 파일: [$CHANGED_FILE]"
 
-    RESOURCE_DIR=`head $CHANGED_FILE | egrep -o '[A-F0-9-]{2}/[A-F0-9-]{34}$'`
+    # shouts 변경사항(2022-12-22)
+    # templete 12번째 열에 resource가 나와서 head 12번째 행까지 보이도록 변경
+    # uuid 검색 패턴 변경
+
+    # RESOURCE_DIR=`head $CHANGED_FILE | egrep -o '[A-F0-9-]{2}/[A-F0-9-]{34}$'`
+    RESOURCE_DIR=`head -12 $CHANGED_FILE | egrep -o '[a-zA-Z0-9-]{2}/[a-zA-Z0-9-]{34}$'`
     TARGET_PATH="./resource/$RESOURCE_DIR"
 
     echo "생성할 디렉토리 경로: [$TARGET_PATH]"
@@ -20,8 +25,11 @@ for CHANGED_FILE in $CHANGE_LIST; do
     # 작업 대상 파일에서 참조하고 있는 github에 등록된 리소스 파일들의 URI 목록
     # URI_LIST=`ag "https://user-images\.githubuser.*?\/$NUM\/.*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
     # URI_LIST=`ag "https://pbs.twimg.com/media/.*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
+    # URI_LIST=`ag "https://((user-images\.githubuser.*?\/$NUM\/)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
 
-    URI_LIST=`ag "https://((user-images\.githubuser.*?\/$NUM\/)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
+    # shouts 변경사항(2022-12-22)
+    # \/$NUM\/ 패턴으로 검색이 안되서 임시 제외
+    URI_LIST=`ag "https://((user-images\.githubuser.*?)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
 
     for URI in $URI_LIST; do
         FILE_NAME=`echo $URI | sed 's,^.*/,,'`
