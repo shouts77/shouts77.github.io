@@ -12,11 +12,10 @@ for CHANGED_FILE in $CHANGE_LIST; do
     echo "이미지경로를 교정할 문서 파일: [$CHANGED_FILE]"
 
     # shouts 변경사항(2022-12-22)
-    # templete 12번째 열에 resource가 나와서 head 12번째 행까지 보이도록 변경
     # uuid 검색 패턴 변경
 
     # RESOURCE_DIR=`head $CHANGED_FILE | egrep -o '[A-F0-9-]{2}/[A-F0-9-]{34}$'`
-    RESOURCE_DIR=`head -12 $CHANGED_FILE | egrep -o '[a-zA-Z0-9-]{2}/[a-zA-Z0-9-]{34}$'`
+    RESOURCE_DIR=`head $CHANGED_FILE | egrep -o '[a-zA-Z0-9-]{2}/[a-zA-Z0-9-]{34}$'`
     TARGET_PATH="./resource/$RESOURCE_DIR"
 
     echo "생성할 디렉토리 경로: [$TARGET_PATH]"
