@@ -3,7 +3,7 @@ layout  : wiki
 title   : Git 
 summary : Git에 대해 알게 된 것을 정리해 보자.
 date    : 2022-12-11 21:05:06 +0900
-updated : 2022-12-22 20:59:07 +0900
+updated : 2022-12-23 21:11:56 +0900
 tag     : git study 
 resource: 2d/dc08a3-173b-4101-89d2-7386f24beb5b
 toc     : true
@@ -36,9 +36,10 @@ latex   : false
 
 ## 도서
 
-### 40% 4 / 10
+### 50% 5 / 10
 * [X] (2022-12-19) 0. How To use This Book:Intro
 * [X] (2022-12-20) 1. Beginning Git: Get Going With Git
 * [X] (2022-12-21) 2. Branching Out: Multiple Trains Of Thoughts
 * [X] (2022-12-22) 3. Looking Around: Investigating Your Git Repository
-* [ ] 4. Undoing : Fixing Your Mistakes
+* [X] (2022-12-23) 4. Undoing : Fixing Your Mistakes
+* [ ] 5. Collaborating With Git - Part I: Remote Work
