@@ -3,7 +3,7 @@ layout  : wiki
 title   : 정규 표현식
 summary : 정규 표현식을 자유롭게 활용해 보자.
 date    : 2022-12-17 22:12:36 +0900
-updated : 2022-12-23 12:37:42 +0900
+updated : 2022-12-23 12:45:23 +0900
 tag     : regex study
 resource: 0d/54e289-c76c-4572-8de0-baed46b4dc74
 toc     : true
@@ -33,7 +33,7 @@ latex   : false
 
 ## 도서
 
-### 0% 0 / 10
+### 10% 1 / 10
 * [X] Introduction To Regular Expressions
     * [X] (2022-12-18) Solving Real Problems
     * [X] (2022-12-18) Regular Expressions as a Language
