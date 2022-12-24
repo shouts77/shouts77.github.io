@@ -93,19 +93,22 @@ h2,h3,h4,h5,h6 {
 }
 
 .post-content h1,h2,h3,h4,h5,h6 {
+    padding: 10px;
     &:before { color:$theme-color; }
 }
 
 h1 {
     font-size: 2.2rem;
     margin: 0px;
+    color : #000000;
 }
 .post-content h1 {
     border-bottom: 1px solid $theme-color;
 }
 h2 {
     font-size: 1.8em;
-    border-bottom: 1px solid #d0d0d0;
+    color: #000000;
+//    border-bottom: 1px solid #d0d0d0;
 }
 .post-content h2 {
     &:before { content:"⠁"; }
