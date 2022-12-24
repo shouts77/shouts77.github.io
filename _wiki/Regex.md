@@ -3,7 +3,7 @@ layout  : wiki
 title   : 정규 표현식
 summary : 정규 표현식을 자유롭게 활용해 보자.
 date    : 2022-12-17 22:12:36 +0900
-updated : 2022-12-24 21:12:41 +0900
+updated : 2022-12-24 21:25:19 +0900
 tag     : regex study
 resource: 0d/54e289-c76c-4572-8de0-baed46b4dc74
 toc     : true
@@ -69,11 +69,6 @@ latex   : true
 
 ### 10% 1 / 10 
 
-<details>
-<summary>진행단계</summary>
-
-<div markdown="1">
-
 * [X] Introduction To Regular Expressions
     * [X] (2022-12-18) Solving Real Problems
     * [X] (2022-12-18) Regular Expressions as a Language
@@ -84,9 +79,6 @@ latex   : true
     * [X] (2022-12-23) about the Examples
     * [X] (2022-12-23) Matching Text with Regular Expressions
     * [ ] Modifying Text with Regular Expressions
-
-</div>
-</details>
 
 ## Web
 * John Grib, [정규 표현식 기본](https://johngrib.github.io/wiki/regex/basic/)
