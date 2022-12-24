@@ -3,7 +3,7 @@ layout  : wiki
 title   : 정규 표현식
 summary : 정규 표현식을 자유롭게 활용해 보자.
 date    : 2022-12-17 22:12:36 +0900
-updated : 2022-12-24 20:33:36 +0900
+updated : 2022-12-24 21:10:27 +0900
 tag     : regex study
 resource: 0d/54e289-c76c-4572-8de0-baed46b4dc74
 toc     : true
@@ -67,7 +67,7 @@ latex   : true
 </div>
 </details>
 
-### 10% 1 / 10 (보류)
+### 10% 1 / 10 
 
 <details>
 <summary>진행단계</summary>
