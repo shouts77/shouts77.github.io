@@ -92,7 +92,7 @@ h2,h3,h4,h5,h6 {
     color: $main-font-color;
 }
 
-.post-content h1,h2,h3,h4,h5,h6 {
+.post-content h1,h2,h3,h4,h5,h6,img {
     padding: 10px;
     &:before { color:$theme-color; }
 }
@@ -154,6 +154,11 @@ h6 {
 
 .post-content .tagged-link {
     &:before { content:"#"; }
+}
+
+.post-content img {
+    width : 100%;
+    height: 100%;
 }
 
 .error-link {
