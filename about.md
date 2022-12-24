@@ -24,8 +24,12 @@ latex: true
 
 ## Motto
 
-> We will find a way. We always have. - Interstellar
-   
+> We will find a way. We always have. - Interstellar   
+
+![pexels-hristo-fidanov-1252890](https://user-images.githubusercontent.com/12388981/209439257-0e36ecbe-4c89-4c93-a3a3-a24065b7b258.png)   
+
+* [photo by Hristo Fidanov](https://www.pexels.com/ko-kr/photo/1252890/)
+
    
 ## About Me
 
