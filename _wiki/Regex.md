@@ -3,13 +3,13 @@ layout  : wiki
 title   : 정규 표현식
 summary : 정규 표현식을 자유롭게 활용해 보자.
 date    : 2022-12-17 22:12:36 +0900
-updated : 2022-12-24 21:25:19 +0900
+updated : 2022-12-26 08:12:24 +0900
 tag     : regex study
 resource: 0d/54e289-c76c-4572-8de0-baed46b4dc74
 toc     : true
 public  : true
 parent  : [[Study]]
-latex   : true
+latex   : false
 ---
 * TOC
 {:toc}
