@@ -3,7 +3,7 @@ layout  : wiki
 title   : 정규 표현식
 summary : 정규 표현식을 자유롭게 활용해 보자.
 date    : 2022-12-17 22:12:36 +0900
-updated : 2022-12-26 08:12:24 +0900
+updated : 2022-12-26 21:38:37 +0900
 tag     : regex study
 resource: 0d/54e289-c76c-4572-8de0-baed46b4dc74
 toc     : true
@@ -17,7 +17,7 @@ latex   : false
 # 목표
 * 정규 표현식을 자유롭게 활용하기
 
-# 정규 표현식 기초 (필요한 부분만 정리)
+# TIL
 
 ## Quantifiers
 * `?` : 물음표는 {0,1} 의미
@@ -44,6 +44,16 @@ latex   : false
 
 # 자료
 
+## Web
+* John Grib, [정규 표현식 기본](https://johngrib.github.io/wiki/regex/basic/)
+* John Grib, [rans 명령어](https://johngrib.github.io/wiki/rans-cmd/)
+
+## Site
+* [regex101](https://regex101.com/)
+* [REGEXPER](https://regexper.com/)
+* [regex2nfa](https://cyberzhg.github.io/toolbox/regex2nfa)
+
+
 ## 도서
 
 ### 100% 1 / 1 - An Intorduction to Regular Expressions
@@ -67,7 +77,12 @@ latex   : false
 </div>
 </details>
 
-### 10% 1 / 10 
+### 10% 1 / 10 - (보류)
+
+<details>
+<summary>진행단계</summary>
+
+<div markdown="1">
 
 * [X] Introduction To Regular Expressions
     * [X] (2022-12-18) Solving Real Problems
@@ -80,12 +95,10 @@ latex   : false
     * [X] (2022-12-23) Matching Text with Regular Expressions
     * [ ] Modifying Text with Regular Expressions
 
-## Web
-* John Grib, [정규 표현식 기본](https://johngrib.github.io/wiki/regex/basic/)
-* John Grib, [rans 명령어](https://johngrib.github.io/wiki/rans-cmd/)
+</div>
+</details>
 
-## Site
-* [regex101](https://regex101.com/)
-* [REGEXPER](https://regexper.com/)
-* [regex2nfa](https://cyberzhg.github.io/toolbox/regex2nfa)
+### 11% 1 / 9
 
+* [X] (2022-12-26) 1. Introduction To Regular Expressions
+* [ ] 2. Basic Regular Expression Skillsr
