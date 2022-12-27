@@ -3,7 +3,7 @@ layout  : wiki
 title   : Git 
 summary : Git에 대해 알게 된 것을 정리해 보자.
 date    : 2022-12-11 21:05:06 +0900
-updated : 2022-12-25 18:55:29 +0900
+updated : 2022-12-26 20:53:07 +0900
 tag     : git study 
 resource: 2d/dc08a3-173b-4101-89d2-7386f24beb5b
 toc     : true
@@ -58,4 +58,5 @@ latex   : false
 * [X] (2022-12-22) 3. Looking Around: Investigating Your Git Repository
 * [X] (2022-12-23) 4. Undoing : Fixing Your Mistakes
 * [X] (2022-12-25) 5. Collaborating With Git - Part I: Remote Work
-* [ ] 6. Collaborating With Git - Part II: Go, Team, Go!
+* [X] (2022-12-26) 6. Collaborating With Git - Part II: Go, Team, Go!
+* [ ] 7. Searching Git Repositories: Git a Grep
