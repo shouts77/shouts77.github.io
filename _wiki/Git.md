@@ -3,7 +3,7 @@ layout  : wiki
 title   : Git 
 summary : Git에 대해 알게 된 것을 정리해 보자.
 date    : 2022-12-11 21:05:06 +0900
-updated : 2022-12-26 20:53:07 +0900
+updated : 2022-12-27 13:44:54 +0900
 tag     : git study 
 resource: 2d/dc08a3-173b-4101-89d2-7386f24beb5b
 toc     : true
@@ -17,7 +17,7 @@ latex   : false
 # 목표
 * git을 자유롭게 활용하기
 
-# 공부한 내용
+# TIL
 
 * git fetch
     * 원격 저장소에서 트랙킹한 브랜치만 업데이트 시킴 (git pull은 로컬브랜치까지 업데이트 하고 병합)
@@ -51,7 +51,12 @@ latex   : false
 
 ## 도서
 
-### 50% 5 / 10
+### 100% 10 / 10 - Head First Git (by Raju Gandhi)
+
+<details>
+<summary>진행단계</summary>
+<div markdown="1">
+
 * [X] (2022-12-19) 0. How To use This Book:Intro
 * [X] (2022-12-20) 1. Beginning Git: Get Going With Git
 * [X] (2022-12-21) 2. Branching Out: Multiple Trains Of Thoughts
@@ -59,4 +64,9 @@ latex   : false
 * [X] (2022-12-23) 4. Undoing : Fixing Your Mistakes
 * [X] (2022-12-25) 5. Collaborating With Git - Part I: Remote Work
 * [X] (2022-12-26) 6. Collaborating With Git - Part II: Go, Team, Go!
-* [ ] 7. Searching Git Repositories: Git a Grep
+* [X] (2022-12-27) 7. Searching Git Repositories: Git a Grep
+* [X] (2022-12-27) 8. Making Your Life Easier With Git: #ProTips
+* [X] (2022-12-27) 9. A. Leftovers: The Top Five Topics We Didn't Cover
+
+</div>
+</details>
