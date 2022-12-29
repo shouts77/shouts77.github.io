@@ -3,7 +3,7 @@ layout  : wiki
 title   : Vim
 summary : Vim에 대해 알게 된 것을 정리해 보자. 
 date    : 2022-12-15 22:24:39 +0900
-updated : 2022-12-29 19:50:22 +0900
+updated : 2022-12-29 19:53:52 +0900
 tag     : vim study 
 resource: 51/031b60-fad5-498e-a6b3-e9104e7de479
 toc     : true
@@ -23,8 +23,7 @@ latex   : false
 
 * 코드 자동 정렬 (2022-12-15)
     * 코드를 자동으로 정렬하려면 노멀 상태에서 gg=G라고 입력하면 됨
-    * VS Code에서 그랬던 것 처럼 저장할 때마다 자동정렬되게 하면 좋을 것 같음 (BufWrite할 때마다)
-
+    * VS Code에서 그랬던 것 처럼 저장할 때마다 자동정렬되게 하면 좋을 것 같음 (BufWrite할 때마다)   
 
 * Vim을 종료하지 않고 터미널로 빠져나오기 (2022-12-29)
     * vim에서 파일을 수정 중에 `pause`키나 `Ctrl + z`키를 누르면 터미널로 빠져나옴
