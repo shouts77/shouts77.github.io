@@ -3,7 +3,7 @@ layout  : wiki
 title   : Vim
 summary : Vim에 대해 알게 된 것을 정리해 보자. 
 date    : 2022-12-15 22:24:39 +0900
-updated : 2022-12-21 11:43:44 +0900
+updated : 2022-12-29 19:38:11 +0900
 tag     : vim study 
 resource: 51/031b60-fad5-498e-a6b3-e9104e7de479
 toc     : true
@@ -39,6 +39,7 @@ latex   : false
           [설정관련 참조 자료](https://github.com/junegunn/fzf/issues/337)
 
 * coc.vim
+    
     * coc language server extension 관련 (2022-12-18)
         * 설치된 extension 보기 
           ```
@@ -49,6 +50,14 @@ latex   : false
           :CocUninstall coc-html
           ```
           [참조 자료](https://github.com/neoclide/coc.nvim/issues/1311#issuecomment-547225815)
+          
+    * coc-clangd 설치 (2022-12-29)
+        * normal 모드에서 coc-clangd 설치
+          ```
+          :CocInstall coc-clangd
+          ```
+        * coc-settings.json이 없다면 `:CocConfig` 후 빈 파일 저장
+        * clangd가 설치되지 않았을 경우 `vim test.c`처럼 파일명을 포함시켜서 vim을 실행시킨 후 `:CocCommand clangd.install` 실행
           
 
 # 자료
