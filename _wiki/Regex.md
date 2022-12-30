@@ -3,7 +3,7 @@ layout  : wiki
 title   : 정규 표현식
 summary : 정규 표현식을 자유롭게 활용해 보자.
 date    : 2022-12-17 22:12:36 +0900
-updated : 2022-12-29 16:47:52 +0900
+updated : 2022-12-30 15:01:36 +0900
 tag     : regex study
 resource: 0d/54e289-c76c-4572-8de0-baed46b4dc74
 toc     : true
@@ -19,10 +19,17 @@ latex   : false
 
 # TIL
 
+## Defining vague matchers in Regex
+* `\d` : 0~9 사이 숫자 (digit character)
+* `\w` : 숫자, 문자 (word character)
+* `\D` : except digit character
+* `\W` : except word character
+
+
 ## Quantifiers
-* `?` : 물음표는 {0,1} 의미
-* `+` : 더하기는 {1,} 의미
-* `*` : 곱하기는 {0,} 의미
+* `?` : 물음표는 {0,1} 의미 (zero or one occurrence)
+* `+` : 더하기는 {1,} 의미 (one or more occurrence)
+* `*` : 곱하기는 {0,} 의미 (zero or more occurrence)
 
 ## Wildcards
 * `.*` : This is often used to match any text.
