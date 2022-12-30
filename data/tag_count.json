@@ -36,8 +36,20 @@
   "size": 1
  },
  {
+  "name": "processing",
+  "size": 2
+ },
+ {
   "name": "project",
   "size": 3
+ },
+ {
+  "name": "random",
+  "size": 1
+ },
+ {
+  "name": "rectangle",
+  "size": 1
  },
  {
   "name": "regex",
