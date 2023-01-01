@@ -3,7 +3,7 @@ layout  : wiki
 title   : Vimwiki-Project
 summary : fork한 Vimwiki를 커스터마이징해보자. 
 date    : 2022-12-12 08:23:58 +0900
-updated : 2022-12-23 12:42:25 +0900
+updated : 2023-01-02 08:43:59 +0900
 tag     : vimwiki project
 resource: 3b/b4eb4a-08a4-4fa8-a4be-3554856f4561
 toc     : true
@@ -14,14 +14,14 @@ latex   : false
 * TOC
 {:toc}
 
-## 개요
+# 개요
 이 위키는 John Grib님의 [Vimwiki skeleton repository](https://github.com/johngrib/johngrib-jekyll-skeleton){:target="_blank"} 를 fork하여 만들었다. 이 위키를 커스터마징해보자.
 
-## 목표
+# 목표
 * 현재 John Grib님이 운영하고 있는 위키에 추가된 기능을 적용해 본다.
 * 나만의 스타일(디자인?)도 조금씩 적용해 본다.
 
-## To-do
+# To-do
 * [O] 현재 운영중인 위키에 추가된 기능 중 적용해 볼 것들
     * [X] (2022-12-12) 외부 링크를 표시하는 방법
     * [X] (2012-12-12) 주석을 다는 부분
@@ -39,3 +39,8 @@ latex   : false
     * [X] (2022-12-17) 메인 화면을 좀더 심플하게 바꿔보자.
         * 아이콘 변경, 색상변경, 여백 조정 등 기본 세팅 마무리
 
+# 자료
+
+## Web
+
+* John Grib, [리스트를 테이블로 변환하는 기능](https://johngrib.github.io/wiki/blog/this/table-generate/) 
