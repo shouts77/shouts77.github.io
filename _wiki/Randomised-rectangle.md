@@ -3,12 +3,12 @@ layout  : wiki
 title   : Randomised rectangle 
 summary : 
 date    : 2022-12-30 23:08:04 +0900
-updated : 2022-12-30 23:23:06 +0900
+updated : 2023-01-01 16:27:34 +0900
 tag     : processing random rectangle
 resource: 7e/4879e9-39bf-4521-a4d0-90265698ecee
 toc     : true
 public  : true
-parent  : 
+parent  : [[Processing]] 
 latex   : false
 ---
 * TOC
