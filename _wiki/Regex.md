@@ -3,7 +3,7 @@ layout  : wiki
 title   : 정규 표현식
 summary : 정규 표현식을 자유롭게 활용해 보자.
 date    : 2022-12-17 22:12:36 +0900
-updated : 2022-12-30 15:01:36 +0900
+updated : 2023-01-02 17:05:16 +0900
 tag     : regex study
 resource: 0d/54e289-c76c-4572-8de0-baed46b4dc74
 toc     : true
@@ -25,11 +25,18 @@ latex   : false
 * `\D` : except digit character
 * `\W` : except word character
 
+* `\b` : 단어(w)사이의 경계
+* `\1` : 1~9까지 숫자를 사용할 수 있으며, 괄호로 묶여진 그룹을 호출
+
 
 ## Quantifiers
 * `?` : 물음표는 {0,1} 의미 (zero or one occurrence)
 * `+` : 더하기는 {1,} 의미 (one or more occurrence)
 * `*` : 곱하기는 {0,} 의미 (zero or more occurrence)
+
+> Greedy/Nongreedy Qunatifiers
+* `*` : greedy approach (maximum number of options)
+* `?` : nongreedy approach (minimum number of options)
 
 ## Wildcards
 * `.*` : This is often used to match any text.
@@ -84,7 +91,8 @@ latex   : false
 </div>
 </details>
 
-### 16% 1 / 6
+### 33% 2 / 6
 
 * [X] (2022-12-29) Getting Started with Regex
-* [ ] The Basics
+* [X] (2023-01-02) The Basics
+* [ ] Special Characters
