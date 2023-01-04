@@ -211,7 +211,7 @@ sup[role=doc-noteref] {
     a.footnote {
         position: relative;
         padding-bottom: 1em;
-        top: -0.9em;
+        //top: -0.9em;
         text-decoration: none;
 
         &:before { content: "[" }
