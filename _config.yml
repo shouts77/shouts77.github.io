@@ -46,6 +46,12 @@ utterances:
   label: Comment
   branch: master
 
+giscus:
+  repo: shouts77/shouts77.github.io
+  repo_id: R_kgDOIpvPCA
+  category: Announcements
+  category_id: DIC_kwDOIpvPCM4CTabv
+
 google_analytics:
   ua:
 # ua: UA-110224147-1
