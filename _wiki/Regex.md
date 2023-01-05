@@ -3,7 +3,7 @@ layout  : wiki
 title   : 정규 표현식
 summary : 정규 표현식을 자유롭게 활용해 보자.
 date    : 2022-12-17 22:12:36 +0900
-updated : 2023-01-04 19:36:30 +0900
+updated : 2023-01-05 13:41:41 +0900
 tag     : regex study
 resource: 0d/54e289-c76c-4572-8de0-baed46b4dc74
 toc     : true
@@ -60,10 +60,6 @@ latex   : false
       echo iraq | egrep 'q[^u]'
       ```
 
-# 주석
-[^capturing-group]: [자바스크립트 정규표현식의 capturing group 참조](https://blog.rhostem.com/posts/2018-11-11-regex-capture-group)
-
-
 # 자료
 
 ## Web
@@ -105,4 +101,5 @@ latex   : false
 * [X] (2023-01-02) The Basics
 * [ ] Special Characters
 
-
+# 주석
+[^capturing-group]: [자바스크립트 정규 표현식의 capturing group 참조](https://blog.rhostem.com/posts/2018-11-11-regex-capture-group)
