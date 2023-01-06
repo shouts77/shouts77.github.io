@@ -4,7 +4,7 @@ title   : Wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-01-01 19:11:19 +0900
+updated : 2023-01-05 17:06:49 +0900
 regenerate: true
 ---
 
@@ -25,6 +25,7 @@ regenerate: true
     * [[Git]]
     * [[Vim]]
     * [[Regex]]
+    * [[Ubuntu]]
     * [[incubating]]
 
 ---

@@ -57,10 +57,14 @@
  },
  {
   "name": "study",
-  "size": 5
+  "size": 6
  },
  {
   "name": "to-do",
+  "size": 1
+ },
+ {
+  "name": "ubuntu",
   "size": 1
  },
  {
