@@ -3,7 +3,7 @@ layout  : wiki
 title   : Vimwiki-Project
 summary : fork한 Vimwiki를 커스터마이징해보자. 
 date    : 2022-12-12 08:23:58 +0900
-updated : 2023-01-05 13:38:09 +0900
+updated : 2023-01-06 20:38:03 +0900
 tag     : vimwiki project
 resource: 3b/b4eb4a-08a4-4fa8-a4be-3554856f4561
 toc     : true
@@ -20,6 +20,16 @@ latex   : false
 # 목표
 * 현재 John Grib님이 운영하고 있는 위키에 추가된 기능을 적용해 본다.
 * 나만의 스타일(디자인?)도 조금씩 적용해 본다.
+
+# TIL
+* rbenv를 이용하여 Ruby를 설치하는 경우
+    * Ruby 버전 설치 `rbenv install 2.7.4`
+    * Ruby 설치 후 재실행 `rbenv rehash`
+    * Ruby 버전 변경
+        * 시스템 전체 지정한 버전 사용 `rbenv global 2.7.4`
+        * 현재 디렉토리만 사용 `rbenv local 2.7.4`
+    * Ruby 버전확인 `rbenv versions`
+    * Ruby 버전삭제 `rbenv unistall 2.7.4`
 
 # To-do
 * [O] 현재 운영중인 위키에 추가된 기능 중 적용해 볼 것들
