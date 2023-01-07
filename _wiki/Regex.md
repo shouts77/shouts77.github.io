@@ -3,7 +3,7 @@ layout  : wiki
 title   : 정규 표현식
 summary : 정규 표현식을 자유롭게 활용해 보자.
 date    : 2022-12-17 22:12:36 +0900
-updated : 2023-01-05 13:41:41 +0900
+updated : 2023-01-07 17:39:45 +0900
 tag     : regex study
 resource: 0d/54e289-c76c-4572-8de0-baed46b4dc74
 toc     : true
@@ -28,10 +28,10 @@ latex   : false
 * `\b` : 단어(w)사이의 경계
 * `\1` : 1~9까지 숫자를 사용할 수 있으며, 괄호로 묶여진 그룹을 호출
 
-## Capturing Group (Javascipt)
+## Capture Group (Javascipt)
 * 정규 표현식에서 괄호로 둘러싼 영역
 * match 메소드 실행 시 첫번째는 전체 매칭 문자열이, 두번째부터는 캡처링 그룹 안에 있는 문자열이 차례로 들어감[^capturing-group]
-
+* 괄호 안에 `?:`가 포함되어 있을 경우 이 괄호는 캡처하지 않겠다는 의미임 (Non-Capter Group)
 
 ## Quantifiers
 * `?` : 물음표는 {0,1} 의미 (zero or one occurrence)
@@ -95,11 +95,12 @@ latex   : false
 </div>
 </details>
 
-### 33% 2 / 6
+### 50% 3 / 6
 
 * [X] (2022-12-29) Getting Started with Regex
 * [X] (2023-01-02) The Basics
-* [ ] Special Characters
+* [X] (2023-01-07) Special Characters
+* [ ] Regex in Practice
 
 # 주석
 [^capturing-group]: [자바스크립트 정규 표현식의 capturing group 참조](https://blog.rhostem.com/posts/2018-11-11-regex-capture-group)
