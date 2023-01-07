@@ -3,7 +3,7 @@ layout  : wiki
 title   : C언어 
 summary : C언어를 이해하자.
 date    : 2022-12-11 20:56:45 +0900
-updated : 2023-01-03 09:27:05 +0900
+updated : 2023-01-07 16:56:46 +0900
 tag     : c study
 resource: ef/623fa9-b252-49a4-961d-61ccc30a70bd
 toc     : true
@@ -84,7 +84,7 @@ latex   : false
 </div>
 </details>
 
-### 27% 183 / 665
+### 31% 208 / 665
 
 * [X] Chapter01 프로그램 만들기
     * [X] (2022-12-29) 프로그램과 C언어
@@ -101,5 +101,8 @@ latex   : false
 * [X] Chapter05 선택문
     * [X] (2023-01-03) if문
     * [X] (2023-01-03) if문 활용과 switch~case문
-* [ ] Chapter06 반복문
-    * [ ] while문, for문, do~while문
+* [X] Chapter06 반복문
+    * [X] (2023-01-07) while문, for문, do~while문
+    * [X] (2023-01-07) 반복문 활용
+* [ ] Chapter07 함수
+    * [ ] 함수의 작성과 사용
