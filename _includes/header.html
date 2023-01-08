@@ -4,7 +4,8 @@
 
     <meta name="google-site-verification" content="iRCsVm-5KwOwEJXbwODznWoFHW_3NUJ23IR1y0grWYc" />
 
-    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <!-- 참고: https://jekyllrb.com/docs/liquid/filters/ -->
+    <title>{% if page.title %}{{ page.title | slugify: "default" }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <meta name="description" content="{{ page.summary }}">
 
