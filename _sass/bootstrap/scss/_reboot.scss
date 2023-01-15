@@ -266,8 +266,8 @@ a:not([href]):not([class]) {
 
 // Code
 
-pre,
-code,
+//pre,
+//code,
 kbd,
 samp {
   font-family: $font-family-code;
@@ -278,32 +278,32 @@ samp {
 // 2. Reset browser default of `1em` to use `rem`s
 // 3. Don't allow content to break outside
 
-pre {
-  display: block;
-  margin-top: 0; // 1
-  margin-bottom: 1rem; // 2
-  overflow: auto; // 3
-  @include font-size($code-font-size);
-  color: $pre-color;
-
-  // Account for some code outputs that place code tags in pre tags
-  code {
-    @include font-size(inherit);
-    color: inherit;
-    word-break: normal;
-  }
-}
-
-code {
-  @include font-size($code-font-size);
-  color: var(--#{$prefix}code-color);
-  word-wrap: break-word;
-
-  // Streamline the style when inside anchors to avoid broken underline and more
-  a > & {
-    color: inherit;
-  }
-}
+//pre {
+//  display: block;
+//  margin-top: 0; // 1
+//  margin-bottom: 1rem; // 2
+//  overflow: auto; // 3
+//  @include font-size($code-font-size);
+//  color: $pre-color;
+//
+//  // Account for some code outputs that place code tags in pre tags
+//  code {
+//    @include font-size(inherit);
+//    color: inherit;
+//    word-break: normal;
+//  }
+//}
+//
+//code {
+//  @include font-size($code-font-size);
+//  color: var(--#{$prefix}code-color);
+//  word-wrap: break-word;
+//
+//  // Streamline the style when inside anchors to avoid broken underline and more
+//  a > & {
+//    color: inherit;
+//  }
+//}
 
 kbd {
   padding: $kbd-padding-y $kbd-padding-x;
