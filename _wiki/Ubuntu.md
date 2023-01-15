@@ -1,9 +1,9 @@
 ---
 layout  : wiki
 title   : Ubuntu
-summary : Ubuntu에 대해 알게된 것을 정리해보자.
+summary : Ubuntu에 대해 알게된 것을 정리해 보자.
 date    : 2023-01-05 17:05:28 +0900
-updated : 2023-01-15 06:44:13 +0900
+updated : 2023-01-16 08:53:24 +0900
 tag     : ubuntu study
 resource: 24/1d4d84-2c49-4db6-9952-d1f51dd5ce8b
 toc     : true

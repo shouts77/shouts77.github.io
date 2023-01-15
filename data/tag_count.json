@@ -56,8 +56,12 @@
   "size": 1
  },
  {
+  "name": "rust",
+  "size": 1
+ },
+ {
   "name": "study",
-  "size": 6
+  "size": 7
  },
  {
   "name": "to-do",
