@@ -3,7 +3,7 @@ layout  : wiki
 title   : Vimwiki-Project
 summary : fork한 Vimwiki를 커스터마이징해보자. 
 date    : 2022-12-12 08:23:58 +0900
-updated : 2023-01-06 20:38:03 +0900
+updated : 2023-01-07 15:26:02 +0900
 tag     : vimwiki project
 resource: 3b/b4eb4a-08a4-4fa8-a4be-3554856f4561
 toc     : true
@@ -38,6 +38,7 @@ latex   : false
     * [X] (2022-12-21) 2022-12-07에 업데이트된 skeleton 내용 확인 후 적용
     * [ ] resource 경로에서 엔터를 칠 경우 해당 경로에서 Finder(윈도우의 경우 탐색기) 열기
     * [X] (2023-01-05) 댓글 기능 utterances에서 giscus로 교체
+    * [X] (2023-01-07) 문서 내 랜덤링크 열어주는 기능
 
 * [X] 나만의 스타일로 구현할 부분
     * [X] (2012-12-12) tag에 배경색을 입혀서 텍스트와 구분해 보면 어떨까.
