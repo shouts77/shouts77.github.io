@@ -3,7 +3,7 @@ layout  : wiki
 title   : Rust
 summary : Rust에 대해 알게 된 것을 정리해 보자.
 date    : 2023-01-14 21:15:59 +0900
-updated : 2023-01-14 22:12:47 +0900
+updated : 2023-01-20 14:56:12 +0900
 tag     : rust study
 resource: c7/09ef31-a034-4d7a-b504-c0d9ff99cb17
 toc     : true
@@ -32,7 +32,8 @@ latex   : false
 
 ## 도서
 
-### 4% 1 / 23
+### 8% 2 / 23
 
-* [X] 1.Systems Programmers Can Have Nice Things
-* [ ] 2.A tour of Rust
+* [X] (2023-01-14) 1.Systems Programmers Can Have Nice Things
+* [X] (2023-01-20) 2.A tour of Rust
+* [ ] 3.Fundametal Types
