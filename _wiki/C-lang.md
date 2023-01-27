@@ -3,7 +3,7 @@ layout  : wiki
 title   : C언어 
 summary : C언어를 이해하자.
 date    : 2022-12-11 20:56:45 +0900
-updated : 2023-01-27 12:51:21 +0900
+updated : 2023-01-27 12:52:13 +0900
 tag     : c study
 resource: ef/623fa9-b252-49a4-961d-61ccc30a70bd
 toc     : true
@@ -136,7 +136,7 @@ latex   : false
 </div>
 </details>
 
-### 57% 385 / 665
+### 61% 411 / 665
 
 * [X] Chapter01 프로그램 만들기
     * [X] (2022-12-29) 프로그램과 C언어
