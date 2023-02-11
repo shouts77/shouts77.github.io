@@ -3,7 +3,7 @@ layout  : wiki
 title   : Ubuntu
 summary : Ubuntu에 대해 알게된 것을 정리해 보자.
 date    : 2023-01-05 17:05:28 +0900
-updated : 2023-02-11 09:42:34 +0900
+updated : 2023-02-11 10:11:00 +0900
 tag     : ubuntu study
 resource: 24/1d4d84-2c49-4db6-9952-d1f51dd5ce8b
 toc     : true
@@ -56,8 +56,9 @@ latex   : false
 ## 터미널 어플리케이션
 * tmux
     * 참고
-        * [tmux 사용법 간단 정리](https://velog.io/@jeromecheon/tmux-%EC%82%AC%EC%9A%A9%EB%B2%95-%EA%B0%84%EB%8B%A8-%EC%A0%95%EB%A6%AC)
         * [우분투(Ubuntu)에 tmux 설치/세팅하기](https://seongkyun.github.io/others/2019/01/05/tmux/)   
+        * [tmux 사용법 간단 정리](https://velog.io/@jeromecheon/tmux-%EC%82%AC%EC%9A%A9%EB%B2%95-%EA%B0%84%EB%8B%A8-%EC%A0%95%EB%A6%AC)
+        * [Tmux Tutorial 정리](https://y0c.github.io/2018/09/27/tmux-tutorial/)
 
 # 자료
 
