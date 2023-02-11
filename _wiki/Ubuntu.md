@@ -3,7 +3,7 @@ layout  : wiki
 title   : Ubuntu
 summary : Ubuntu에 대해 알게된 것을 정리해 보자.
 date    : 2023-01-05 17:05:28 +0900
-updated : 2023-02-11 09:35:34 +0900
+updated : 2023-02-11 09:42:34 +0900
 tag     : ubuntu study
 resource: 24/1d4d84-2c49-4db6-9952-d1f51dd5ce8b
 toc     : true
@@ -53,6 +53,11 @@ latex   : false
     * `kill` 명렁어로 원하는 작업을 종료할 경우 해당 작업의 숫자를 입력하면 되는데, 이 경우 반드시 %를 붙여야함. %를 붙이지 않을 경우 job number가 아니라 PID를 찾아 종료하게 됨
     * 참고 : [리눅스 Ctrl + z 사용법](https://steelcup.home.blog/2020/07/22/%EB%A6%AC%EB%88%85%EC%8A%A4-ctrl-z-%EC%82%AC%EC%9A%A9%EB%B2%95/) 
 
+## 터미널 어플리케이션
+* tmux
+    * 참고
+        * [tmux 사용법 간단 정리](https://velog.io/@jeromecheon/tmux-%EC%82%AC%EC%9A%A9%EB%B2%95-%EA%B0%84%EB%8B%A8-%EC%A0%95%EB%A6%AC)
+        * [우분투(Ubuntu)에 tmux 설치/세팅하기](https://seongkyun.github.io/others/2019/01/05/tmux/)   
 
 # 자료
 
