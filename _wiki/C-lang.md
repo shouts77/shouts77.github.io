@@ -3,7 +3,7 @@ layout  : wiki
 title   : C언어 
 summary : C언어를 이해하자.
 date    : 2022-12-11 20:56:45 +0900
-updated : 2023-02-13 09:29:33 +0900
+updated : 2023-02-13 09:31:59 +0900
 tag     : c study
 resource: ef/623fa9-b252-49a4-961d-61ccc30a70bd
 toc     : true
@@ -189,7 +189,7 @@ latex   : false
 * [X] Chapter17 사용자 정의 자료형
     * [X] (2023-02-10) 구조체
     * [X] (2023-02-13) 구조체 활용, 공용체, 열거형
-* [X] Chapter19 파일 입출력
+* [X] Chapter18 파일 입출력
     * [X] (2023-02-13) 파일 개방과 입출력
     * [X] (2023-02-13) 다양한 파일 입출력 함수
 * [ ] Chapter19 전처리와 분할 컴파일
