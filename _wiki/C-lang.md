@@ -3,7 +3,7 @@ layout  : wiki
 title   : C언어 
 summary : C언어를 이해하자.
 date    : 2022-12-11 20:56:45 +0900
-updated : 2023-02-13 09:31:59 +0900
+updated : 2023-02-14 08:50:33 +0900
 tag     : c study
 resource: ef/623fa9-b252-49a4-961d-61ccc30a70bd
 toc     : true
@@ -136,7 +136,11 @@ latex   : false
 </div>
 </details>
 
-### 87% 585 / 665
+### 100% 665 / 665 - 혼자 공부하는 C언어
+
+<details>
+<summary>진행단계</summary>
+<div markdown="1">
 
 * [X] Chapter01 프로그램 만들기
     * [X] (2022-12-29) 프로그램과 C언어
@@ -192,9 +196,12 @@ latex   : false
 * [X] Chapter18 파일 입출력
     * [X] (2023-02-13) 파일 개방과 입출력
     * [X] (2023-02-13) 다양한 파일 입출력 함수
-* [ ] Chapter19 전처리와 분할 컴파일
-    * [ ] 전처리 지시자
+* [X] Chapter19 전처리와 분할 컴파일
+    * [X] (2023-02-14) 전처리 지시자
+    * [X] (2023-02-14) 분할 컴파일
 
+</div>
+</details>
 
 # 주석
 [^memory-address]: 서현우, 혼자 공부하는 C언어, 한빛미디어, 2019, p235 참조
