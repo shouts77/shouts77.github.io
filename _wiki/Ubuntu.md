@@ -3,7 +3,7 @@ layout  : wiki
 title   : Ubuntu
 summary : Ubuntu에 대해 알게된 것을 정리해 보자.
 date    : 2023-01-05 17:05:28 +0900
-updated : 2023-02-13 18:49:32 +0900
+updated : 2023-02-14 12:52:12 +0900
 tag     : ubuntu study
 resource: 24/1d4d84-2c49-4db6-9952-d1f51dd5ce8b
 toc     : true
@@ -64,6 +64,14 @@ latex   : false
     * (예시) `$ md5sum *.jg` 입력했을 때(jpg를 jg로 잘못 입력) `No such file or directory` 오류 발생
     * 다음 명령어로 `$ ^jg^jpg`로 입력하면 `$ md5sum *.jpg`로 실행됨
     * `s/(source)/(target)`을 활용할 수도 있음 `$ !!:s/jg/jpg/` 또는 `$ !md5sum:s/jg/jpg/`
+
+
+* cd
+    * 빠르게 경로를 이동하는 방법
+        * shell 환경설정 파일(예 .bashrc)에 quick change directory 함수 만들기
+        * shell 환경설정 파일에 `CDPATH`를 지정하면 경로 내 폴더명만으로도 쉽게 이동 가능
+        * directory stack을 이용하는 방법 : `dirs`, `pushd`, `popd`
+    * `$ cd -` : 바로 전 경로로 이동
 
 ## Shell
 * 참고
