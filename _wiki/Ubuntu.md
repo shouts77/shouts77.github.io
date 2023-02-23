@@ -3,7 +3,7 @@ layout  : wiki
 title   : Ubuntu
 summary : Ubuntu에 대해 알게된 것을 정리해 보자.
 date    : 2023-01-05 17:05:28 +0900
-updated : 2023-02-14 12:55:06 +0900
+updated : 2023-02-23 18:47:18 +0900
 tag     : ubuntu study
 resource: 24/1d4d84-2c49-4db6-9952-d1f51dd5ce8b
 toc     : true
@@ -73,6 +73,15 @@ latex   : false
         * directory stack을 이용하는 방법 : `dirs`, `pushd`, `popd`
     * `$ cd -` : 바로 전 경로로 이동
 
+* awk : 텍스트 편집 프로그램 언어
+    * 참고 : [awk wiki by John Grib](https://johngrib.github.io/wiki/awk/)
+
+* sed : 스트림 편집기
+    * 참고 : [sed wiki by John Grib](https://johngrib.github.io/wiki/cmd/sed/)
+
+* man : Unix 매뉴얼 페이지를 찾아보는 명령
+    * 참고 : [man wiki by John Grib](https://johngrib.github.io/wiki/cmd/man/)
+
 ## Shell
 * 참고
     * [interactive shell vs non-interactive shell](https://mug896.github.io/bash-shell/interactive_non-interactive.html)
@@ -91,10 +100,11 @@ latex   : false
 
 ## 도서
 
-### 36% 4 / 11
+### 45% 5 / 11
 
 * [X] (2023-01-31) Combining Commands
 * [X] (2023-02-12) Introducing The Shell
 * [X] (2023-02-13) Rerunning Commands
 * [X] (2023-02-14) Cruising The Filesystem
-* [ ] Expanding Your Toolbox
+* [X] (2023-02-23) Expanding Your Toolbox
+* [ ] Parents, Chidren, and Environments
