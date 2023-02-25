@@ -3,7 +3,7 @@ layout  : wiki
 title   : Ubuntu
 summary : Ubuntu에 대해 알게된 것을 정리해 보자.
 date    : 2023-01-05 17:05:28 +0900
-updated : 2023-02-25 16:39:52 +0900
+updated : 2023-02-25 17:08:26 +0900
 tag     : ubuntu study
 resource: 24/1d4d84-2c49-4db6-9952-d1f51dd5ce8b
 toc     : true
@@ -108,11 +108,12 @@ latex   : false
 
 ## 도서
 
-### 45% 5 / 11
+### 54% 6 / 11
 
 * [X] (2023-01-31) Combining Commands
 * [X] (2023-02-12) Introducing The Shell
 * [X] (2023-02-13) Rerunning Commands
 * [X] (2023-02-14) Cruising The Filesystem
 * [X] (2023-02-23) Expanding Your Toolbox
-* [ ] Parents, Chidren, and Environments
+* [X] (2023-02-25) Parents, Chidren, and Environments
+* [ ] 11 More Ways to Run a Command
