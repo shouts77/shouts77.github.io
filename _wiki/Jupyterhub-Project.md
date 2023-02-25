@@ -3,7 +3,7 @@ layout  : wiki
 title   : Jupyterhub-Project 
 summary : 윈도우에서 도커 엔진으로 Jupyterhub 운영이 가능하다.
 date    : 2022-12-07 13:43:48 +0900
-updated : 2023-02-25 16:08:25 +0900
+updated : 2023-02-25 16:12:40 +0900
 tag     : jupyterhub docker wsl2 project
 resource: 3b/303e12-70e9-44aa-9bdc-b6dff6cc3b64
 toc     : true
@@ -35,8 +35,9 @@ latex   : false
     * 우선은 Volume없이 테스트 중
     * Jupyterhub proxy와 관련해서 좀 더 살펴 볼 필요 있음
 * [ ] 윈도우를 재부팅하지 않고 켜둘 경우 시스템이 중단되는 증상
-    * 우선은 매일 윈도우를 자동 리부트하고 스크립트를 실행하여 서비스가 유지될 수 있도록 조치함(2022.12.02)
+    * 우선은 매일 윈도우를 자동 리부트하고 스크립트를 실행하여 서비스가 유지될 수 있도록 조치함 (2022-12-02)
 * [X] 도커 실행 시 'cannot connect to docker daemon' 오류 발생
+    * 아래와 같이 환경 변수를 unset하니 해결되었는데, 원인은 아직 알 수 없음 (2023-02-25)
     * unset DOCKER_HOST, DOCKER_TLS_PATH, DOCKER_VERIFY
       ```
       unset DOCKER_HOST
