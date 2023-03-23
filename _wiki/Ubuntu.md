@@ -3,7 +3,7 @@ layout  : wiki
 title   : Ubuntu
 summary : Ubuntu에 대해 알게된 것을 정리해 보자.
 date    : 2023-01-05 17:05:28 +0900
-updated : 2023-02-25 17:08:26 +0900
+updated : 2023-03-23 12:57:47 +0900
 tag     : ubuntu study
 resource: 24/1d4d84-2c49-4db6-9952-d1f51dd5ce8b
 toc     : true
@@ -72,6 +72,12 @@ latex   : false
         * shell 환경설정 파일에 `CDPATH`를 지정하면 경로 내 폴더명만으로도 쉽게 이동 가능
         * directory stack을 이용하는 방법 : `dirs`, `pushd`, `popd`
     * `$ cd -` : 바로 전 경로로 이동
+    * generating CDPATH
+    ```
+    $ echo 'CDPATH=$HOME' \
+       $(cd && ls -d */ | sed -e 's@^@$HOME/@' -e 's@/$@@') \
+       .. \ | tr ' ' ':'
+    ```
 
 * awk : 텍스트 편집 프로그램 언어
     * 참고 : [awk wiki by John Grib](https://johngrib.github.io/wiki/awk/)
@@ -108,7 +114,7 @@ latex   : false
 
 ## 도서
 
-### 54% 6 / 11
+### 72% 8 / 11
 
 * [X] (2023-01-31) Combining Commands
 * [X] (2023-02-12) Introducing The Shell
@@ -116,4 +122,6 @@ latex   : false
 * [X] (2023-02-14) Cruising The Filesystem
 * [X] (2023-02-23) Expanding Your Toolbox
 * [X] (2023-02-25) Parents, Chidren, and Environments
-* [ ] 11 More Ways to Run a Command
+* [X] (2023-03-23) 11 More Ways to Run a Command
+* [X] (2023-03-23) Building A Brash One-Liner
+* [ ] (2023-03-23) Leveraging Text Files
