@@ -3,12 +3,12 @@ layout  : wiki
 title   : ADsP
 summary : ADsP 시험 대비용 자료
 date    : 2023-02-22 20:15:13 +0900
-updated : 2023-03-19 11:15:40 +0900
+updated : 2023-07-30 05:31:26 +0900
 tag     : ADsP
 resource: cf/d1d9db-9d29-4258-8f24-163fb454a5a3
 toc     : true
 public  : true
-parent  : 
+parent  : [[2023년]] 
 latex   : false
 ---
 * TOC

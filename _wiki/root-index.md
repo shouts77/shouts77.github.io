@@ -4,7 +4,7 @@ title   : Wiki
 toc     : true
 public  : true
 comment : false
-updated : 2023-07-29 07:29:54 +0900
+updated : 2023-07-30 05:31:34 +0900
 regenerate: true
 ---
 
@@ -28,11 +28,11 @@ regenerate: true
     * [[Vim]]
     * [[Regex]]
     * [[Ubuntu]]
-    * [[ADsP]]
-    * [[incubating]]
+   * [[incubating]]
 * [[Archive]]
     * [[2023년]]
         * [[2023-memo]]
+        * [[ADsP]]
     * [[2022년]]
         * [[2022-memo]]
         * [[2022-To-Do]]
