@@ -4,7 +4,7 @@ title   : Wiki
 toc     : true
 public  : true
 comment : false
-updated : 2025-01-29 17:39:43 +0900
+updated : 2025-01-29 17:46:20 +0900
 regenerate: true
 ---
 
@@ -32,6 +32,7 @@ regenerate: true
     * [[Ubuntu]]
    * [[incubating]]
 * [[Archive]]
+    * [[2024년]]
     * [[2023년]]
         * [[2023-memo]]
         * [[ADsP]]
