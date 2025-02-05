@@ -4,7 +4,7 @@ title   : Wiki
 toc     : true
 public  : true
 comment : false
-updated : 2025-01-29 17:46:20 +0900
+updated : 2025-02-05 22:34:17 +0900
 regenerate: true
 ---
 
@@ -23,7 +23,9 @@ regenerate: true
     * [[2023-memo3]]
     * [[2023-memo2]]
     * [[2023-memo1]]
- - [[Study]]
+* [[Book]]
+    * [[2025-book]] 
+* [[Study]]
     * [[C-lang]]
     * [[Rust]]
     * [[Git]]
