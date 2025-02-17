@@ -7,7 +7,7 @@
  "updated": "2022-12-21 11:43:23 +0900",
  "resource": "dd/d4fbf9-b83d-47c4-b9f8-6dc7c609769c",
  "children": [
-  "Jupyterhub-Project",
-  "Vimwiki-Project"
+  "jupyterhub-project",
+  "vimwiki-project"
  ]
 }

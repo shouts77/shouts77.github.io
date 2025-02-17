@@ -72,8 +72,16 @@
   "size": 1
  },
  {
+  "name": "short",
+  "size": 2
+ },
+ {
   "name": "study",
   "size": 7
+ },
+ {
+  "name": "thoughts",
+  "size": 2
  },
  {
   "name": "to-do",

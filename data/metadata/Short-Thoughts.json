@@ -1,12 +1,12 @@
 {
  "type": "wiki",
- "title": "Book&Media",
+ "title": "Short Thoughts",
  "summary": "",
  "parent": "index",
- "url": "/wiki/Book-Media",
- "updated": "2025-02-16 21:19:48 +0900",
+ "url": "/wiki/Short-Thoughts",
+ "updated": "2025-02-18 07:28:13 +0900",
  "resource": "82/43c792-a897-4416-87a0-36ddb45d28aa",
  "children": [
-  "2025-book-media"
+  "2025-short-thoughts"
  ]
 }
