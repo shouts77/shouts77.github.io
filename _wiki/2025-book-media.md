@@ -3,7 +3,7 @@ layout  : wiki
 title   : 2025 Book & Media log
 summary : 2025년에 읽고 본 책과 미디어 기록을 정리해 보자. 
 date    : 2025-02-05 22:27:51 +0900
-updated : 2025-03-03 21:30:44 +0900
+updated : 2025-03-03 22:17:32 +0900
 tag     : book media
 resource: 18/090d73-d3b1-424a-9db4-e02de12afed8
 toc     : true
@@ -49,6 +49,7 @@ latex   : false
     - 넷플릭스 추천작들은 대개 재미가 있던 편이어서 시작한 드라마. 기대했던 것 이상으로 재미있음
     - 비일상적인 이야기들을 일상적인 이야기로 보여주는 스토리가 너무 재미있고 앞으로의 이야기가 기대됨
 
+
 ### Everything Everywhere All At Once
 1. status : ongoing
 2. info : 넷플릭스 / 영화 / 2022
@@ -79,7 +80,7 @@ latex   : false
     - 슬픈 상황과 연기, 대사로 인해 보면서 눈물을 참기 어려운 순간들이 있었다.
 
 
-### The Recruit (넷플릭스, 드라마, 2025 시즌2)
+### The Recruit
 1. status : done (2025-02-15 토)
 2. info : 넷플릭스 / 드라마 / 2025 시즌2
 3. memo
