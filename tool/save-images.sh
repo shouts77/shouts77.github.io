@@ -28,7 +28,7 @@ for CHANGED_FILE in $CHANGE_LIST; do
 
     # shouts 변경사항(2022-12-22)
     # \/$NUM\/ 패턴으로 검색이 안되서 임시 제외
-    URI_LIST=`ag "https://((user-images\.githubuser.*?)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|gif|mp4)" -o $CHANGED_FILE`
+    URI_LIST=`ag "https://((user-images\.githubuser.*?)|(pbs.twimg.com/media/)|(video.twimg.com/.+_video/)).*?(png|jpg|jpeg|JPEG|gif|mp4)" -o $CHANGED_FILE`
 
     for URI in $URI_LIST; do
         FILE_NAME=`echo $URI | sed 's,^.*/,,'`
