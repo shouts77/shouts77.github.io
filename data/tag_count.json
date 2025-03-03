@@ -28,6 +28,10 @@
   "size": 1
  },
  {
+  "name": "foam",
+  "size": 1
+ },
+ {
   "name": "git",
   "size": 1
  },
@@ -46,6 +50,10 @@
  {
   "name": "memo",
   "size": 8
+ },
+ {
+  "name": "photo",
+  "size": 1
  },
  {
   "name": "processing",
@@ -69,6 +77,10 @@
  },
  {
   "name": "rust",
+  "size": 1
+ },
+ {
+  "name": "sea",
   "size": 1
  },
  {
