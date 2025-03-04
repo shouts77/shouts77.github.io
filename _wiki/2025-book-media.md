@@ -3,7 +3,7 @@ layout  : wiki
 title   : 2025 Book & Media log
 summary : 2025년에 읽고 본 책과 미디어 기록을 정리해 보자. 
 date    : 2025-02-05 22:27:51 +0900
-updated : 2025-03-03 22:17:32 +0900
+updated : 2025-03-04 21:54:12 +0900
 tag     : book media
 resource: 18/090d73-d3b1-424a-9db4-e02de12afed8
 toc     : true
@@ -39,7 +39,7 @@ latex   : false
 1. status : ongoing
 2. info : 넷플릭스 / 드라마 / 2025
 3. memo
-    - '그래 우리는'을 연상시키는 최우식의 연기가 몰입감을 준다.
+    - '그해 우리는'을 연상시키는 최우식의 연기가 몰입감을 준다. 그림같이 이쁜 배경이 담긴 장면들이 많이 나와서 좋다.
 
 
 ### The Hot Spot
