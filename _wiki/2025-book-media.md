@@ -3,7 +3,7 @@ layout  : wiki
 title   : 2025 Book & Media log
 summary : 2025년에 읽고 본 책과 미디어 기록을 정리해 보자. 
 date    : 2025-02-05 22:27:51 +0900
-updated : 2025-04-04 07:53:10 +0900
+updated : 2025-04-08 07:33:14 +0900
 tag     : book media
 resource: 18/090d73-d3b1-424a-9db4-e02de12afed8
 toc     : true
@@ -34,6 +34,12 @@ latex   : false
 
 
 ## Media
+
+### 슈퍼셀
+1. status : done (2025-04-07 월)
+2. info : 넷플릭스 / 드라마 / 2025
+3. memo
+    - 마블 히어로에 지친 사람들이 쉬어갈 수 있을 법한 드라마. 잠깐 쉬어갈 지, 오래도록 머물지는 다음 시즌을 봐야 결정할 수 있을 것 같음 
 
 ### 소년의 시간
 1. status : done (2025-03-31 월)
