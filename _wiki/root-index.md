@@ -4,7 +4,7 @@ title   : Wiki
 toc     : true
 public  : true
 comment : false
-updated : 2025-03-04 21:49:11 +0900
+updated : 2025-04-08 07:39:18 +0900
 regenerate: true
 ---
 
@@ -17,6 +17,7 @@ regenerate: true
     * [[randomised-rectangle]]
     * [[winter]]
 * [[Diary]]
+    * [[2025-memo2]]
     * [[2025-memo1]]
     * [[2024-memo1]]
     * [[2023-memo4]]
