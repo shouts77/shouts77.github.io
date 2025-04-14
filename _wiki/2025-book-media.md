@@ -3,7 +3,7 @@ layout  : wiki
 title   : 2025 Book & Media log
 summary : 2025년에 읽고 본 책과 미디어 기록을 정리해 보자. 
 date    : 2025-02-05 22:27:51 +0900
-updated : 2025-04-13 05:54:54 +0900
+updated : 2025-04-15 08:03:14 +0900
 tag     : book media
 resource: 18/090d73-d3b1-424a-9db4-e02de12afed8
 toc     : true
@@ -34,6 +34,12 @@ latex   : false
 
 
 ## Media
+
+### 미션 임파서블: 데드 레코닝
+1. status : done (2025-04-12 토)
+2. info : 넷플릭스 / 영화 / 2023
+3. memo
+    - ''톰 크루즈'가 나오는 '미션 임파서블' 그 이상도 이 이하도 아님. 왜 '미션 임파서블'이어만 하는지 색이 점점 흐릿해진다. 
 
 ### 슈퍼셀
 1. status : done (2025-04-07 월)
@@ -69,12 +75,11 @@ latex   : false
 
 
 ### The Hot Spot
-1. status : ongoing
+1. status : done (2025-04-13 일)
 2. info : 넷플릭스 / 드라마 / 2025
 3. memo
     - 넷플릭스 추천작들은 대개 재미가 있던 편이어서 시작한 드라마. 기대했던 것 이상으로 재미있음
-    - 비일상적인 이야기들을 일상적인 이야기로 보여주는 스토리가 너무 재미있고 앞으로의 이야기가 기대됨
-
+    - 외계인, 초능력자, 귀신 등 비일상적인 소재를 일상적인 이야기로 풀어서 보여주는 스토리가 재미있으나 후반부로 갈수록 힘이 점점 떨어짐
 
 ### Everything Everywhere All At Once
 1. status : quit
