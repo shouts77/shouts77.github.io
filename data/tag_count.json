@@ -20,8 +20,12 @@
   "size": 1
  },
  {
+  "name": "dawn",
+  "size": 1
+ },
+ {
   "name": "diary",
-  "size": 10
+  "size": 11
  },
  {
   "name": "docker",
@@ -49,7 +53,7 @@
  },
  {
   "name": "memo",
-  "size": 8
+  "size": 9
  },
  {
   "name": "photo",
@@ -86,6 +90,10 @@
  {
   "name": "short",
   "size": 2
+ },
+ {
+  "name": "sky",
+  "size": 1
  },
  {
   "name": "study",
