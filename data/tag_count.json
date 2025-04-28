@@ -21,7 +21,7 @@
  },
  {
   "name": "dawn",
-  "size": 1
+  "size": 2
  },
  {
   "name": "diary",
@@ -48,6 +48,10 @@
   "size": 1
  },
  {
+  "name": "ligth",
+  "size": 1
+ },
+ {
   "name": "media",
   "size": 2
  },
@@ -57,7 +61,7 @@
  },
  {
   "name": "photo",
-  "size": 1
+  "size": 3
  },
  {
   "name": "processing",
@@ -93,6 +97,10 @@
  },
  {
   "name": "sky",
+  "size": 1
+ },
+ {
+  "name": "stop",
   "size": 1
  },
  {
