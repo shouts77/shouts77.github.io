@@ -3,9 +3,9 @@ layout  : wiki
 title   : Stop light at dawn  
 summary : 새벽 신호등 불빛
 date    : 2025-03-04 21:45:01 +0900
-updated : 2025-04-29 07:53:22 +0900
-tag     : 
-resource: dd/c67da6-9a6d-4632-a728-d7e5826b40dc
+updated : 2025-04-29 08:31:36 +0900
+tag     : ligth stop dawn photo
+resource: 27/b19806-c1ee-45a2-8395-5c6a5c9c3bd8
 toc     : true
 public  : true
 parent  : [[Photos]]
