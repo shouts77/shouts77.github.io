@@ -4,7 +4,7 @@ title   : Wiki
 toc     : true
 public  : true
 comment : false
-updated : 2025-04-17 07:40:49 +0900
+updated : 2025-04-29 09:57:29 +0900
 regenerate: true
 ---
 
@@ -27,7 +27,7 @@ regenerate: true
 * [[Book-Media]]
     * [[2025-book-media]] 
 * [[Photos]]
-    * [[2025-04-16-dawn]]
+    * [[dawn]]
     * [[foam-of-the-sea]]
     * [[stop-light]]
 * [[Study]]
