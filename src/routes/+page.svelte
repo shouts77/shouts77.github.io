@@ -1,7 +1,3 @@
-<nav>
-	<a href="/">home</a>
-	<a href="/about">about</a>
-</nav>
-
-<h1>home</h1>
-<p>this is the home page.</p>
+<div class="flex justify-left w-96 px-4 py-1">
+	<p>this is the home page.</p>
+</div>

@@ -11,4 +11,10 @@
         font-weight: 400;
         font-display: swap;
     }
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
