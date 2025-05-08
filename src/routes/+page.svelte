@@ -1,3 +1,3 @@
-<div class="flex justify-left w-96 px-4 py-1">
-	<p>this is the home page.</p>
+<div class="flex justify-left w-full px-4 md:justify-left md:w-96 md:px-4">
+	<p>SvelteKit + Tailwind CSS로 제작중인 페이지입니다.</p>
 </div>
