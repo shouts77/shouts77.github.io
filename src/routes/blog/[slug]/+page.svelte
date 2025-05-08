@@ -1,9 +1,13 @@
 <script>
-	let { data } = $props();
+    export let data;
 </script>
 
-<div class="flex-row justify-left w-full px-4 md:justify-left md:w-96 md:px-4">
-	<h1>{data.post.title}</h1>
-	<div class="text-sm text-gray-400">{data.post.date}</div>
-	<div class="text-sm">{@html data.post.content}</div>
+<div class="prose">
+    <h1>{data.meta.title}</h1>
+    <p class="text-gray-500">{data.meta.date}</p>
+    {#if data.content}
+        <svelte:component this={data.content} />
+    {:else}
+        <p>Unable to load content.</p>
+    {/if}
 </div>

@@ -1,12 +1,15 @@
 import { error } from '@sveltejs/kit';
-import { posts } from '../../../posts/data.js';
 
-export function load({ params }) {
-	const post = posts.find((post) => post.slug === params.slug);
-
-	if (!post) error(404);
-
-	return {
-		post
-	};
+export async function load({ params }) {
+    try {
+        const post = await import(`../../../posts/${params.slug}.md`);
+        
+        return {
+            meta: post.metadata,
+            slug: params.slug
+        };
+    } catch (e) {
+        console.error('Error loading post:', e);
+        throw error(404, `Post not found: ${params.slug}`);
+    }
 }
