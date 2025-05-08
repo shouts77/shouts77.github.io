@@ -12,10 +12,10 @@
             Home
         </a>
         <a 
-            href="/about" 
+            href="/blog" 
             class="md px-2 py-1 text-sm font-medium text-black-300 hover:bg-gradient-to-b hover:from-white hover:to-gray-200 hover:text-gray-600"
         >
-            About
+            log
         </a>
     </div>
     <svg
