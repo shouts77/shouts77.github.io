@@ -5,6 +5,7 @@
 
 <nav class="w-full md:w-96 px-2">
     <div class="flex justify-start md:justify-start">
+        <p>
         <a 
             href="/" 
             class="md px-2 py-1 text-sm font-medium text-black-300 hover:bg-gradient-to-b hover:from-white hover:to-gray-200 hover:text-gray-600"
@@ -17,6 +18,7 @@
         >
             log
         </a>
+        </p>
     </div>
     <svg
         class="w-full h-1 md:h-2"

@@ -8,7 +8,7 @@
             {#each data.summaries as { slug, title, date }}
                 <tr>
 					<td class="text-sm text-gray-400">{date}</td>
-					<td class="px-1 text-sm hover:underline"><a href="/blog/{slug}">{title}</a></td>
+					<td class="px-2 hover:text-red-600"><a href="/blog/{slug}">{title}</a></td>
                 </tr>
             {/each}
         </tbody>
