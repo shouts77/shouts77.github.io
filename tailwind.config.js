@@ -10,12 +10,20 @@ export default {
               fontFamily: '"Cute Font", sans-serif',
               fontSize: '2.0em',
               fontWeight: '400',
+              marginTop: '0',
+              marginBottom: '0'
             },
             h2: {
               fontFamily: '"Cute Font", sans-serif',
               fontSize: '1.75em',
               fontWeight: '400',
+              marginTop: '0',
+              marginBottom: '0'
             },
+            p: {
+              marginTop: '0',
+              marginBottom: '0'
+            }
           },
         },
       },
