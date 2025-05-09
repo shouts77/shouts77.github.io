@@ -14,6 +14,7 @@ const config = {
         mdsvex({
             extensions: ['.md']
         })
+	]
 };
 
 export default config;
