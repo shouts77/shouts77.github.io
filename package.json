@@ -6,6 +6,7 @@
 	"scripts": {
 		"dev": "vite dev --host 0.0.0.0 --port 3400",
 		"build": "vite build",
+		"build:netlify": "npx svelte-kit sync && vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
