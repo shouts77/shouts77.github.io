@@ -7,6 +7,7 @@ import { onMount } from 'svelte';
 export let data;
 let tocItems = [];
 let contentElement;
+let otherPosts = [];
   
 onMount(() => {
     // 콘텐츠가 마운트된 후 TOC 생성
@@ -15,12 +16,19 @@ onMount(() => {
       if (contentElement) {
         tocItems = generateTOC(contentElement);
       }
+      
+      // 현재 포스트를 제외한 다른 포스트 3개 가져오기
+      if (data.summaries && data.meta) {
+        otherPosts = data.summaries
+          .filter(post => post.slug !== data.meta.slug)
+          .slice(0, 3);
+      }
     }, 100); // 약간의 지연을 두어 콘텐츠가 완전히 렌더링되도록 함
 });
 </script>
 
 <div class="prose justify-left w-full px-4 md:justify-left md:w-96 md:px-4">
-    <h1 class="mb-0">{data.meta.title}</h1>
+    <h1 class="mb-0 text-blue-800">{data.meta.title}</h1>
     <p class="text-sm text-gray-500 mb-0">{formatDate(data.meta.date)}</p>
 
     <!-- 작은 화면에서만 표시되는 TOC -->
@@ -32,6 +40,29 @@ onMount(() => {
         <svelte:component this={data.content} />
     {:else}
         <p>Unable to load content.</p>
+    {/if}
+
+    <!-- 추가된 부분: 다른 포스트 섹션 -->
+    {#if otherPosts.length > 0}
+    <aside class="mt-8 border-t border-gray-200 pt-3">
+        <h2 class="text-lg text-gray-700">More logs</h2>
+        <table class="table-auto w-full">
+            <tbody>
+                {#each otherPosts as post}
+                <tr>
+                    <td class="w-4 text-gray-400 whitespace-nowrap">
+                    {formatDate(post.date)}
+                    </td>
+                    <td class="px-2 justify-left hover:text-red-600">
+                        <a href="/blog/{post.slug}" class="no-underline">
+                            {post.title}
+                        </a>
+                    </td>
+                </tr>
+                {/each}
+            </tbody>
+        </table>
+    </aside>
     {/if}
 
 </div>
