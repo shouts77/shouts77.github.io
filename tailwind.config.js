@@ -24,8 +24,8 @@ export default {
               fontFamily: '"Bujangnim_nunchi"',
               fontSize: '0.80em',                        // 단락 폰트 크기 설정
               lineHeight: '1.5',                         // 줄 간격 설정
-              marginTop: '0.25em',
-              marginBottom: '0.25em'
+              marginTop: '0.05em',
+              marginBottom: '0.8em'
             },
             // 다른 텍스트 요소도 설정할 수 있습니다
             li: {
