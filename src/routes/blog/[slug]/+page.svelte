@@ -27,34 +27,36 @@ onMount(() => {
 });
 </script>
 
-<div class="prose justify-left w-full px-4 md:justify-left md:w-96 md:px-4">
-    <h1 class="mb-0 text-blue-800">{data.meta.title}</h1>
-    <p class="text-sm text-gray-500 mb-0">{formatDate(data.meta.date)}</p>
+<div class="justify-left w-full px-4 md:justify-left md:w-96 md:px-4">
+    <div class="prose">
+        <h1 class="mb-0 text-blue-800">{data.meta.title}</h1>
+        <p class="text-sm text-gray-500 mb-0">{formatDate(data.meta.date)}</p>
 
-    <!-- 작은 화면에서만 표시되는 TOC -->
-    <div class="xl:hidden">
-      <TOC toc={tocItems} title="목차" isFloating={false} />
+        <!-- 작은 화면에서만 표시되는 TOC -->
+        <div class="xl:hidden font-bujang">
+            <TOC toc={tocItems} title="목차" isFloating={false} />
+        </div>
+
+        {#if data.content}
+            <svelte:component this={data.content} />
+        {:else}
+            <p>Unable to load content.</p>
+        {/if}
     </div>
-
-    {#if data.content}
-        <svelte:component this={data.content} />
-    {:else}
-        <p>Unable to load content.</p>
-    {/if}
 
     <!-- 추가된 부분: 다른 포스트 섹션 -->
     {#if otherPosts.length > 0}
-    <aside class="mt-8 border-t border-gray-200 pt-3">
-        <h2 class="text-lg text-gray-700">More logs</h2>
-        <table class="table-auto w-full">
+    <aside class="mt-8 border-t border-gray-200 pt-3 font-bujang">
+        <h2 class="text-red-800">다른 기록들...</h2>
+        <table class="table-auto w-full text-sm">
             <tbody>
                 {#each otherPosts as post}
                 <tr>
-                    <td class="w-4 text-gray-400 whitespace-nowrap">
+                    <td class="text-gray-400 align-top w-18">
                     {formatDate(post.date)}
                     </td>
-                    <td class="px-2 justify-left hover:text-red-600">
-                        <a href="/blog/{post.slug}" class="no-underline">
+                    <td>
+                        <a href="/blog/{post.slug}" class="no-underline hover:text-blue-800">
                             {post.title}
                         </a>
                     </td>
@@ -63,12 +65,13 @@ onMount(() => {
             </tbody>
         </table>
     </aside>
+    <br />
     {/if}
 
 </div>
 
 <!-- 큰 화면에서만 표시되는 사이드바 TOC -->
 
-<div class="hidden xl:block fixed right-[calc((100%-850px)/2-300px)] w-40 p-4">
-<TOC toc={tocItems} title="목차" isFloating={true} />
+<div class="hidden xl:block fixed right-[calc((100%-850px)/2-280px)] w-40 p-4 font-bujang">
+    <TOC toc={tocItems} title="목차" isFloating={true} />
 </div>

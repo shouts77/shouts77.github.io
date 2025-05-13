@@ -3,20 +3,20 @@
 	let { children } = $props();
 </script>
 
-<nav class="w-full md:w-96 px-2">
-    <div class="flex justify-start md:justify-start">
+<nav class="w-full md:w-96 px-2 pt-2">
+    <div class="flex justify-start font-bujang text-sm">
         <p>
         <a 
             href="/" 
             class="md px-2 py-1 text-sm font-medium text-black-300 hover:bg-gradient-to-b hover:from-white hover:to-gray-200 hover:text-gray-600"
         >
-            Home
+            첫화면
         </a>
         <a 
             href="/blog" 
             class="md px-2 py-1 text-sm font-medium text-black-300 hover:bg-gradient-to-b hover:from-white hover:to-gray-200 hover:text-gray-600"
         >
-            log
+            기록
         </a>
         </p>
     </div>

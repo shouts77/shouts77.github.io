@@ -1,17 +1,45 @@
+/* 
 @import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+*/
+
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 @config "../../tailwind.config.js";
 
+/* 부장님 눈치 폰트 추가 */
+@font-face {
+    font-family: 'Bujangnim_nunchi';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/naverfont_02@1.0/Bujangnim_nunchi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Noto Sans KR 폰트추가 */
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('https://fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzR7s.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: url('https://fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5CgmOUlnI3VYcOA-vvnIzzR7s.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 @layer base {
     html {
-        font-family: 'Cute Font';
+/*         font-family: 'Cute Font', 'Noto Sans KR', 'Bujangnim_nunchi', sans-serif;  */
         font-style: normal;
         font-size: 2.0em;
         font-weight: 400;
-        font-display: swap;
     }
     body {
         display: flex;
