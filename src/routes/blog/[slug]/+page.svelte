@@ -60,7 +60,7 @@ onMount(() => {
             <tbody>
                 {#each otherPosts as post}
                 <tr>
-                    <td class="text-gray-400 align-top w-18">
+                    <td class="text-gray-400 align-top w-16">
                     {formatDate(post.date)}
                     </td>
                     <td>

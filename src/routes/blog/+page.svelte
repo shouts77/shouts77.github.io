@@ -14,7 +14,7 @@
         <tbody>
             {#each sortedSummaries as { slug, title, date }}
                 <tr>
-					<td class="text-gray-400 align-top w-18">{date}</td>
+					<td class="text-gray-400 align-top w-16">{date}</td>
 					<td><a href="/blog/{slug}" class="no-underline hover:text-blue-800">{title}</a></td>
                 </tr>
             {/each}
