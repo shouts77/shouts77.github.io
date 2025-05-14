@@ -8,14 +8,14 @@ export default {
           css: {
             h1: {
               fontFamily: '"Kimyooyee"',
-              fontSize: '1.25em',
+              fontSize: '1.50em',
               fontWeight: '400',
               marginTop: '0.25em',
               marginBottom: '0.25em'
             },
             h2: {
               fontFamily: '"Kimyooyee"',
-              fontSize: '1.00em',
+              fontSize: '1.25em',
               fontWeight: '400',
               marginTop: '0.25em',
               marginBottom: '0.25em'
