@@ -1,6 +1,7 @@
 <script>
-	import '../styles/app.css';
-	let { children } = $props();
+    import '../styles/app.css';
+    import { page } from '$app/stores';
+    let { children } = $props();
 </script>
 
 <nav class="w-full md:w-96 px-2 pt-1">
@@ -8,19 +9,25 @@
         <p>
         <a 
             href="/" 
-            class="md px-2 py-1 text-sm font-medium text-black-300 hover:bg-gradient-to-b hover:from-white hover:to-gray-200 hover:text-gray-600"
+            class={`md px-2 py-1 text-sm hover:text-red-800 relative ${$page.url.pathname === '/' ? 'active' : ''}`}
         >
             첫화면
+            {#if $page.url.pathname === '/'}
+                <span class="absolute left-2 bottom-0 h-[2px] w-8 translate-x-[-1px] bg-blue-400"></span>
+            {/if}
         </a>
         <a 
             href="/blog" 
-            class="md px-2 py-1 text-sm font-medium text-black-300 hover:bg-gradient-to-b hover:from-white hover:to-gray-200 hover:text-gray-600"
+            class={`md px-2 py-1 text-sm hover:text-red-800 relative ${$page.url.pathname.startsWith('/blog') ? 'active' : ''}`}
         >
             기록
+            {#if $page.url.pathname.startsWith('/blog')}
+                <span class="absolute left-0.5 bottom-0 h-[2px] w-8 translate-x-[-2px] bg-blue-400"></span>
+            {/if}
         </a>
         </p>
     </div>
-    <svg
+<!--     <svg
         class="w-full h-1 md:h-2"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 100 2"
@@ -34,7 +41,7 @@
             </linearGradient>
         </defs>
         <rect width="100" height="0.3" fill="url(#gradient)" />
-    </svg>
+    </svg> -->
 </nav>
 
 {@render children()}
