@@ -4,7 +4,7 @@
 </script>
 
 <nav class="w-full md:w-96 px-2 pt-1">
-    <div class="flex justify-start font-bujang text-sm">
+    <div class="flex justify-start font-yoo text-sm">
         <p>
         <a 
             href="/" 

@@ -34,9 +34,18 @@
     font-display: swap;
 }
 
+/* 김유이체 폰트추가 */
+@font-face {
+    font-family: 'Kimyooyee';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/naverfont_07@1.0/Kimyooyee.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 @layer base {
     html {
-/*         font-family: 'Cute Font', 'Noto Sans KR', 'Bujangnim_nunchi', sans-serif;  */
+/*         font-family: 'Cute Font', 'Noto Sans KR', 'Bujangnim_nunchi', 'Kimyooyee', sans-serif;  */
         font-style: normal;
         font-size: 2.0em;
         font-weight: 400;

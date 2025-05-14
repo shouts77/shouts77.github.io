@@ -7,21 +7,21 @@ export default {
         DEFAULT: {
           css: {
             h1: {
-              fontFamily: '"Bujangnim_nunchi"',
+              fontFamily: '"Kimyooyee"',
               fontSize: '1.25em',
               fontWeight: '400',
               marginTop: '0.25em',
               marginBottom: '0.25em'
             },
             h2: {
-              fontFamily: '"Bujangnim_nunchi"',
+              fontFamily: '"Kimyooyee"',
               fontSize: '1.00em',
               fontWeight: '400',
               marginTop: '0.25em',
               marginBottom: '0.25em'
             },
             p: {
-              fontFamily: '"Bujangnim_nunchi"',
+              fontFamily: '"Kimyooyee"',
               fontSize: '0.80em',                        // 단락 폰트 크기 설정
               lineHeight: '1.5',                         // 줄 간격 설정
               marginTop: '0.05em',
@@ -40,6 +40,7 @@ export default {
 /*         'cute': ['"Cute Font"', 'cursive'], */
         'noto': ['"Noto Sans KR"', 'sans-serif'],
         'bujang': ['"Bujangnim_nunchi"', 'sans-serif'],
+        'yoo': ['"Kimyooyee"', 'sans-serif'],
       }
     },
   },

@@ -33,7 +33,7 @@ onMount(() => {
         <p class="text-sm text-gray-500 mb-0">{formatDate(data.meta.date)}</p>
 
         <!-- 작은 화면에서만 표시되는 TOC -->
-        <div class="xl:hidden font-bujang">
+        <div class="xl:hidden font-yoo">
             <TOC toc={tocItems} title="목차" isFloating={false} />
         </div>
 
@@ -46,7 +46,7 @@ onMount(() => {
 
     <!-- 추가된 부분: 다른 포스트 섹션 -->
     {#if otherPosts.length > 0}
-    <aside class="mt-8 border-t border-gray-200 pt-3 font-bujang">
+    <aside class="mt-8 border-t border-gray-200 pt-3 font-yoo">
         <h2 class="text-red-800">다른 기록들...</h2>
         <table class="table-auto w-full text-sm">
             <tbody>
@@ -72,6 +72,6 @@ onMount(() => {
 
 <!-- 큰 화면에서만 표시되는 사이드바 TOC -->
 
-<div class="hidden xl:block fixed right-[calc((100%-850px)/2-280px)] w-40 p-4 font-bujang">
+<div class="hidden xl:block fixed right-[calc((100%-850px)/2-280px)] w-40 p-4 font-yoo">
     <TOC toc={tocItems} title="목차" isFloating={true} />
 </div>

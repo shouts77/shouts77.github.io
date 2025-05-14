@@ -2,7 +2,7 @@
     export let data; // 서버에서 전달된 데이터를 props로 받음
 </script>
 
-<div class="flex justify-left w-full px-4 md:justify-left md:w-96 md:px-4 font-bujang text-sm md:items-start">
+<div class="flex justify-left w-full px-4 md:justify-left md:w-96 md:px-4 font-yoo text-sm md:items-start">
     <table class="table-auto w-full text-sm">
         <tbody>
             {#each data.summaries as { slug, title, date }}
