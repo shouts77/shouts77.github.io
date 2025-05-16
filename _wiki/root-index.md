@@ -4,7 +4,7 @@ title   : Wiki
 toc     : true
 public  : true
 comment : false
-updated : 2025-04-29 09:57:29 +0900
+updated : 2025-05-16 16:02:08 +0900
 regenerate: true
 ---
 
@@ -30,6 +30,7 @@ regenerate: true
     * [[dawn]]
     * [[foam-of-the-sea]]
     * [[stop-light]]
+* [[Short-Thoughts]]
 * [[Study]]
     * [[c-lang]]
     * [[rust]]
@@ -37,7 +38,7 @@ regenerate: true
     * [[vim]]
     * [[regex]]
     * [[ubuntu]]
-   * [[incubating]]
+    * [[incubating]]
 * [[Archive]]
     * [[2024년]]
     * [[2023년]]
