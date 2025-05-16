@@ -4,7 +4,7 @@ title   : Wiki
 toc     : true
 public  : true
 comment : false
-updated : 2025-05-16 16:02:08 +0900
+updated : 2025-05-16 16:13:47 +0900
 regenerate: true
 ---
 
@@ -31,6 +31,7 @@ regenerate: true
     * [[foam-of-the-sea]]
     * [[stop-light]]
 * [[Short-Thoughts]]
+    * [[2025-short-thoughts]]
 * [[Study]]
     * [[c-lang]]
     * [[rust]]
