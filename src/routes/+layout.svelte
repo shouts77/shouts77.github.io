@@ -32,7 +32,7 @@
         <div class="flex items-center space-x-1">
             <!-- X 바로가기 버튼 -->
             <a 
-                href="https://twitter.com/your-twitter-handle" 
+                href="https://x.com/shouts2713531" 
                 class="px-2 py-1 text-sm hover:text-orange-600"
                 title="X로 이동"
                 target="_blank" 
