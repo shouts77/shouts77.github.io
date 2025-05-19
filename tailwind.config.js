@@ -41,9 +41,9 @@ export default {
               borderRadius: '0.375rem',  // 모서리 둥글게
             },
             'img.post-horizontal': {
-              maxWidth: '100%',          // 가로형 이미지 최대 너비 (컨테이너에 맞춤)
+              maxWidth: '95%',           // 가로형 이미지 최대 너비 (컨테이너에 맞춤)
               height: 'auto',            // 높이는 자동으로 비율 유지
-              margin: '1.5em 0',         // 상하 여백만 추가
+              margin: '1.5em auto',      // 상하 여백과 가운데 정렬
               display: 'block',          // 블록 요소로 설정
               boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)', // 그림자 효과
               borderRadius: '0.375rem',  // 모서리 둥글게
