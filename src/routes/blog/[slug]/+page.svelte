@@ -107,7 +107,7 @@
         </div>
 
         {#if data.content}
-            <svelte:component this={data.content} />
+            <data.content />
         {:else}
             <p>Unable to load content.</p>
         {/if}
