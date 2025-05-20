@@ -2,37 +2,57 @@
     import { formatDate } from '$lib/utils/formattingDate.js';
     import { generateTOC } from '$lib/utils/toc.js';
     import TOC from '$lib/components/TOC.svelte';
-    import { onMount } from 'svelte';
+    import { onMount, afterUpdate } from 'svelte';
+    import { page } from '$app/stores';
 
     export let data;
     let tocItems = [];
     let contentElement;
     let otherPosts = [];
-  
-onMount(() => {
-    // 콘텐츠가 마운트된 후 TOC 생성
-    setTimeout(() => {
-      contentElement = document.querySelector('.prose');
-      if (contentElement) {
-        tocItems = generateTOC(contentElement);
-      }
-      
-      // 가장 최근 날짜 포스트 3개 가져오기
-      if (data.summaries && data.meta) {
+    
+    // 페이지 전환을 감지하기 위해 $page.url.pathname을 구독
+    $: currentPath = $page.url.pathname;
+    
+    // 데이터 또는 경로가 변경될 때마다 otherPosts 업데이트
+    $: {
+        if (data.summaries && data.meta) {
+            updateOtherPosts();
+        }
+    }
+    
+    // 다른 포스트 목록을 업데이트하는 함수
+    function updateOtherPosts() {
         // 날짜 기준으로 정렬 (최신순)
         const sortedPosts = [...data.summaries].sort((a, b) => {
-          const dateA = new Date(a.date);
-          const dateB = new Date(b.date);
-          return dateB - dateA; // 내림차순 (최신 날짜가 먼저)
+            const dateA = new Date(a.date);
+            const dateB = new Date(b.date);
+            return dateB - dateA; // 내림차순
         });
         
         // 현재 포스트 제목과 다른 포스트만 선택
         otherPosts = sortedPosts
-          .filter(post => post.title !== data.meta.title) // 제목으로 필터링
-          .slice(0, 3); // 최대 3개만 선택
-      }
-    }, 100); // 약간의 지연을 두어 콘텐츠가 완전히 렌더링되도록 함
-});
+            .filter(post => post.title !== data.meta.title)
+            .slice(0, 3); // 최대 3개만 선택
+    }
+    
+    // TOC 생성 함수
+    function generateTableOfContents() {
+        setTimeout(() => {
+            contentElement = document.querySelector('.prose');
+            if (contentElement) {
+                tocItems = generateTOC(contentElement);
+            }
+        }, 100);
+    }
+
+    onMount(() => {
+        generateTableOfContents();
+    });
+    
+    // 페이지 전환 및 데이터 변경 후 업데이트
+    afterUpdate(() => {
+        generateTableOfContents();
+    });
 </script>
 
 <div class="justify-left w-full px-4 pt-2.5 md:justify-left md:w-96 md:px-4">
