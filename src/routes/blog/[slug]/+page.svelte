@@ -3,7 +3,8 @@
     import { generateTOC } from '$lib/utils/toc.js';
     import TOC from '$lib/components/TOC.svelte';
     import { onMount } from 'svelte';
-    import { page } from '$app/state';
+    import { page } from '$app/stores';
+    import { afterNavigate, beforeNavigate } from '$app/navigation';
     
     // export let data 대신 $props() 사용
     const { data } = $props();
@@ -13,13 +14,24 @@
     let contentElement = $state(null);
     let otherPosts = $state([]);
     
-    // 현재 경로 정보
-    const currentPath = $derived($page.url.pathname);
+    // 현재 슬러그를 추적
+    const currentSlug = $derived($page.params.slug || '');
     
     // 데이터 변경 감지 및 업데이트
     $effect(() => {
         if (data.summaries && data.meta) {
             updateOtherPosts();
+        }
+    });
+    
+    // 슬러그 변경 감지
+    $effect(() => {
+        if (currentSlug) {
+            // 페이지 변경 시 TOC 초기화 후 재생성
+            tocItems = [];
+            setTimeout(() => {
+                generateTableOfContents();
+            }, 10);
         }
     });
     
@@ -32,30 +44,55 @@
             return dateB - dateA; // 내림차순
         });
         
-        // 현재 포스트 제목과 다른 포스트만 선택
+        // 현재 포스트와 다른 포스트만 선택 - 슬러그로 비교
         otherPosts = sortedPosts
-            .filter(post => post.title !== data.meta.title)
+            .filter(post => post.slug !== currentSlug)
             .slice(0, 3); // 최대 3개만 선택
     }
     
     // TOC 생성 함수
     function generateTableOfContents() {
-        setTimeout(() => {
-            contentElement = document.querySelector('.prose');
-            if (contentElement) {
-                tocItems = generateTOC(contentElement);
-            }
-        }, 100);
+        // TOC 초기화
+        tocItems = [];
+        
+        // 콘텐츠 요소 찾기
+        contentElement = document.querySelector('.prose');
+        if (!contentElement) {
+        //  console.log('Content element not found');
+            return;
+        }
+        
+        // 목차 생성
+        const newTocItems = generateTOC(contentElement);
+        tocItems = newTocItems;
+    //  console.log('Generated TOC items:', tocItems);
     }
 
-    onMount(() => {
-        generateTableOfContents();
+    // 페이지 탐색 후 처리
+    afterNavigate(() => {
+    //  console.log('Navigation completed, regenerating TOC');
+        // 이전 TOC 지우기
+        tocItems = [];
+        
+        // DOM이 완전히 업데이트된 후 TOC 생성
+        setTimeout(() => {
+            generateTableOfContents();
+            updateOtherPosts();
+        }, 150);
     });
     
-    // 페이지 전환 및 경로 변경 감지
-    $effect(() => {
-        // currentPath가 변경될 때마다 실행
-        generateTableOfContents();
+    // 페이지 탐색 전 처리
+    beforeNavigate(() => {
+    //  console.log('Navigation starting, clearing TOC');
+        // 새 페이지로 이동하기 전에 TOC 초기화
+        tocItems = [];
+    });
+
+    onMount(() => {
+    // console.log('Component mounted, generating TOC');
+        setTimeout(() => {
+            generateTableOfContents();
+        }, 100);
     });
 </script>
 
@@ -70,7 +107,7 @@
         </div>
 
         {#if data.content}
-                <data.content />
+            <svelte:component this={data.content} />
         {:else}
             <p>Unable to load content.</p>
         {/if}
@@ -99,11 +136,18 @@
     </aside>
     <br />
     {/if}
-
 </div>
 
 <!-- 큰 화면에서만 표시되는 사이드바 TOC -->
-
 <div class="hidden xl:block fixed right-[calc((100%-850px)/2-280px)] w-40 p-4 font-yoo">
-    <TOC toc={tocItems} title="목차" isFloating={true} />
+    {#if tocItems.length > 0}
+        <TOC toc={tocItems} title="목차" isFloating={true} />
+    {:else if contentElement && !tocItems.length}
+        <!-- 콘텐츠가 로드되었지만 목차 항목이 없는 경우 -->
+        <div class="text-sm text-gray-400 font-yoo">
+        </div>
+    {:else}
+        <!-- 콘텐츠 로딩 중이거나 TOC 생성 중인 경우 -->
+        <div class="text-sm text-gray-400 font-yoo">목차를 생성 중...</div>
+    {/if}
 </div>
