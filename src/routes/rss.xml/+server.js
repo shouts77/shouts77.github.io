@@ -17,13 +17,21 @@ export async function GET({ url }) {
       const fileContents = fs.readFileSync(filePath, 'utf-8');
       const { data, content } = matter(fileContents);
       
+      // script 태그를 제거하는 함수
+      const removeScriptTags = (content) => {
+        return content.replace(/<script(\s[^>]*>|>)[\s\S]*?<\/script>/gi, '');
+      };
+      
+      // script 태그 제거
+      const cleanContent = removeScriptTags(content);
+      
       // 콘텐츠의 초반 부분을 발췌하여 요약으로 사용
-      const excerpt = content
+      const excerpt = cleanContent
         .trim()
         .split('\n')
-        .slice(0, 3)
+        .slice(0, 5) // 더 많은 줄을 포함해서 본문을 더 많이 가져오기
         .join(' ')
-        .substring(0, 200)
+        .substring(0, 300) // 더 긴 요약 제공
         .replace(/[<>&'"]/g, (c) => {
           switch (c) {
             case '<': return '&lt;';
@@ -34,12 +42,22 @@ export async function GET({ url }) {
           }
         });
       
+      // 날짜 처리
+      let postDate;
+      try {
+        postDate = data.date ? new Date(data.date) : new Date();
+        // 날짜가 유효하지 않으면 현재 날짜 사용
+        if (isNaN(postDate.getTime())) postDate = new Date();
+      } catch (e) {
+        postDate = new Date();
+      }
+      
       return {
         slug: filename.replace('.md', ''),
         title: data.title || 'Untitled',
-        date: data.date ? new Date(data.date) : new Date(),
+        date: postDate,
         excerpt: excerpt + '...',
-        formattedDate: data.date ? new Date(data.date).toUTCString() : new Date().toUTCString()
+        formattedDate: postDate.toUTCString()
       };
     })
     .sort((a, b) => b.date - a.date); // 날짜 기준 내림차순 정렬
@@ -58,7 +76,7 @@ export async function GET({ url }) {
       <guid isPermaLink="true">${siteUrl}/blog/${post.slug}</guid>
       <title>${post.title}</title>
       <link>${siteUrl}/blog/${post.slug}</link>
-      <description>${post.excerpt}</description>
+      <description><![CDATA[${post.excerpt}]]></description>
       <pubDate>${post.formattedDate}</pubDate>
     </item>`).join('')}
   </channel>
