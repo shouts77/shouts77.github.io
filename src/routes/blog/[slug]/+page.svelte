@@ -2,23 +2,26 @@
     import { formatDate } from '$lib/utils/formattingDate.js';
     import { generateTOC } from '$lib/utils/toc.js';
     import TOC from '$lib/components/TOC.svelte';
-    import { onMount, afterUpdate } from 'svelte';
-    import { page } from '$app/stores';
-
-    export let data;
-    let tocItems = [];
-    let contentElement;
-    let otherPosts = [];
+    import { onMount } from 'svelte';
+    import { page } from '$app/state';
     
-    // 페이지 전환을 감지하기 위해 $page.url.pathname을 구독
-    $: currentPath = $page.url.pathname;
+    // export let data 대신 $props() 사용
+    const { data } = $props();
     
-    // 데이터 또는 경로가 변경될 때마다 otherPosts 업데이트
-    $: {
+    // 반응형 상태 변수들
+    let tocItems = $state([]);
+    let contentElement = $state(null);
+    let otherPosts = $state([]);
+    
+    // 현재 경로 정보
+    const currentPath = $derived($page.url.pathname);
+    
+    // 데이터 변경 감지 및 업데이트
+    $effect(() => {
         if (data.summaries && data.meta) {
             updateOtherPosts();
         }
-    }
+    });
     
     // 다른 포스트 목록을 업데이트하는 함수
     function updateOtherPosts() {
@@ -49,8 +52,9 @@
         generateTableOfContents();
     });
     
-    // 페이지 전환 및 데이터 변경 후 업데이트
-    afterUpdate(() => {
+    // 페이지 전환 및 경로 변경 감지
+    $effect(() => {
+        // currentPath가 변경될 때마다 실행
         generateTableOfContents();
     });
 </script>
@@ -66,7 +70,7 @@
         </div>
 
         {#if data.content}
-            <svelte:component this={data.content} />
+                <data.content />
         {:else}
             <p>Unable to load content.</p>
         {/if}
