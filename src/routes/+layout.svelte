@@ -34,6 +34,7 @@
             <a 
                 href="https://x.com/shouts2713531" 
                 class="px-2 py-1 text-sm hover:text-orange-600"
+                aria-label="X로 이동"
                 title="X로 이동"
                 target="_blank" 
                 rel="noopener"
