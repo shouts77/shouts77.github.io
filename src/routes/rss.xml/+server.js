@@ -17,10 +17,18 @@ export async function GET({ url }) {
       const fileContents = fs.readFileSync(filePath, 'utf-8');
       const { data, content } = matter(fileContents);
       
-      // HTML 태그를 제거하는 함수 (모든 HTML 태그)
+      // HTML 태그를 제거하는 함수 (script, img 및 모든 HTML 태그)
       const removeHtmlTags = (content) => {
-        // 모든 HTML 태그 제거 (마크다운 본문만 남김)
-        return content.replace(/<\/?[^>]+(>|$)/g, '');
+        // 먼저 script 태그와 내용 제거
+        let cleanContent = content.replace(/<script(\s[^>]*>|>)[\s\S]*?<\/script>/gi, '');
+        
+        // img 태그와 그 속성 제거
+        cleanContent = cleanContent.replace(/<img\s+[^>]*>/gi, '');
+        
+        // 그 외 모든 HTML 태그 제거 (마크다운 본문만 남김)
+        // cleanContent = cleanContent.replace(/<\/?[^>]+(>|$)/g, '');
+        
+        return cleanContent;
       };
       
       // HTML 태그 제거
