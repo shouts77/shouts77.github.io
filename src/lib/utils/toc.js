@@ -11,6 +11,16 @@ export function generateTOC(content) {
   const toc = [];
 
   headings.forEach((heading, index) => {
+    // "목차"라는 텍스트를 가진 헤딩은 건너뜁니다.
+    if (heading.textContent.trim() === "목차") {
+      return;
+    }
+    
+    // TOC 컴포넌트 내부에 있는 요소는 건너뜁니다.
+    if (heading.closest('.toc-component') || heading.closest('[data-toc-component]')) {
+      return;
+    }
+
     // ID가 없으면 생성
     if (!heading.id) {
       heading.id = `heading-${index}`;
