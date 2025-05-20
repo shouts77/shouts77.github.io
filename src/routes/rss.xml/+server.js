@@ -94,7 +94,7 @@ export async function GET({ url }) {
 
   return new Response(xml, {
     headers: {
-      'Content-Type': 'application/rss+xml',
+      'Content-Type': 'application/rss+xml; charset=UTF-8',
       'Cache-Control': 'max-age=0, s-maxage=3600'
     }
   });
