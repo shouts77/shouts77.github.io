@@ -2,6 +2,7 @@
     import { formatDate } from '$lib/utils/formattingDate.js';
     import { generateTOC } from '$lib/utils/toc.js';
     import TOC from '$lib/components/TOC.svelte';
+    import Giscus from '$lib/components/Giscus.svelte';
     import { onMount } from 'svelte';
     import { page } from '$app/stores';
     import { afterNavigate, beforeNavigate } from '$app/navigation';
@@ -16,6 +17,9 @@
     
     // 현재 슬러그를 추적
     const currentSlug = $derived($page.params.slug || '');
+    
+    // Giscus 테마 상태
+    let giscusTheme = $state('light'); // 기본 테마는 light
     
     // 데이터 변경 감지 및 업데이트
     $effect(() => {
@@ -111,6 +115,7 @@
         {:else}
             <p>Unable to load content.</p>
         {/if}
+        
     </div>
 
     <!-- 다른 포스트 섹션 -->
@@ -136,6 +141,18 @@
     </aside>
     <br />
     {/if}
+
+    <!-- Giscus 댓글 시스템 추가 -->
+    <Giscus
+        repo="shouts77/svlog"
+        repoId="R_kgDOOjOFgQ"
+        category="Announcements"
+        categoryId="DIC_kwDOOjOFgc4CqaMe"
+        mapping="pathname"
+        reactionsEnabled="1"
+        theme={giscusTheme}
+        lang="ko"
+    />
 </div>
 
 <!-- 큰 화면에서만 표시되는 사이드바 TOC -->
