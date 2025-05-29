@@ -26,7 +26,7 @@
         'about': 'bg-blue-100 text-blue-800',
         'memo': 'bg-green-100 text-green-800',
         'photo': 'bg-yellow-100 text-yellow-800',
-        '미분류': 'bg-gray-100 text-gray-800'
+        'undecided': 'bg-gray-100 text-gray-800'
         // 필요에 따라 추가
     };
     
@@ -128,7 +128,7 @@
         </p>
 
         <!-- 작은 화면에서만 표시되는 TOC -->
-        <div class="xl:hidden font-yoo">
+        <div class="xl:hidden font-yoo mt-4">
             <TOC toc={tocItems} title="목차" isFloating={false} />
         </div>
 

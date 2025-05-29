@@ -20,6 +20,20 @@ export default {
               marginTop: '0.25em',
               marginBottom: '0.25em'
             },
+            h3: {
+              fontFamily: '"Kimyooyee"',
+              fontSize: '1.00em',
+              fontWeight: '400',
+              marginTop: '0.25em',
+              marginBottom: '0.25em'
+            },
+            h4: {
+              fontFamily: '"Kimyooyee"',
+              fontSize: '0.80em',
+              fontWeight: '400',
+              marginTop: '0.25em',
+              marginBottom: '0.25em'
+            },
             p: {
               fontFamily: '"Kimyooyee"',
               fontSize: '0.80em',                        // 단락 폰트 크기 설정
@@ -28,6 +42,7 @@ export default {
               marginBottom: '0.8em'
             },
             li: {
+              fontFamily: '"Kimyooyee"',
               fontSize: '0.80em',
               marginTop: '0.25em',
               marginBottom: '0.25em'
