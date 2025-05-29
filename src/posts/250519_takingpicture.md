@@ -1,6 +1,7 @@
 ---
 title: 사진찍기
 date: 2025-05-19
+category: memo
 ---
 
 <script>

@@ -29,11 +29,16 @@ export async function load() {
                     slug: filename.replace('.md', ''), // 파일 이름에서 확장자 제거
                     title: data.title || 'Untitled',
                     date: formattedDate,
+                    category: data.category || '미분류' // 카테고리 추가
                 };
             });
 
+        // 모든 고유 카테고리 목록 수집
+        const categories = [...new Set(summaries.map(post => post.category))];
+
         return {
-            summaries
+            summaries,
+            categories // 카테고리 목록 전달
         };
     } catch (error) {
         console.error('Error in load function:', error); // 오류 출력
