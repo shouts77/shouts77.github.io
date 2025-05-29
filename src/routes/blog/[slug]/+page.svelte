@@ -21,6 +21,20 @@
     // Giscus 테마 상태
     let giscusTheme = $state('light'); // 기본 테마는 light
     
+    // 카테고리별 색상 매핑 (선택 사항) - 블로그 메인 페이지와 동일하게 유지
+    const categoryColors = {
+        'about': 'bg-blue-100 text-blue-800',
+        'memo': 'bg-green-100 text-green-800',
+        'photo': 'bg-yellow-100 text-yellow-800',
+        '미분류': 'bg-gray-100 text-gray-800'
+        // 필요에 따라 추가
+    };
+    
+    // 카테고리에 맞는 색상 클래스 반환
+    function getCategoryColorClass(category) {
+        return categoryColors[category] || 'bg-gray-100 text-gray-800';
+    }
+    
     // 데이터 변경 감지 및 업데이트
     $effect(() => {
         if (data.summaries && data.meta) {
@@ -103,7 +117,15 @@
 <div class="justify-left w-full px-4 pt-2.5 md:justify-left md:w-96 md:px-4">
     <div class="prose">
         <h1 class="mb-0 text-blue-800">{data.meta.title}</h1>
-        <p class="text-sm text-gray-500 mb-0">{formatDate(data.meta.date)}</p>
+        <p class="text-sm text-gray-500 mb-0">
+            {formatDate(data.meta.date)}
+            <!-- 카테고리 배지 추가 -->
+            {#if data.meta.category}
+            <span class="text-xs px-1.5 py-0.5 rounded-full {getCategoryColorClass(data.meta.category)}">
+                {data.meta.category}
+            </span>
+            {/if}
+        </p>
 
         <!-- 작은 화면에서만 표시되는 TOC -->
         <div class="xl:hidden font-yoo">
@@ -126,13 +148,19 @@
             <tbody>
                 {#each otherPosts as post}
                 <tr>
-                    <td class="text-gray-400 align-top w-16">
-                    {formatDate(post.date)}
+                    <td class="text-gray-400 align-top w-14">
+                        {formatDate(post.date)}
                     </td>
                     <td>
+                       <!-- 카테고리 배지 추가 -->
+                        {#if post.category}
+                        <span class="text-xs px-1.5 py-0.5 rounded-full {getCategoryColorClass(post.category)}">
+                            {post.category}
+                        </span>
                         <a href="/blog/{post.slug}" class="no-underline hover:text-blue-800">
                             {post.title}
                         </a>
+                        {/if}
                     </td>
                 </tr>
                 {/each}
