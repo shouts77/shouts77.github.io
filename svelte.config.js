@@ -1,7 +1,8 @@
 // import adapter from '@sveltejs/adapter-auto';
 
 import adapter from '@sveltejs/adapter-static';
-import { vitePreprocess } from '@sveltejs/kit/vite';
+// vitePreprocess 경로 수정
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 import { mdsvex } from 'mdsvex';
 
@@ -25,6 +26,7 @@ const config = {
         }
 	},
 	preprocess: [
+        vitePreprocess(),
         mdsvex({
             extensions: ['.md']
         })
