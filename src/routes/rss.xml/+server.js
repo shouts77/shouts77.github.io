@@ -3,6 +3,7 @@ export const prerender = true;
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { marked } from 'marked'; // 이 줄 추가
 
 // posts.js 파일 대신 직접 구현
 async function getPosts() {
@@ -140,38 +141,10 @@ function generateExcerpt(content, maxLength = 150) {
 function processContentForRss(content) {
   if (!content) return '';
   
-  // 단계 1: 줄바꿈으로 분리
-  const lines = content.split(/\n\s*\n/);
-  
-  // 단계 2: 각 블록 변환
-  const processedBlocks = lines.map(block => {
-    const trimmedBlock = block.trim();
-    if (!trimmedBlock) return '';
-    
-    // 제목 확인 및 변환
-    if (trimmedBlock.startsWith('# ')) {
-      return `<h1>${trimmedBlock.substring(2).trim()}</h1>`;
-    } 
-    if (trimmedBlock.startsWith('## ')) {
-      return `<h2>${trimmedBlock.substring(3).trim()}</h2>`;
-    } 
-    if (trimmedBlock.startsWith('### ')) {
-      return `<h3>${trimmedBlock.substring(4).trim()}</h3>`;
-    }
-    
-    // 일반 단락 변환 (줄바꿈 처리)
-    return `<p>${
-      trimmedBlock
-        // 강조 변환
-        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-        .replace(/\*(.*?)\*/g, '<em>$1</em>')
-        // 링크 변환
-        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
-        // 줄바꿈 처리
-        .replace(/\n/g, '<br>')
-    }</p>`;
+  // marked를 사용하여 마크다운을 HTML로 변환
+  return marked(content, {
+    gfm: true,        // GitHub Flavored Markdown 지원
+    breaks: true,     // 줄바꿈 인식
+    sanitize: false   // HTML 태그 허용
   });
-  
-  // 결합하여 반환
-  return processedBlocks.join('\n');
 }
