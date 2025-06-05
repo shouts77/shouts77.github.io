@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Slog</title>
+      <description>SvelteKit으로 만든 개인 블로그</description>
+      <link>https://shouts77.github.io</link>
+      <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+      <pubDate>Thu, 05 Jun 2025 04:45:00 GMT</pubDate>
+      
+      
+      <item>
+        <title>2025년 메모(4~6월)</title>
+        <link>https://shouts77.github.io/blog/250408_memo2</link>
+        <guid isPermaLink="true">https://shouts77.github.io/blog/250408_memo2</guid>
+        <pubDate>Tue, 03 Jun 2025 00:00:00 GMT</pubDate>
+        <description><![CDATA[]]></description>
+      </item>
+      
+      <item>
+        <title>새싹</title>
+        <link>https://shouts77.github.io/blog/250520_sprout</link>
+        <guid isPermaLink="true">https://shouts77.github.io/blog/250520_sprout</guid>
+        <pubDate>Tue, 20 May 2025 00:00:00 GMT</pubDate>
+        <description><![CDATA[]]></description>
+      </item>
+      
+      <item>
+        <title>사진찍기</title>
+        <link>https://shouts77.github.io/blog/250519_takingpicture</link>
+        <guid isPermaLink="true">https://shouts77.github.io/blog/250519_takingpicture</guid>
+        <pubDate>Mon, 19 May 2025 00:00:00 GMT</pubDate>
+        <description><![CDATA[]]></description>
+      </item>
+      
+      <item>
+        <title>about</title>
+        <link>https://shouts77.github.io/blog/250514_about</link>
+        <guid isPermaLink="true">https://shouts77.github.io/blog/250514_about</guid>
+        <pubDate>Wed, 14 May 2025 00:00:00 GMT</pubDate>
+        <description><![CDATA[]]></description>
+      </item>
+      
+    </channel>
+  </rss>

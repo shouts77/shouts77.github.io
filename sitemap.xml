@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- 메인 페이지 -->
+    <url>
+      <loc>https://shouts77.github.io/</loc>
+      <changefreq>daily</changefreq>
+      <priority>1.0</priority>
+    </url>
+    
+    <!-- 블로그 목록 페이지 -->
+    <url>
+      <loc>https://shouts77.github.io/blog</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+    </url>
+    
+    <!-- 각 블로그 포스트 -->
+    
+    <url>
+      <loc>https://shouts77.github.io/blog/250408_memo2</loc>
+      <lastmod>2025-06-03</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+    
+    <url>
+      <loc>https://shouts77.github.io/blog/250520_sprout</loc>
+      <lastmod>2025-05-20</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+    
+    <url>
+      <loc>https://shouts77.github.io/blog/250519_takingpicture</loc>
+      <lastmod>2025-05-19</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+    
+    <url>
+      <loc>https://shouts77.github.io/blog/250514_about</loc>
+      <lastmod>2025-05-14</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+    
+  </urlset>
