@@ -17,7 +17,7 @@ async function getPosts() {
         const fileContents = fs.readFileSync(filePath, 'utf-8');
         
         try {
-          const { data } = matter(fileContents);
+          const { data, content } = matter(fileContents);
           
           // 날짜 포맷팅
           let formattedDate = 'Unknown';
@@ -30,12 +30,23 @@ async function getPosts() {
             }
           }
           
+          // 콘텐츠에서 HTML 태그 제거 및 요약 생성
+          const cleanContent = content
+            .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+            .replace(/<[^>]*>/g, ' ')
+            .trim();
+          
+          const excerpt = cleanContent.length > 200 
+            ? cleanContent.substring(0, 200) + '...' 
+            : cleanContent;
+          
           return {
             slug: filename.replace('.md', ''),
             title: data.title || filename.replace('.md', ''),
             date: formattedDate,
             category: data.category || '미분류',
             summary: data.summary || '',
+            excerpt: excerpt
           };
         } catch (e) {
           console.error(`Error parsing ${filename}:`, e);
@@ -74,7 +85,7 @@ export async function GET({ url }) {
         <link>${baseUrl}/blog/${post.slug}</link>
         <guid isPermaLink="true">${baseUrl}/blog/${post.slug}</guid>
         <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-        <description><![CDATA[${post.summary || ''}]]></description>
+        <description><![CDATA[${post.summary || post.excerpt || ''}]]></description>
       </item>
       `).join('')}
     </channel>
