@@ -24,13 +24,13 @@ export async function generateSearchData() {
     const posts = filenames
       .filter((file) => file.endsWith('.md'))
       .map((filename) => {
-        console.log(`처리 중: ${filename}`);
+        // console.log(`처리 중: ${filename}`);
         const filePath = path.join(postsDirectory, filename);
         const fileContents = fs.readFileSync(filePath, 'utf-8');
         
         try {
           const { data, content } = matter(fileContents);
-          console.log(`${filename} frontmatter:`, data); // 파싱된 frontmatter 출력
+          // console.log(`${filename} frontmatter:`, data); // 파싱된 frontmatter 출력
           
           // 날짜 포맷팅
           let formattedDate = 'Unknown';
@@ -54,7 +54,7 @@ export async function generateSearchData() {
             .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
             .replace(/<[^>]*>/g, ' ');
           
-          console.log(`${filename}: 콘텐츠 길이 ${cleanContent.length}자`);
+          // console.log(`${filename}: 콘텐츠 길이 ${cleanContent.length}자`);
           
           const postData = {
             slug: filename.replace('.md', ''),
@@ -66,10 +66,10 @@ export async function generateSearchData() {
             content: cleanContent
           };
           
-          console.log(`${filename} 요약: "${postData.summary}"`);
+          // console.log(`${filename} 요약: "${postData.summary}"`);
           return postData;
         } catch (e) {
-          console.error(`${filename} 처리 중 오류 발생:`, e);
+          // console.error(`${filename} 처리 중 오류 발생:`, e);
           return null;
         }
       })
