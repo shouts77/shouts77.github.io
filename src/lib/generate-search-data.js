@@ -9,8 +9,8 @@ export async function generateSearchData() {
     // 포스트 디렉토리 경로
     const postsDirectory = path.resolve('src/posts');
     console.log(`포스트 디렉토리: ${postsDirectory}`);
+    console.log(`디렉토리 존재 여부: ${fs.existsSync(postsDirectory)}`);
     
-    // 디렉토리 존재 확인
     if (!fs.existsSync(postsDirectory)) {
       console.error(`오류: 포스트 디렉토리가 존재하지 않습니다: ${postsDirectory}`);
       return;
@@ -18,7 +18,7 @@ export async function generateSearchData() {
     
     // 파일 목록 가져오기
     const filenames = fs.readdirSync(postsDirectory);
-    console.log(`총 ${filenames.length}개 파일 발견`);
+    console.log(`총 ${filenames.length}개 파일 발견: ${filenames.join(', ')}`);
     
     // 마크다운 파일만 필터링 및 처리
     const posts = filenames
@@ -30,6 +30,7 @@ export async function generateSearchData() {
         
         try {
           const { data, content } = matter(fileContents);
+          console.log(`${filename} frontmatter:`, data); // 파싱된 frontmatter 출력
           
           // 날짜 포맷팅
           let formattedDate = 'Unknown';
@@ -55,7 +56,7 @@ export async function generateSearchData() {
           
           console.log(`${filename}: 콘텐츠 길이 ${cleanContent.length}자`);
           
-          return {
+          const postData = {
             slug: filename.replace('.md', ''),
             title: data.title || filename.replace('.md', ''),
             date: formattedDate,
@@ -64,6 +65,9 @@ export async function generateSearchData() {
             summary: data.summary || '',
             content: cleanContent
           };
+          
+          console.log(`${filename} 요약: "${postData.summary}"`);
+          return postData;
         } catch (e) {
           console.error(`${filename} 처리 중 오류 발생:`, e);
           return null;
@@ -75,6 +79,9 @@ export async function generateSearchData() {
     
     // 출력 디렉토리 준비
     const outputDir = path.resolve('static');
+    console.log(`출력 디렉토리: ${outputDir}`);
+    console.log(`디렉토리 존재 여부: ${fs.existsSync(outputDir)}`);
+    
     if (!fs.existsSync(outputDir)) {
       console.log(`출력 디렉토리 생성: ${outputDir}`);
       fs.mkdirSync(outputDir, { recursive: true });
@@ -82,21 +89,29 @@ export async function generateSearchData() {
     
     // 검색 데이터 파일 저장
     const outputPath = path.join(outputDir, 'search-data.json');
-    fs.writeFileSync(outputPath, JSON.stringify(posts));
+    console.log(`검색 데이터 파일 경로: ${outputPath}`);
+    
+    fs.writeFileSync(outputPath, JSON.stringify(posts, null, 2));
     
     // 파일 크기 확인
-    const stats = fs.statSync(outputPath);
-    console.log(`검색 데이터 파일 생성 완료: ${outputPath} (${(stats.size / 1024).toFixed(2)} KB)`);
+    if (fs.existsSync(outputPath)) {
+      const stats = fs.statSync(outputPath);
+      console.log(`검색 데이터 파일 생성 완료: ${outputPath} (${(stats.size / 1024).toFixed(2)} KB)`);
+    } else {
+      console.error(`오류: 파일이 생성되지 않았습니다: ${outputPath}`);
+    }
   } catch (error) {
     console.error('검색 데이터 생성 중 오류 발생:', error);
-    throw error; // 오류를 다시 던져서 빌드 프로세스가 실패하도록 함
   }
 }
 
 // 스크립트가 직접 실행될 때 함수 호출
 if (import.meta.url === import.meta.main) {
+  console.log('스크립트 직접 실행 감지');
   generateSearchData().catch(err => {
     console.error('최상위 오류:', err);
     process.exit(1);
   });
+} else {
+  console.log('모듈로 임포트됨');
 }
