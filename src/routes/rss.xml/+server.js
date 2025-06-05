@@ -46,7 +46,8 @@ async function getPosts() {
             date: formattedDate,
             category: data.category || '미분류',
             summary: data.summary || '',
-            excerpt: excerpt
+            excerpt: excerpt,
+            content: cleanContent // 전체 콘텐츠 추가
           };
         } catch (e) {
           console.error(`Error parsing ${filename}:`, e);
@@ -71,7 +72,7 @@ export async function GET({ url }) {
   
   const xml = `
   <?xml version="1.0" encoding="UTF-8" ?>
-  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
       <title>Slog</title>
       <description>SvelteKit으로 만든 개인 블로그</description>
@@ -85,7 +86,8 @@ export async function GET({ url }) {
         <link>${baseUrl}/blog/${post.slug}</link>
         <guid isPermaLink="true">${baseUrl}/blog/${post.slug}</guid>
         <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-        <description><![CDATA[${post.summary || post.excerpt || ''}]]></description>
+        <description><![CDATA[${post.summary || generateExcerpt(post.content) || ''}]]></description>
+        <content:encoded><![CDATA[${processContentForRss(post.content)}]]></content:encoded>
       </item>
       `).join('')}
     </channel>
@@ -110,4 +112,48 @@ function escapeXml(unsafe) {
       case '"': return '&quot;';
     }
   });
+}
+
+// 콘텐츠 발췌 함수 추가
+function generateExcerpt(content, maxLength = 150) {
+  if (!content) return '';
+  
+  // HTML 태그 제거 및 공백 정리
+  const cleanText = content
+    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  
+  if (cleanText.length <= maxLength) return cleanText;
+  
+  // 적절한 길이로 자르기
+  const excerpt = cleanText.substring(0, maxLength);
+  const lastSpace = excerpt.lastIndexOf(' ');
+  
+  return lastSpace > maxLength * 0.8 
+    ? excerpt.substring(0, lastSpace) + '...' 
+    : excerpt + '...';
+}
+
+// RSS용 콘텐츠 처리 함수
+function processContentForRss(content) {
+  if (!content) return '';
+  
+  // 마크다운을 HTML로 변환 (실제 환경에 맞는 마크다운 변환기 사용 필요)
+  // 여기서는 간단한 변환만 예시로 제공
+  return content
+    // 제목 변환
+    .replace(/^# (.*?)$/gm, '<h1>$1</h1>')
+    .replace(/^## (.*?)$/gm, '<h2>$1</h2>')
+    .replace(/^### (.*?)$/gm, '<h3>$1</h3>')
+    // 강조 변환
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em>$1</em>')
+    // 단락 변환 (빈 줄을 단락 구분자로 사용)
+    .split(/\n\s*\n/)
+    .map(para => para.trim() ? `<p>${para.trim()}</p>` : '')
+    .join('\n')
+    // 링크 변환
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
 }
