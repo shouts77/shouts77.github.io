@@ -5,16 +5,20 @@
       <description>SvelteKit으로 만든 개인 블로그</description>
       <link>https://shouts77.github.io</link>
       <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-      <pubDate>Thu, 05 Jun 2025 08:49:29 GMT</pubDate>
+      <pubDate>Thu, 05 Jun 2025 09:00:29 GMT</pubDate>
       
       
       <item>
         <title>2025년 메모(4~6월)</title>
         <link>https://shouts77.github.io/blog/250408_memo2</link>
         <guid isPermaLink="true">https://shouts77.github.io/blog/250408_memo2</guid>
-        <pubDate>Tue, 03 Jun 2025 00:00:00 GMT</pubDate>
+        <pubDate>Thu, 05 Jun 2025 00:00:00 GMT</pubDate>
         <description><![CDATA[2025년 2분기 일상의 기록 모음]]></description>
-        <content:encoded><![CDATA[<h2>2025-06-03 화</h2>
+        <content:encoded><![CDATA[<h2>2025-06-05 목</h2>
+<ol>
+<li>앞으로는 svelte 블로그를 운영하기로 마음을 정하고 깃헙 페이지로 호스팅하도록 작업했다. 심플하면서도 내 수준으로 관리가 가능한 블로그를 운영해보고 싶었는데, copilot의 도움을 받으면서 검색 등 상당 부분은 ai 코딩에 의존한 부분도 없지 않다. 그동안 위키 블로그를 사용할 수 있도록 도움을 주신 John Grib 님에게도 다시 한 번 감사를 드린다.</li>
+</ol>
+<h2>2025-06-03 화</h2>
 <ol>
 <li>지난 주일에 안방 침대 위치를 바꿔봤다. 공간 활용도는 조금 더 좋아진 것 같은데, 장단점이 있어서 좀 더 사용해 봐야 더 나아진 건지 알 수 있을 것 같다.</li>
 <li>오늘은 대통령 선거가 있는 날이다. 오후 시간을 여유있게 보내기 위해 보통 오전 일찍 가서 투표를 하고 오는데 오늘은 점심 시간쯤 가서 투표를 하고 왔다.</li>
