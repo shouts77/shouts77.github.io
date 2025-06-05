@@ -2,6 +2,7 @@
 title: 사진찍기
 date: 2025-05-19
 category: photo
+summary: 건물 사진
 ---
 
 <script>
