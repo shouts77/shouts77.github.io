@@ -5,8 +5,10 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 import { generateSearchData } from './src/lib/generate-search-data.js';
 
-// 빌드 시 검색 데이터 생성
-generateSearchData();
+// 빌드 시 검색 데이터 생성 (비동기 함수 실행)
+generateSearchData().catch(err => {
+  console.error('검색 데이터 생성 실패:', err);
+});
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
