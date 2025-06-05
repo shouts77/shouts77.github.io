@@ -136,24 +136,42 @@ function generateExcerpt(content, maxLength = 150) {
     : excerpt + '...';
 }
 
-// RSS용 콘텐츠 처리 함수
+// RSS용 콘텐츠 처리 함수 개선
 function processContentForRss(content) {
   if (!content) return '';
   
-  // 마크다운을 HTML로 변환 (실제 환경에 맞는 마크다운 변환기 사용 필요)
-  // 여기서는 간단한 변환만 예시로 제공
-  return content
-    // 제목 변환
-    .replace(/^# (.*?)$/gm, '<h1>$1</h1>')
-    .replace(/^## (.*?)$/gm, '<h2>$1</h2>')
-    .replace(/^### (.*?)$/gm, '<h3>$1</h3>')
-    // 강조 변환
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.*?)\*/g, '<em>$1</em>')
-    // 단락 변환 (빈 줄을 단락 구분자로 사용)
-    .split(/\n\s*\n/)
-    .map(para => para.trim() ? `<p>${para.trim()}</p>` : '')
-    .join('\n')
-    // 링크 변환
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+  // 단계 1: 줄바꿈으로 분리
+  const lines = content.split(/\n\s*\n/);
+  
+  // 단계 2: 각 블록 변환
+  const processedBlocks = lines.map(block => {
+    const trimmedBlock = block.trim();
+    if (!trimmedBlock) return '';
+    
+    // 제목 확인 및 변환
+    if (trimmedBlock.startsWith('# ')) {
+      return `<h1>${trimmedBlock.substring(2).trim()}</h1>`;
+    } 
+    if (trimmedBlock.startsWith('## ')) {
+      return `<h2>${trimmedBlock.substring(3).trim()}</h2>`;
+    } 
+    if (trimmedBlock.startsWith('### ')) {
+      return `<h3>${trimmedBlock.substring(4).trim()}</h3>`;
+    }
+    
+    // 일반 단락 변환 (줄바꿈 처리)
+    return `<p>${
+      trimmedBlock
+        // 강조 변환
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        // 링크 변환
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+        // 줄바꿈 처리
+        .replace(/\n/g, '<br>')
+    }</p>`;
+  });
+  
+  // 결합하여 반환
+  return processedBlocks.join('\n');
 }
