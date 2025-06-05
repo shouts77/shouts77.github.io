@@ -12,6 +12,7 @@
     let searchIndex = $state([]); // 기본 메타데이터 (색인)
     let loadedCategories = $state({}); // 로드된 카테고리 데이터
     let loadedYears = $state({}); // 로드된 연도 데이터
+    let allPostsData = []; // 모든 포스트 데이터 (전체 검색 데이터)
     
     // 페이지 로드 시 검색 색인 데이터 가져오기
     onMount(async () => {
@@ -106,6 +107,85 @@
         }
     }
     
+    // 검색 수행 함수
+    function performSearch() {
+        const query = searchQuery.trim().toLowerCase();
+        
+        if (!query) {
+            searchResults = [];
+            return;
+        }
+        
+        isSearching = true;
+        
+        try {
+            // 검색 데이터가 없으면 로드
+            if (!allPostsData || allPostsData.length === 0) {
+                fetch('/search-data.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        allPostsData = data;
+                        executeSearch(query);
+                    })
+                    .catch(error => {
+                        console.error('검색 데이터 로드 실패:', error);
+                        searchResults = [];
+                        isSearching = false;
+                    });
+            } else {
+                executeSearch(query);
+            }
+        } catch (error) {
+            console.error('검색 중 오류 발생:', error);
+            searchResults = [];
+            isSearching = false;
+        }
+    }
+    
+    // 실제 검색 실행 함수 (별도로 분리)
+    function executeSearch(query) {
+        console.log(`검색어: "${query}"`);
+        
+        searchResults = allPostsData
+            .filter(post => {
+                const titleMatch = post.title && post.title.toLowerCase().includes(query);
+                const contentMatch = post.content && post.content.toLowerCase().includes(query);
+                const summaryMatch = post.summary && post.summary.toLowerCase().includes(query);
+                const categoryMatch = post.category && post.category.toLowerCase().includes(query);
+                
+                // 디버깅용 로그
+                if (post.content && post.content.toLowerCase().includes(query)) {
+                    console.log(`포스트 '${post.title}'에서 '${query}' 키워드 발견`);
+                }
+                
+                return titleMatch || contentMatch || summaryMatch || categoryMatch;
+            })
+            .map(post => {
+                // 컨텍스트 추출 함수
+                let matchContext = '';
+                
+                if (post.content && post.content.toLowerCase().includes(query)) {
+                    matchContext = extractContextForKeyword(post.content, query, 60);
+                    console.log(`컨텍스트 추출: "${matchContext}"`);
+                } else if (post.summary && post.summary.toLowerCase().includes(query)) {
+                    matchContext = extractContextForKeyword(post.summary, query, 60);
+                }
+                
+                return {
+                    slug: post.slug,
+                    title: post.title,
+                    date: post.date,
+                    category: post.category || '미분류',
+                    summary: post.summary || '',
+                    matchContext: matchContext // 여기서 matchContext 필드를 추가
+                };
+            })
+            .sort((a, b) => new Date(b.date) - new Date(a.date));
+        
+        console.log(`검색 결과: ${searchResults.length}개 포스트 찾음`);
+        isSearching = false;
+    }
+    
     // 컨텍스트 추출 함수
     function extractContextForKeyword(text, keyword, contextLength = 40) {
         if (!text || !keyword || typeof text !== 'string') return '';
@@ -125,117 +205,11 @@
         if (startIndex > 0) context = '...' + context;
         if (endIndex < text.length) context = context + '...';
         
+        // 키워드 강조 (선택적)
+        // 클라이언트에서 처리하려면 HTML을 이스케이프 처리해야 함
+        // context = context.replace(new RegExp(keyword, 'gi'), match => `<strong>${match}</strong>`);
+        
         return context;
-    }
-    
-    // 지능형 검색 수행
-    async function performSearch() {
-        const query = searchQuery.trim().toLowerCase();
-        
-        if (!query) {
-            searchResults = [];
-            return;
-        }
-        
-        isSearching = true;
-        
-        try {
-            // 1. 먼저 메타데이터로 제목, 요약, 카테고리 검색
-            let metaResults = searchIndex.filter(post => 
-                post.title.toLowerCase().includes(query) || 
-                (post.summary && post.summary.toLowerCase().includes(query)) ||
-                post.category.toLowerCase().includes(query)
-            );
-            
-            // 제목이나 요약에서 발견되지 않았다면 내용 검색 필요
-            if (metaResults.length === 0) {
-                console.log('메타데이터에서 결과를 찾지 못했습니다. 전체 내용 검색 중...');
-                
-                // 관련 카테고리가 있는지 확인
-                const relatedCategories = [...new Set(searchIndex.map(post => post.category))].filter(
-                    category => category.toLowerCase().includes(query)
-                );
-                
-                // 연도 검색어인지 확인 (예: "2025")
-                const yearMatch = query.match(/\b(20\d{2})\b/);
-                const relatedYears = yearMatch ? [yearMatch[1]] : [];
-                
-                // 카테고리 또는 연도 관련 데이터 로드
-                let contentSearchData = [];
-                
-                if (relatedCategories.length > 0) {
-                    // 관련 카테고리 데이터 로드
-                    for (const category of relatedCategories) {
-                        const categoryData = await loadCategoryData(category);
-                        contentSearchData = [...contentSearchData, ...categoryData];
-                    }
-                } else if (relatedYears.length > 0) {
-                    // 관련 연도 데이터 로드
-                    for (const year of relatedYears) {
-                        const yearData = await loadYearData(year);
-                        contentSearchData = [...contentSearchData, ...yearData];
-                    }
-                } else {
-                    // 전체 데이터 로드 (최후의 수단)
-                    contentSearchData = await loadAllData();
-                }
-                
-                // 내용 검색
-                const contentResults = contentSearchData.filter(post => 
-                    post.content && post.content.toLowerCase().includes(query)
-                );
-                
-                // 결과 병합
-                metaResults = [...metaResults, ...contentResults];
-            } else {
-                console.log(`메타데이터에서 ${metaResults.length}개 결과를 찾았습니다. 컨텍스트 로드 중...`);
-                
-                // 필요한 카테고리 데이터만 로드
-                const categories = [...new Set(metaResults.map(post => post.category))];
-                let contentData = [];
-                
-                for (const category of categories) {
-                    const categoryData = await loadCategoryData(category);
-                    contentData = [...contentData, ...categoryData];
-                }
-                
-                // 내용으로 컨텍스트 추출을 위한 매핑
-                const contentMap = {};
-                contentData.forEach(post => {
-                    contentMap[post.slug] = post.content;
-                });
-                
-                // 메타 결과에 내용 컨텍스트 추가
-                metaResults = metaResults.map(post => {
-                    const content = contentMap[post.slug] || '';
-                    let matchContext = '';
-                    
-                    if (content && content.toLowerCase().includes(query)) {
-                        matchContext = extractContextForKeyword(content, query, 60);
-                    } else if (post.summary && post.summary.toLowerCase().includes(query)) {
-                        matchContext = extractContextForKeyword(post.summary, query, 60);
-                    }
-                    
-                    return {
-                        ...post,
-                        matchContext
-                    };
-                });
-            }
-            
-            // 결과 정렬 (날짜 내림차순)
-            searchResults = metaResults.sort((a, b) => {
-                const dateA = new Date(a.date);
-                const dateB = new Date(b.date);
-                return dateB - dateA;
-            });
-            
-        } catch (error) {
-            console.error('검색 중 오류 발생:', error);
-            searchResults = [];
-        } finally {
-            isSearching = false;
-        }
     }
     
     // 모달 열기/닫기
