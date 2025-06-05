@@ -1,35 +1,49 @@
-name: Deploy to GitHub Pages
+name: Build and Deploy
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
-
-# 권한 설정 추가
-permissions:
-  contents: write
+    branches: [ main ]  # 또는 master, 프로젝트의 기본 브랜치 이름에 맞게 수정
+  workflow_dispatch:    # 수동 실행 옵션
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Set up Node.js
+      
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
-          cache: 'npm'
-
+          node-version: 18
+      
       - name: Install dependencies
         run: npm ci
-
-      - name: Build
+      
+      - name: Generate search data
+        run: |
+          echo "Generating search data..."
+          node src/lib/generate-search-data.js
+          echo "Search data generated:"
+          ls -la static/search-data.json
+          cat static/search-data.json | head -n 20
+      
+      - name: Build project
         run: npm run build
-
+      
+      - name: Ensure search data in build
+        run: |
+          if [ ! -f "build/search-data.json" ]; then
+            echo "Copying search data to build directory..."
+            cp static/search-data.json build/
+          fi
+          echo "Final search data file:"
+          ls -la build/search-data.json
+      
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
           branch: gh-pages
+          clean: true
