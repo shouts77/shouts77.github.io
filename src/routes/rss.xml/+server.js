@@ -1,7 +1,56 @@
-import * as fs from 'fs';
-import * as path from 'path';
+export const prerender = true;
+
+import fs from 'fs';
+import path from 'path';
 import matter from 'gray-matter';
-import { getPosts } from '$lib/posts';
+
+// posts.js 파일 대신 직접 구현
+async function getPosts() {
+  try {
+    const postsDirectory = path.resolve('src/posts');
+    const filenames = fs.readdirSync(postsDirectory);
+    
+    const posts = filenames
+      .filter((file) => file.endsWith('.md'))
+      .map((filename) => {
+        const filePath = path.join(postsDirectory, filename);
+        const fileContents = fs.readFileSync(filePath, 'utf-8');
+        
+        try {
+          const { data } = matter(fileContents);
+          
+          // 날짜 포맷팅
+          let formattedDate = 'Unknown';
+          if (data.date) {
+            const date = new Date(data.date);
+            if (!isNaN(date.getTime())) {
+              formattedDate = date.toISOString().split('T')[0];
+            } else {
+              formattedDate = data.date;
+            }
+          }
+          
+          return {
+            slug: filename.replace('.md', ''),
+            title: data.title || filename.replace('.md', ''),
+            date: formattedDate,
+            category: data.category || '미분류',
+            summary: data.summary || '',
+          };
+        } catch (e) {
+          console.error(`Error parsing ${filename}:`, e);
+          return null;
+        }
+      })
+      .filter(Boolean)
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+    return posts;
+  } catch (error) {
+    console.error('포스트 로드 중 오류 발생:', error);
+    return [];
+  }
+}
 
 export async function GET({ url }) {
   const posts = await getPosts();
