@@ -1,10 +1,12 @@
 // import adapter from '@sveltejs/adapter-auto';
 
 import adapter from '@sveltejs/adapter-static';
-// vitePreprocess 경로 수정
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-
 import { mdsvex } from 'mdsvex';
+import { generateSearchData } from './src/lib/generate-search-data.js';
+
+// 빌드 시 검색 데이터 생성
+generateSearchData();
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

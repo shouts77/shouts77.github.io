@@ -1,14 +1,27 @@
 <script>
     import '../styles/app.css';
     import { page } from '$app/stores';
+    import { onMount } from 'svelte';
     let { children } = $props();
     
     // 검색 모달 상태 관리
     let showSearchModal = $state(false);
     let searchQuery = $state('');
-    let selectedCategory = $state('all');
     let searchResults = $state([]);
     let isSearching = $state(false);
+    let allPostsData = $state([]);
+    
+    // 페이지 로드 시 검색 데이터 가져오기
+    onMount(async () => {
+        try {
+            const response = await fetch('/search-data.json');
+            if (response.ok) {
+                allPostsData = await response.json();
+            }
+        } catch (error) {
+            console.error('Failed to load search data:', error);
+        }
+    });
     
     // 모달 열기/닫기
     function toggleSearchModal() {
@@ -20,18 +33,41 @@
         }
     }
     
-    // 검색 입력 필드에 대한 이벤트 핸들러 수정
+    // 검색 입력 필드에 대한 이벤트 핸들러
     function handleInput() {
         // 검색어가 비어있는 경우, 강조 표시 제거를 위해 결과 재렌더링
         if (!searchQuery.trim()) {
-            searchResults = [...searchResults]; // 배열 복사로 반응형 업데이트 트리거
+            searchResults = [];
         }
     }
 
-    // 검색 기능 수정
-    async function performSearch() {
-        // 검색어가 비어있으면 검색하지 않음
-        if (!searchQuery.trim()) {
+    // 컨텍스트 추출 함수
+    function extractContextForKeyword(text, keyword, contextLength = 40) {
+        if (!text || !keyword || typeof text !== 'string') return '';
+        
+        const lowerText = text.toLowerCase();
+        const lowerKeyword = keyword.toLowerCase();
+        const keywordIndex = lowerText.indexOf(lowerKeyword);
+        
+        if (keywordIndex === -1) return '';
+        
+        const startIndex = Math.max(0, keywordIndex - contextLength);
+        const endIndex = Math.min(text.length, keywordIndex + keyword.length + contextLength);
+        
+        let context = text.substring(startIndex, endIndex);
+        
+        // 시작/끝에 있을 경우 생략 부호 추가
+        if (startIndex > 0) context = '...' + context;
+        if (endIndex < text.length) context = context + '...';
+        
+        return context;
+    }
+
+    // 클라이언트 사이드 검색 기능
+    function performSearch() {
+        const query = searchQuery.trim().toLowerCase();
+        
+        if (!query) {
             searchResults = [];
             return;
         }
@@ -39,12 +75,38 @@
         isSearching = true;
         
         try {
-            // API 엔드포인트로 검색 요청
-            const response = await fetch(`/api/search?q=${encodeURIComponent(searchQuery.trim())}`);
-            const data = await response.json();
-            searchResults = data.results;
+            // 클라이언트 사이드에서 검색 수행
+            searchResults = allPostsData
+                .filter(post => {
+                    const titleMatch = post.title.toLowerCase().includes(query);
+                    const contentMatch = post.content.toLowerCase().includes(query);
+                    const summaryMatch = post.summary && post.summary.toLowerCase().includes(query);
+                    
+                    return titleMatch || contentMatch || summaryMatch;
+                })
+                .map(post => {
+                    // 컨텍스트 추출
+                    let matchContext = '';
+                    
+                    if (post.content.toLowerCase().includes(query)) {
+                        matchContext = extractContextForKeyword(post.content, query, 60);
+                    } else if (post.summary && post.summary.toLowerCase().includes(query)) {
+                        matchContext = extractContextForKeyword(post.summary, query, 60);
+                    }
+                    
+                    return {
+                        ...post,
+                        matchContext
+                    };
+                })
+                .sort((a, b) => {
+                    // 날짜 기준 내림차순 정렬
+                    const dateA = new Date(a.date);
+                    const dateB = new Date(b.date);
+                    return dateB - dateA;
+                });
         } catch (error) {
-            console.error('검색 중 오류 발생:', error);
+            console.error('Search error:', error);
             searchResults = [];
         } finally {
             isSearching = false;
