@@ -9,38 +9,103 @@
     let searchQuery = $state('');
     let searchResults = $state([]);
     let isSearching = $state(false);
-    let allPostsData = $state([]);
+    let searchIndex = $state([]); // 기본 메타데이터 (색인)
+    let loadedCategories = $state({}); // 로드된 카테고리 데이터
+    let loadedYears = $state({}); // 로드된 연도 데이터
     
-    // 페이지 로드 시 검색 데이터 가져오기
+    // 페이지 로드 시 검색 색인 데이터 가져오기
     onMount(async () => {
         try {
-            const response = await fetch('/search-data.json');
+            console.log('검색 색인 데이터 로드 시도...');
+            const response = await fetch('/search-data/index.json');
             if (response.ok) {
-                allPostsData = await response.json();
+                searchIndex = await response.json();
+                console.log(`검색 색인 로드 완료: ${searchIndex.length}개 포스트 메타데이터`);
+            } else {
+                // 색인 파일이 없으면 기존 방식으로 전체 데이터 로드
+                console.log('색인 파일을 찾을 수 없어 전체 검색 데이터를 로드합니다.');
+                const fullResponse = await fetch('/search-data.json');
+                if (fullResponse.ok) {
+                    const fullData = await fullResponse.json();
+                    searchIndex = fullData.map(post => {
+                        const { content, ...metadata } = post;
+                        return metadata;
+                    });
+                    console.log(`전체 데이터에서 ${searchIndex.length}개 메타데이터 추출`);
+                }
             }
         } catch (error) {
-            console.error('Failed to load search data:', error);
+            console.error('검색 데이터 로드 중 오류 발생:', error);
         }
     });
     
-    // 모달 열기/닫기
-    function toggleSearchModal() {
-        showSearchModal = !showSearchModal;
-        if (!showSearchModal) {
-            // 모달 닫을 때 상태 초기화
-            searchQuery = '';
-            searchResults = [];
+    // 필요한 카테고리 데이터 로드
+    async function loadCategoryData(category) {
+        if (loadedCategories[category]) {
+            return loadedCategories[category];
+        }
+        
+        try {
+            console.log(`카테고리 '${category}' 데이터 로드 중...`);
+            const response = await fetch(`/search-data/category-${category}.json`);
+            if (response.ok) {
+                const data = await response.json();
+                loadedCategories[category] = data;
+                console.log(`카테고리 '${category}' 데이터 로드 완료: ${data.length}개 포스트`);
+                return data;
+            } else {
+                console.error(`카테고리 '${category}' 데이터를 찾을 수 없습니다.`);
+                return [];
+            }
+        } catch (error) {
+            console.error(`카테고리 '${category}' 데이터 로드 중 오류 발생:`, error);
+            return [];
         }
     }
     
-    // 검색 입력 필드에 대한 이벤트 핸들러
-    function handleInput() {
-        // 검색어가 비어있는 경우, 강조 표시 제거를 위해 결과 재렌더링
-        if (!searchQuery.trim()) {
-            searchResults = [];
+    // 필요한 연도 데이터 로드
+    async function loadYearData(year) {
+        if (loadedYears[year]) {
+            return loadedYears[year];
+        }
+        
+        try {
+            console.log(`연도 '${year}' 데이터 로드 중...`);
+            const response = await fetch(`/search-data/year-${year}.json`);
+            if (response.ok) {
+                const data = await response.json();
+                loadedYears[year] = data;
+                console.log(`연도 '${year}' 데이터 로드 완료: ${data.length}개 포스트`);
+                return data;
+            } else {
+                console.error(`연도 '${year}' 데이터를 찾을 수 없습니다.`);
+                return [];
+            }
+        } catch (error) {
+            console.error(`연도 '${year}' 데이터 로드 중 오류 발생:`, error);
+            return [];
         }
     }
-
+    
+    // 전체 검색 데이터 로드 (필요한 경우)
+    async function loadAllData() {
+        try {
+            console.log('전체 검색 데이터 로드 중...');
+            const response = await fetch('/search-data.json');
+            if (response.ok) {
+                const data = await response.json();
+                console.log(`전체 검색 데이터 로드 완료: ${data.length}개 포스트`);
+                return data;
+            } else {
+                console.error('전체 검색 데이터를 찾을 수 없습니다.');
+                return [];
+            }
+        } catch (error) {
+            console.error('전체 검색 데이터 로드 중 오류 발생:', error);
+            return [];
+        }
+    }
+    
     // 컨텍스트 추출 함수
     function extractContextForKeyword(text, keyword, contextLength = 40) {
         if (!text || !keyword || typeof text !== 'string') return '';
@@ -62,9 +127,9 @@
         
         return context;
     }
-
-    // 클라이언트 사이드 검색 기능
-    function performSearch() {
+    
+    // 지능형 검색 수행
+    async function performSearch() {
         const query = searchQuery.trim().toLowerCase();
         
         if (!query) {
@@ -75,21 +140,78 @@
         isSearching = true;
         
         try {
-            // 클라이언트 사이드에서 검색 수행
-            searchResults = allPostsData
-                .filter(post => {
-                    const titleMatch = post.title.toLowerCase().includes(query);
-                    const contentMatch = post.content.toLowerCase().includes(query);
-                    const summaryMatch = post.summary && post.summary.toLowerCase().includes(query);
-                    
-                    return titleMatch || contentMatch || summaryMatch;
-                })
-                .map(post => {
-                    // 컨텍스트 추출
+            // 1. 먼저 메타데이터로 제목, 요약, 카테고리 검색
+            let metaResults = searchIndex.filter(post => 
+                post.title.toLowerCase().includes(query) || 
+                (post.summary && post.summary.toLowerCase().includes(query)) ||
+                post.category.toLowerCase().includes(query)
+            );
+            
+            // 제목이나 요약에서 발견되지 않았다면 내용 검색 필요
+            if (metaResults.length === 0) {
+                console.log('메타데이터에서 결과를 찾지 못했습니다. 전체 내용 검색 중...');
+                
+                // 관련 카테고리가 있는지 확인
+                const relatedCategories = [...new Set(searchIndex.map(post => post.category))].filter(
+                    category => category.toLowerCase().includes(query)
+                );
+                
+                // 연도 검색어인지 확인 (예: "2025")
+                const yearMatch = query.match(/\b(20\d{2})\b/);
+                const relatedYears = yearMatch ? [yearMatch[1]] : [];
+                
+                // 카테고리 또는 연도 관련 데이터 로드
+                let contentSearchData = [];
+                
+                if (relatedCategories.length > 0) {
+                    // 관련 카테고리 데이터 로드
+                    for (const category of relatedCategories) {
+                        const categoryData = await loadCategoryData(category);
+                        contentSearchData = [...contentSearchData, ...categoryData];
+                    }
+                } else if (relatedYears.length > 0) {
+                    // 관련 연도 데이터 로드
+                    for (const year of relatedYears) {
+                        const yearData = await loadYearData(year);
+                        contentSearchData = [...contentSearchData, ...yearData];
+                    }
+                } else {
+                    // 전체 데이터 로드 (최후의 수단)
+                    contentSearchData = await loadAllData();
+                }
+                
+                // 내용 검색
+                const contentResults = contentSearchData.filter(post => 
+                    post.content && post.content.toLowerCase().includes(query)
+                );
+                
+                // 결과 병합
+                metaResults = [...metaResults, ...contentResults];
+            } else {
+                console.log(`메타데이터에서 ${metaResults.length}개 결과를 찾았습니다. 컨텍스트 로드 중...`);
+                
+                // 필요한 카테고리 데이터만 로드
+                const categories = [...new Set(metaResults.map(post => post.category))];
+                let contentData = [];
+                
+                for (const category of categories) {
+                    const categoryData = await loadCategoryData(category);
+                    contentData = [...contentData, ...categoryData];
+                }
+                
+                // 내용으로 컨텍스트 추출을 위한 매핑
+                const contentMap = {};
+                contentData.forEach(post => {
+                    contentMap[post.slug] = post.content;
+                });
+                
+                // 메타 결과에 내용 컨텍스트 추가
+                metaResults = metaResults.map(post => {
+                    const content = contentMap[post.slug] || '';
                     let matchContext = '';
                     
-                    if (post.content.toLowerCase().includes(query)) {
-                        matchContext = extractContextForKeyword(post.content, query, 60);
+                    if (content && content.toLowerCase().includes(query)) {
+                        matchContext = extractContextForKeyword(content, query, 60);
                     } else if (post.summary && post.summary.toLowerCase().includes(query)) {
                         matchContext = extractContextForKeyword(post.summary, query, 60);
                     }
@@ -98,21 +220,42 @@
                         ...post,
                         matchContext
                     };
-                })
-                .sort((a, b) => {
-                    // 날짜 기준 내림차순 정렬
-                    const dateA = new Date(a.date);
-                    const dateB = new Date(b.date);
-                    return dateB - dateA;
                 });
+            }
+            
+            // 결과 정렬 (날짜 내림차순)
+            searchResults = metaResults.sort((a, b) => {
+                const dateA = new Date(a.date);
+                const dateB = new Date(b.date);
+                return dateB - dateA;
+            });
+            
         } catch (error) {
-            console.error('Search error:', error);
+            console.error('검색 중 오류 발생:', error);
             searchResults = [];
         } finally {
             isSearching = false;
         }
     }
     
+    // 모달 열기/닫기
+    function toggleSearchModal() {
+        showSearchModal = !showSearchModal;
+        if (!showSearchModal) {
+            // 모달 닫을 때 상태 초기화
+            searchQuery = '';
+            searchResults = [];
+        }
+    }
+    
+    // 검색 입력 필드에 대한 이벤트 핸들러
+    function handleInput() {
+        // 검색어가 비어있는 경우, 강조 표시 제거를 위해 결과 재렌더링
+        if (!searchQuery.trim()) {
+            searchResults = [];
+        }
+    }
+
     // 엔터 키로 검색
     function handleKeyPress(event) {
         if (event.key === 'Enter') {
