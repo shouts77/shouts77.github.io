@@ -48,6 +48,7 @@ export async function generateSearchData() {
             year,
             category: data.category || '미분류',
             summary: data.summary || '',
+            // 콘텐츠 전체 포함 (content 제한 없음)
             content: cleanContent
           };
         } catch (e) {
