@@ -7,7 +7,7 @@
 		"dev": "vite dev --host 0.0.0.0 --port 3400",
 		"build": "vite build",
 		"preview": "vite preview",
-		"generate-search": "node src/lib/generate-search-data.js",
+		"generate-search": "node -e \"import('./src/lib/generate-search-data.js').then(module => module.generateSearchData())\"",
 		"prebuild": "npm run generate-search",
 		"deploy": "gh-pages -d build"
 	},
