@@ -5,16 +5,21 @@
       <description>SvelteKit으로 만든 개인 블로그</description>
       <link>https://shouts77.github.io</link>
       <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-      <pubDate>Fri, 06 Jun 2025 14:53:01 GMT</pubDate>
+      <pubDate>Fri, 06 Jun 2025 15:17:48 GMT</pubDate>
       
       
       <item>
         <title>2025년 메모(4~6월)</title>
         <link>https://shouts77.github.io/blog/250408_memo2</link>
         <guid isPermaLink="true">https://shouts77.github.io/blog/250408_memo2</guid>
-        <pubDate>Thu, 05 Jun 2025 00:00:00 GMT</pubDate>
+        <pubDate>Fri, 06 Jun 2025 00:00:00 GMT</pubDate>
         <description><![CDATA[2025년 2분기 일상의 기록 모음]]></description>
-        <content:encoded><![CDATA[<h2>2025-06-05 목</h2>
+        <content:encoded><![CDATA[<h2>2025-06-06 금</h2>
+<ol>
+<li>오늘은 집에서 쉬면서 게임, 드라마 시청, 약간의 독서를 했다. 게임은 요즘 디아블로4를 하고 있는데 캐릭터를 키우고 강화하는게 재미있어서 즐겨하고 있다. 드라마는 오늘 간만에 디즈니플러스에서 &#39;나인퍼즐&#39; 이라는 걸 보기 시작했는데 스토리 전개가 재미있어서 끝을 볼 것 같기도 하다. 이러다 보니 독서는 항상 뒷전인데, 이제 &#39;지대넓얕0&#39;도 끝이 보이기 시작한다.</li>
+<li>어제 블로그를 깃헙 페이지로 런칭하느라 여러개를 손봤었는데, 오늘은 어제 한 것들을 돌아보면서 코파일럿의 도움을 받아 중복된 부분 일부를 리팩토링 해봤다.</li>
+</ol>
+<h2>2025-06-05 목</h2>
 <ol>
 <li>앞으로는 svelte 블로그를 운영하기로 마음을 정하고 깃헙 페이지로 호스팅하도록 작업했다. 심플하면서도 내 수준으로 관리가 가능한 블로그를 운영해보고 싶었는데, copilot의 도움을 받으면서 검색 등 상당 부분은 ai 코딩에 의존한 부분도 없지 않다. 그동안 위키 블로그를 사용할 수 있도록 도움을 주신 John Grib 님에게도 다시 한 번 감사를 드린다.</li>
 </ol>
