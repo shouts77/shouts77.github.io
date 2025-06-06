@@ -1,4 +1,5 @@
 <script>
+    import { getCategoryColorClass } from '$lib/utils/categoryStyles.js';
     export let data;
     
     // 선택된 카테고리 (기본값: 전체)
@@ -54,20 +55,6 @@
     
     function resetPagination() {
         currentPage = 1;
-    }
-    
-    // 카테고리별 색상 매핑 (선택 사항)
-    const categoryColors = {
-        'about': 'bg-blue-100 text-blue-800',
-        'memo': 'bg-green-100 text-green-800',
-        'photo': 'bg-yellow-100 text-yellow-800',
-        '미분류': 'bg-gray-100 text-gray-800'
-        // 필요에 따라 추가
-    };
-    
-    // 카테고리에 맞는 색상 클래스 반환
-    function getCategoryColorClass(category) {
-        return categoryColors[category] || 'bg-gray-100 text-gray-800';
     }
     
     // 페이지 버튼 렌더링 (최대 5개)

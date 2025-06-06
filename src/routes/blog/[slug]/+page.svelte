@@ -1,6 +1,7 @@
 <script>
     import { formatDate } from '$lib/utils/formattingDate.js';
     import { generateTOC } from '$lib/utils/toc.js';
+    import { getCategoryColorClass } from '$lib/utils/categoryStyles.js';
     import TOC from '$lib/components/TOC.svelte';
     import Giscus from '$lib/components/Giscus.svelte';
     import { onMount } from 'svelte';
@@ -20,20 +21,6 @@
     
     // Giscus 테마 상태
     let giscusTheme = $state('light'); // 기본 테마는 light
-    
-    // 카테고리별 색상 매핑 (선택 사항) - 블로그 메인 페이지와 동일하게 유지
-    const categoryColors = {
-        'about': 'bg-blue-100 text-blue-800',
-        'memo': 'bg-green-100 text-green-800',
-        'photo': 'bg-yellow-100 text-yellow-800',
-        'undecided': 'bg-gray-100 text-gray-800'
-        // 필요에 따라 추가
-    };
-    
-    // 카테고리에 맞는 색상 클래스 반환
-    function getCategoryColorClass(category) {
-        return categoryColors[category] || 'bg-gray-100 text-gray-800';
-    }
     
     // 데이터 변경 감지 및 업데이트
     $effect(() => {
