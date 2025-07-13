@@ -5,8 +5,22 @@
       <description>SvelteKit으로 만든 개인 블로그</description>
       <link>https://shouts77.github.io</link>
       <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-      <pubDate>Wed, 25 Jun 2025 23:58:37 GMT</pubDate>
+      <pubDate>Sun, 13 Jul 2025 10:19:06 GMT</pubDate>
       
+      
+      <item>
+        <title>2025년 메모(7~9월)</title>
+        <link>https://shouts77.github.io/blog/250713_memo3</link>
+        <guid isPermaLink="true">https://shouts77.github.io/blog/250713_memo3</guid>
+        <pubDate>Sun, 13 Jul 2025 00:00:00 GMT</pubDate>
+        <description><![CDATA[2025년 3분기 일상의 기록 모음]]></description>
+        <content:encoded><![CDATA[<h2>2025-07-13 일</h2>
+<ol>
+<li>전보로 인해 글을 쓸 여유가 생기지 않았는데 지금은 약간 마음의 여유가 생겼다. 아직 업무는 파악 중이지만, 조금씩 조금씩 돌아가는 상황이 눈에 들어오고 있다. 업무용 데이터 베이스까지도 조금씩 구축하고 있다.</li>
+<li>어제 &#39;더 베어&#39;라는 드라마를 보는 중, 고객을 위한 특별 이벤트를 진심을 다해 제공하는 모습을 보면서 문득 회사 생각이 났다. 이렇게 모두가 진심을 다해 일할 수 있을까.</li>
+</ol>
+]]></content:encoded>
+      </item>
       
       <item>
         <title>2025년 메모(4~6월)</title>

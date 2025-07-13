@@ -17,6 +17,13 @@
     <!-- 각 블로그 포스트 -->
     
     <url>
+      <loc>https://shouts77.github.io/blog/250713_memo3</loc>
+      <lastmod>2025-07-13</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+    
+    <url>
       <loc>https://shouts77.github.io/blog/250408_memo2</loc>
       <lastmod>2025-06-15</lastmod>
       <changefreq>monthly</changefreq>
