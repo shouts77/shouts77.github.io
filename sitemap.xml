@@ -17,15 +17,22 @@
     <!-- 각 블로그 포스트 -->
     
     <url>
-      <loc>https://shouts77.github.io/blog/250730_monet-to-warhol</loc>
+      <loc>https://shouts77.github.io/blog/250713_memo3</loc>
       <lastmod>2025-07-30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
     
     <url>
-      <loc>https://shouts77.github.io/blog/250713_memo3</loc>
-      <lastmod>2025-07-13</lastmod>
+      <loc>https://shouts77.github.io/blog/250730_faith</loc>
+      <lastmod>2025-07-30</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+    
+    <url>
+      <loc>https://shouts77.github.io/blog/250730_monet-to-warhol</loc>
+      <lastmod>2025-07-30</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
