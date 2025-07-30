@@ -1,0 +1,1 @@
+const t={about:"bg-blue-100 text-blue-800",memo:"bg-green-100 text-green-800",photo:"bg-yellow-100 text-yellow-800",note:"bg-gray-100 text-gray-800"};function o(e){return t[e]||"bg-gray-100 text-gray-800"}export{o as g};
