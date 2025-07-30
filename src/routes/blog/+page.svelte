@@ -182,7 +182,7 @@
                 <tr>
                     <td class="text-gray-400 align-top w-14">{date}</td>
                     <td>
-                        <span class="text-xs px-1.5 py-0.5 rounded-full {getCategoryColorClass(category)}">{category}</span>
+                        <span class="text-xs px-1.5 py-0 rounded {getCategoryColorClass(category)}">{category}</span>
                         <a href="/blog/{slug}" class="no-underline hover:text-blue-800">{title}</a>
                     </td>
                 </tr>

@@ -104,11 +104,11 @@
 <div class="justify-left w-full px-4 pt-2.5 md:justify-left md:w-96 md:px-4">
     <div class="prose">
         <h1 class="mb-0 text-blue-800">{data.meta.title}</h1>
-        <p class="text-sm text-gray-500 mb-0">
+        <p class="text-sm text-gray-500 mb-2">
             {formatDate(data.meta.date)}
             <!-- 카테고리 배지 추가 -->
             {#if data.meta.category}
-            <span class="text-xs px-1.5 py-0.5 rounded-full {getCategoryColorClass(data.meta.category)}">
+            <span class="text-xs px-1.5 py-0 rounded {getCategoryColorClass(data.meta.category)}">
                 {data.meta.category}
             </span>
             {/if}
@@ -141,7 +141,7 @@
                     <td>
                        <!-- 카테고리 배지 추가 -->
                         {#if post.category}
-                        <span class="text-xs px-1.5 py-0.5 rounded-full {getCategoryColorClass(post.category)}">
+                        <span class="text-xs px-1.5 py-0 rounded {getCategoryColorClass(post.category)}">
                             {post.category}
                         </span>
                         <a href="/blog/{post.slug}" class="no-underline hover:text-blue-800">
