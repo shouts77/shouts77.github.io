@@ -9,7 +9,9 @@
 		"preview": "vite preview",
 		"generate-search": "node -e \"import('./src/lib/generate-search-data.js').then(module => module.generateSearchData())\"",
 		"prebuild": "npm run generate-search",
-		"deploy": "gh-pages -d build"
+		"deploy": "gh-pages -d build",
+		 "install-hooks": "cp scripts/hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
+		 "postinstall": "npm run install-hooks"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^6.0.0",
