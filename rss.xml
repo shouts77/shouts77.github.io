@@ -5,8 +5,18 @@
       <description>SvelteKit으로 만든 개인 블로그</description>
       <link>https://shouts77.github.io</link>
       <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-      <pubDate>Sun, 10 Aug 2025 23:23:52 GMT</pubDate>
+      <pubDate>Tue, 12 Aug 2025 00:08:23 GMT</pubDate>
       
+      
+      <item>
+        <title>윤동주의 서시</title>
+        <link>https://shouts77.github.io/blog/250812_prologue</link>
+        <guid isPermaLink="true">https://shouts77.github.io/blog/250812_prologue</guid>
+        <pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate>
+        <description><![CDATA[윤동주의 서시 감상]]></description>
+        <content:encoded><![CDATA[<p>매일 아침마다 깨끗한 마음과 바른 생각으로 하루를 살아보려고 마음먹지만, 저녁이 되면 다시 먼지 투성이인 내 모습을 돌아보게 된다. 시간이 지날 수록 &#39;하늘을 우러러 한 점 부끄럼 없이&#39; 사는 것을 바라며 &#39;잎새에 이는 바람에도 괴로워한&#39; 시인의 마음이 어땠을지 더 공감이 간다. 그래도 포기하지 않고 더 나은 내일을 기대하며 날마다 마음과 생각을 닦아내야겠다.</p>
+]]></content:encoded>
+      </item>
       
       <item>
         <title>2025년 메모(7~9월)</title>
