@@ -17,15 +17,15 @@
     <!-- 각 블로그 포스트 -->
     
     <url>
-      <loc>https://shouts77.github.io/blog/250812_prologue</loc>
-      <lastmod>2025-08-12</lastmod>
+      <loc>https://shouts77.github.io/blog/250713_memo3</loc>
+      <lastmod>2025-08-24</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
     
     <url>
-      <loc>https://shouts77.github.io/blog/250713_memo3</loc>
-      <lastmod>2025-08-11</lastmod>
+      <loc>https://shouts77.github.io/blog/250812_prologue</loc>
+      <lastmod>2025-08-12</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
