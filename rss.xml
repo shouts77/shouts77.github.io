@@ -5,8 +5,18 @@
       <description>SvelteKit으로 만든 개인 블로그</description>
       <link>https://shouts77.github.io</link>
       <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-      <pubDate>Mon, 08 Sep 2025 23:11:11 GMT</pubDate>
+      <pubDate>Wed, 10 Sep 2025 02:24:44 GMT</pubDate>
       
+      
+      <item>
+        <title>여름의 끝</title>
+        <link>https://shouts77.github.io/blog/250910_sunset</link>
+        <guid isPermaLink="true">https://shouts77.github.io/blog/250910_sunset</guid>
+        <pubDate>Wed, 10 Sep 2025 00:00:00 GMT</pubDate>
+        <description><![CDATA[여름 일몰 사진]]></description>
+        <content:encoded><![CDATA[<p>지난 주일 저녁 운동장을 걸으며 찍은 일몰 사진. 여름은 이렇게 지나가고 있다.</p>
+]]></content:encoded>
+      </item>
       
       <item>
         <title>2025년 메모(7~9월)</title>
