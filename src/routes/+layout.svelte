@@ -2,6 +2,7 @@
     import '../styles/app.css';
     import { page } from '$app/stores';
     import { onMount } from 'svelte';
+    import { getCategoryColorClass } from '$lib/utils/categoryStyles.js';
     let { children } = $props();
     
     // 검색 모달 상태 관리
@@ -388,7 +389,7 @@
                                         
                                         <!-- 카테고리 -->
                                         {#if result.category}
-                                            <span class="px-1 py-0 rounded bg-gray-100 text-gray-700 shrink-0 text-xs">
+                                            <span class="px-1 py-0 rounded shrink-0 text-xs {getCategoryColorClass(result.category)}">
                                                 {result.category}
                                             </span>
                                         {/if}
