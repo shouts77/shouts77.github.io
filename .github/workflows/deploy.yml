@@ -24,7 +24,7 @@ jobs:
       - name: Generate search data
         run: |
           echo "Generating search data..."
-          node src/lib/generate-search-data.js
+          npm run generate-search
           echo "Search data generated:"
           ls -la static/search-data.json
           cat static/search-data.json | head -n 20
