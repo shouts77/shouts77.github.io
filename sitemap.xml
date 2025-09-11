@@ -17,6 +17,13 @@
     <!-- 각 블로그 포스트 -->
     
     <url>
+      <loc>https://shouts77.github.io/blog/250912_lunch-time-scenery</loc>
+      <lastmod>2025-09-12</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+    
+    <url>
       <loc>https://shouts77.github.io/blog/250910_sunset</loc>
       <lastmod>2025-09-10</lastmod>
       <changefreq>monthly</changefreq>
