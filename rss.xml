@@ -5,8 +5,18 @@
       <description>SvelteKit으로 만든 개인 블로그</description>
       <link>https://shouts77.github.io</link>
       <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-      <pubDate>Thu, 11 Sep 2025 23:24:26 GMT</pubDate>
+      <pubDate>Sun, 14 Sep 2025 06:35:19 GMT</pubDate>
       
+      
+      <item>
+        <title>구읍뱃터</title>
+        <link>https://shouts77.github.io/blog/250910_ferry-port</link>
+        <guid isPermaLink="true">https://shouts77.github.io/blog/250910_ferry-port</guid>
+        <pubDate>Sun, 14 Sep 2025 00:00:00 GMT</pubDate>
+        <description><![CDATA[구읍뱃터 사진]]></description>
+        <content:encoded><![CDATA[<p>지지난주부터 바닷가에 가보고 싶어서 마음이 들썩들썩했었는데, 어제 마침내 영종도에 다녀왔다. 멍하니 경치를 바라보고 있으면 복잡한 마음과 생각이 차분히 가라앉는 것 같아서 좋다.</p>
+]]></content:encoded>
+      </item>
       
       <item>
         <title>점심시간에 누리는 여유</title>
