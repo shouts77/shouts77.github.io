@@ -13,7 +13,7 @@ summary: 일상 풍경 사진
 
 <img 
     src="/images/250912_lunch-time-scenery.jpeg" 
-    alt="sprout" 
+    alt="lunch-time-scenery" 
     class="post-vertical"
     loading="lazy"
 />
