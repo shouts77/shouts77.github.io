@@ -16,16 +16,35 @@ export async function generateSearchData() {
       return;
     }
     
-    // 파일 목록 가져오기
-    const filenames = fs.readdirSync(postsDirectory);
-    console.log(`총 ${filenames.length}개 파일 발견: ${filenames.join(', ')}`);
+    // 모든 마크다운 파일을 재귀적으로 찾기
+    function findMarkdownFiles(dir) {
+      const files = [];
+      const items = fs.readdirSync(dir);
+      
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory()) {
+          // 하위 디렉토리의 파일들도 재귀적으로 탐색
+          files.push(...findMarkdownFiles(fullPath));
+        } else if (item.endsWith('.md')) {
+          files.push(fullPath);
+        }
+      }
+      
+      return files;
+    }
     
-    // 마크다운 파일만 필터링 및 처리
-    const posts = filenames
-      .filter((file) => file.endsWith('.md'))
-      .map((filename) => {
+    // 파일 목록 가져오기
+    const filePaths = findMarkdownFiles(postsDirectory);
+    console.log(`총 ${filePaths.length}개 파일 발견: ${filePaths.map(f => path.basename(f)).join(', ')}`);
+    
+    // 마크다운 파일 처리
+    const posts = filePaths
+      .map((filePath) => {
+        const filename = path.basename(filePath);
         // console.log(`처리 중: ${filename}`);
-        const filePath = path.join(postsDirectory, filename);
         const fileContents = fs.readFileSync(filePath, 'utf-8');
         
         try {
