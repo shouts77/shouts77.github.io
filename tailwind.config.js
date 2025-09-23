@@ -42,16 +42,6 @@ export default {
               marginBottom: '0.8em',
               textAlign: 'left',                         // 기본 왼쪽 정렬
             },
-            // photo 카테고리용 중앙 정렬 텍스트
-            'p.photo-text': {
-              fontFamily: '"Kimyooyee"',
-              fontSize: '0.80em',
-              lineHeight: '1.6',                         // 조금 더 넓은 줄 간격
-              marginTop: '0.05em',
-              marginBottom: '1.2em',                     // 이미지와의 간격 증가
-              textAlign: 'center',                       // 중앙 정렬
-              color: '#4a5568',                          // 조금 더 부드러운 색상
-            },
             li: {
               fontFamily: '"Kimyooyee"',
               fontSize: '0.80em',
