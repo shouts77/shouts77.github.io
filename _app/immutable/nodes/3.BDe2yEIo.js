@@ -1,0 +1,1 @@
+import{component as a}from"./2.ULRqjbYD.js";async function o({data:e}){return{meta:e.meta}}const t=Object.freeze(Object.defineProperty({__proto__:null,load:o},Symbol.toStringTag,{value:"Module"}));export{a as component,t as universal};
