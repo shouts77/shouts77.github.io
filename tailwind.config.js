@@ -74,6 +74,11 @@ export default {
               display: 'block',          // 블록 요소로 설정
               boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)', // 그림자 효과
               borderRadius: '0.375rem',  // 모서리 둥글게
+              // 500px 이하 화면에서는 화면에 안전하게 맞춤
+              '@media (max-width: 500px)': {
+                width: '100%',           // 너비를 화면에 맞춤
+                maxWidth: '100%',        // 최대 너비도 100%로 보장
+              },
               // 768px 이상 화면(태블릿/데스크톱)에서는 80%로 제한
               '@media (min-width: 768px)': {
                 maxWidth: '80%',
