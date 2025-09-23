@@ -48,7 +48,7 @@ export default {
               marginBottom: '0.25em'
             },
             'img.post-vertical': {
-              maxHeight: '400px',        // 세로형 이미지 최대 높이
+              maxHeight: '460px',        // 세로형 이미지 최대 높이
               width: 'auto',             // 너비는 자동으로 비율 유지
               margin: '0.5em auto',      // 상하 여백과 가운데 정렬
               display: 'block',          // 블록 요소로 설정
