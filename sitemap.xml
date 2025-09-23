@@ -17,6 +17,13 @@
     <!-- 각 블로그 포스트 -->
     
     <url>
+      <loc>https://shouts77.github.io/blog/250713_memo3</loc>
+      <lastmod>2025-09-23</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+    
+    <url>
       <loc>https://shouts77.github.io/blog/250910_ferry-port</loc>
       <lastmod>2025-09-14</lastmod>
       <changefreq>monthly</changefreq>
@@ -33,13 +40,6 @@
     <url>
       <loc>https://shouts77.github.io/blog/250910_sunset</loc>
       <lastmod>2025-09-10</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-    </url>
-    
-    <url>
-      <loc>https://shouts77.github.io/blog/250713_memo3</loc>
-      <lastmod>2025-09-09</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
