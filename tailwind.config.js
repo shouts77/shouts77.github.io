@@ -55,6 +55,12 @@ export default {
               display: 'block',          // 블록 요소로 설정
               boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)', // 그림자 효과
               borderRadius: '0.375rem',  // 모서리 둥글게
+              // 500px 이하 화면에서는 너비를 화면에 완전히 맞춤
+              '@media (max-width: 500px)': {
+                maxHeight: 'none',       // 높이 제한 해제하여 비율 유지
+                width: '100%',           // 너비를 화면에 맞춤
+                maxWidth: '100%',
+              },
               // 768px 이상 화면에서는 더 큰 높이 허용
               '@media (min-width: 768px)': {
                 maxHeight: '460px',
@@ -81,6 +87,12 @@ export default {
               display: 'block',          // 블록 요소로 설정
               boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)', // 그림자 효과
               borderRadius: '0.375rem',  // 모서리 둥글게
+              // 500px 이하 화면에서는 너비를 화면에 완전히 맞춤
+              '@media (max-width: 500px)': {
+                maxHeight: 'none',       // 높이 제한 해제하여 비율 유지
+                width: '100%',           // 너비를 화면에 맞춤
+                maxWidth: '100%',
+              },
               // 768px 이상 화면에서는 더 큰 높이 허용
               '@media (min-width: 768px)': {
                 maxHeight: '400px',
