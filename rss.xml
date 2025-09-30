@@ -5,8 +5,18 @@
       <description>SvelteKit으로 만든 개인 블로그</description>
       <link>https://shouts77.github.io</link>
       <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-      <pubDate>Tue, 23 Sep 2025 23:41:43 GMT</pubDate>
+      <pubDate>Tue, 30 Sep 2025 22:35:02 GMT</pubDate>
       
+      
+      <item>
+        <title>이른 아침 출근길 사진</title>
+        <link>https://shouts77.github.io/blog/251001_ontheway-towork</link>
+        <guid isPermaLink="true">https://shouts77.github.io/blog/251001_ontheway-towork</guid>
+        <pubDate>Wed, 01 Oct 2025 00:00:00 GMT</pubDate>
+        <description><![CDATA[출근길 거리 사진]]></description>
+        <content:encoded><![CDATA[<p>이른 아침에 출근하면서 찍은 사진. 놓치면 다시 만나기 어려울 것 같은 순간.</p>
+]]></content:encoded>
+      </item>
       
     </channel>
   </rss>

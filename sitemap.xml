@@ -16,4 +16,11 @@
     
     <!-- 각 블로그 포스트 -->
     
+    <url>
+      <loc>https://shouts77.github.io/blog/251001_ontheway-towork</loc>
+      <lastmod>2025-10-01</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+    
   </urlset>
