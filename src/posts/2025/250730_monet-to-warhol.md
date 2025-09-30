@@ -14,7 +14,7 @@ summary: 전시
 <figure>
     <figcaption class="text-center text-sm text-gray-900">Gustave Courbet, 폭풍 후 에트르타의 절벽, 1870</figcaption>
 <img 
-    src="/images/250730_courbet.jpg" 
+    src="/images/2025/250730_courbet.jpg" 
     alt="courbet" 
     class="post-vertical"
     loading="lazy"
@@ -24,7 +24,7 @@ summary: 전시
 <figure>
     <figcaption class="text-center text-sm text-gray-900">David Hockney, Tree, 1968</figcaption>
 <img 
-    src="/images/250730_hocney.jpg" 
+    src="/images/2025/250730_hocney.jpg" 
     alt="hocney" 
     class="post-vertical"
     loading="lazy"
