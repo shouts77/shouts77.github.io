@@ -14,6 +14,6 @@ summary: 출근길 거리 사진
 <img 
     src="/images/2025/251001_ontheway-towork.jpeg" 
     alt="sunset" 
-    class="post-horizontal"
+    class="post-vertical"
     loading="lazy"
 />
