@@ -247,7 +247,7 @@
     }
 </script>
 
-<svelte:window on:click={handleOutsideClick} />
+<svelte:window onclick={handleOutsideClick} />
 
 <nav class="w-full md:w-96 px-2 pt-1">
     <div class="flex justify-between items-center font-yoo text-sm">
@@ -277,7 +277,7 @@
         <div class="flex items-center space-x-1">
             <!-- 검색 버튼 -->
             <button
-                on:click|stopPropagation={toggleSearchModal}
+                onclick={toggleSearchModal}
                 class="px-1 py-1 text-sm hover:text-blue-600"
                 aria-label="검색"
                 title="검색"
@@ -322,18 +322,25 @@
 {#if showSearchModal}
     <div 
         class="fixed inset-0 bg-black bg-opacity-30 z-40 flex items-start justify-center pt-14"
-        on:click|self={toggleSearchModal}
+        role="button"
+        tabindex="0"
+        onclick={toggleSearchModal}
+        onkeydown={(e) => e.key === 'Escape' && toggleSearchModal()}
     >
         <div 
             id="search-modal"
             class="bg-white rounded-md shadow-lg w-[80%] max-w-sm max-h-[75vh] overflow-hidden flex flex-col font-yoo animate-fadeIn"
-            on:click|stopPropagation
+            role="dialog"
+            aria-modal="true"
+            tabindex="-1"
+            onclick={(e) => e.stopPropagation()}
+            onkeydown={(e) => e.key === 'Escape' && toggleSearchModal()}
         >
             <div class="p-2 border-b border-gray-100">
                 <div class="flex justify-between items-center mb-1.5">
                     <h3 class="text-sm font-medium text-gray-800">검색</h3>
                     <button 
-                        on:click={toggleSearchModal}
+                        onclick={toggleSearchModal}
                         class="text-gray-400 hover:text-gray-600"
                         aria-label="닫기"
                     >
@@ -349,13 +356,12 @@
                         type="text"
                         placeholder="검색어를 입력하세요"
                         bind:value={searchQuery}
-                        on:keypress={handleKeyPress}
-                        on:input={handleInput}
+                        onkeypress={handleKeyPress}
+                        oninput={handleInput}
                         class="w-full text-xs py-1 px-2 border border-gray-200 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-400"
-                        autofocus
                     />
                     <button 
-                        on:click={performSearch}
+                        onclick={performSearch}
                         class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
                         aria-label="검색"
                         disabled={isSearching}
@@ -380,7 +386,7 @@
                                 <a 
                                     href="/blog/{result.slug}" 
                                     class="block py-1.5 px-2 hover:bg-gray-50 transition-colors"
-                                    on:click={toggleSearchModal}
+                                    onclick={toggleSearchModal}
                                 >
                                     <!-- 한 줄에 날짜, 카테고리, 제목 순서로 표시 -->
                                     <div class="flex items-center text-xs gap-1">
@@ -397,7 +403,7 @@
                                         <!-- 제목에 키워드 강조 -->
                                         <h4 class="font-medium text-gray-800 truncate">
                                             {#if searchQuery && searchQuery.trim()}
-                                                <!-- svelte-ignore security-warn -->
+                                                <!-- svelte-ignore a11y_missing_attribute -->
                                                 {@html result.title.replace(
                                                     new RegExp(searchQuery, 'gi'), 
                                                     match => `<mark class="bg-yellow-200 px-0.5 rounded">${match}</mark>`
@@ -412,7 +418,7 @@
                                     {#if result.matchContext}
                                         <p class="mt-0.5 text-xs text-gray-600 bg-yellow-50 p-1 rounded leading-snug">
                                             {#if searchQuery && searchQuery.trim()}
-                                                <!-- svelte-ignore security-warn -->
+                                                <!-- svelte-ignore a11y_missing_attribute -->
                                                 {@html result.matchContext.replace(
                                                     new RegExp(searchQuery, 'gi'), 
                                                     match => `<mark class="bg-yellow-200 px-0.5 rounded">${match}</mark>`
@@ -432,7 +438,7 @@
                             <a 
                                 href="/search?q={encodeURIComponent(searchQuery)}"
                                 class="text-xs text-blue-600 hover:underline"
-                                on:click={toggleSearchModal}
+                                onclick={toggleSearchModal}
                             >
                                 모든 결과 보기 ({searchResults.length}건)
                             </a>
