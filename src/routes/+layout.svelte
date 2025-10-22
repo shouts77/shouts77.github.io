@@ -11,102 +11,27 @@
     let searchResults = $state([]);
     let isSearching = $state(false);
     let searchIndex = $state([]); // 기본 메타데이터 (색인)
-    let loadedCategories = $state({}); // 로드된 카테고리 데이터
-    let loadedYears = $state({}); // 로드된 연도 데이터
     let allPostsData = []; // 모든 포스트 데이터 (전체 검색 데이터)
     
-    // 페이지 로드 시 검색 색인 데이터 가져오기
+    // 페이지 로드 시 검색 데이터 가져오기
     onMount(async () => {
         try {
-            console.log('검색 색인 데이터 로드 시도...');
-            const response = await fetch('/search-data/index.json');
+            console.log('검색 데이터 로드 시도...');
+            const response = await fetch('/search-data.json');
             if (response.ok) {
-                searchIndex = await response.json();
-                console.log(`검색 색인 로드 완료: ${searchIndex.length}개 포스트 메타데이터`);
+                allPostsData = await response.json();
+                searchIndex = allPostsData.map(post => {
+                    const { content, ...metadata } = post;
+                    return metadata;
+                });
+                console.log(`검색 데이터 로드 완료: ${searchIndex.length}개 포스트 메타데이터`);
             } else {
-                // 색인 파일이 없으면 기존 방식으로 전체 데이터 로드
-                console.log('색인 파일을 찾을 수 없어 전체 검색 데이터를 로드합니다.');
-                const fullResponse = await fetch('/search-data.json');
-                if (fullResponse.ok) {
-                    const fullData = await fullResponse.json();
-                    searchIndex = fullData.map(post => {
-                        const { content, ...metadata } = post;
-                        return metadata;
-                    });
-                    console.log(`전체 데이터에서 ${searchIndex.length}개 메타데이터 추출`);
-                }
+                console.error('검색 데이터를 찾을 수 없습니다.');
             }
         } catch (error) {
             console.error('검색 데이터 로드 중 오류 발생:', error);
         }
     });
-    
-    // 필요한 카테고리 데이터 로드
-    async function loadCategoryData(category) {
-        if (loadedCategories[category]) {
-            return loadedCategories[category];
-        }
-        
-        try {
-            console.log(`카테고리 '${category}' 데이터 로드 중...`);
-            const response = await fetch(`/search-data/category-${category}.json`);
-            if (response.ok) {
-                const data = await response.json();
-                loadedCategories[category] = data;
-                console.log(`카테고리 '${category}' 데이터 로드 완료: ${data.length}개 포스트`);
-                return data;
-            } else {
-                console.error(`카테고리 '${category}' 데이터를 찾을 수 없습니다.`);
-                return [];
-            }
-        } catch (error) {
-            console.error(`카테고리 '${category}' 데이터 로드 중 오류 발생:`, error);
-            return [];
-        }
-    }
-    
-    // 필요한 연도 데이터 로드
-    async function loadYearData(year) {
-        if (loadedYears[year]) {
-            return loadedYears[year];
-        }
-        
-        try {
-            console.log(`연도 '${year}' 데이터 로드 중...`);
-            const response = await fetch(`/search-data/year-${year}.json`);
-            if (response.ok) {
-                const data = await response.json();
-                loadedYears[year] = data;
-                console.log(`연도 '${year}' 데이터 로드 완료: ${data.length}개 포스트`);
-                return data;
-            } else {
-                console.error(`연도 '${year}' 데이터를 찾을 수 없습니다.`);
-                return [];
-            }
-        } catch (error) {
-            console.error(`연도 '${year}' 데이터 로드 중 오류 발생:`, error);
-            return [];
-        }
-    }
-    
-    // 전체 검색 데이터 로드 (필요한 경우)
-    async function loadAllData() {
-        try {
-            console.log('전체 검색 데이터 로드 중...');
-            const response = await fetch('/search-data.json');
-            if (response.ok) {
-                const data = await response.json();
-                console.log(`전체 검색 데이터 로드 완료: ${data.length}개 포스트`);
-                return data;
-            } else {
-                console.error('전체 검색 데이터를 찾을 수 없습니다.');
-                return [];
-            }
-        } catch (error) {
-            console.error('전체 검색 데이터 로드 중 오류 발생:', error);
-            return [];
-        }
-    }
     
     // 검색 수행 함수
     function performSearch() {
@@ -120,22 +45,15 @@
         isSearching = true;
         
         try {
-            // 검색 데이터가 없으면 로드
+            // 검색 데이터가 없으면 빈 결과 반환
             if (!allPostsData || allPostsData.length === 0) {
-                fetch('/search-data.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        allPostsData = data;
-                        executeSearch(query);
-                    })
-                    .catch(error => {
-                        console.error('검색 데이터 로드 실패:', error);
-                        searchResults = [];
-                        isSearching = false;
-                    });
-            } else {
-                executeSearch(query);
+                console.log('검색 데이터가 로드되지 않았습니다.');
+                searchResults = [];
+                isSearching = false;
+                return;
             }
+            
+            executeSearch(query);
         } catch (error) {
             console.error('검색 중 오류 발생:', error);
             searchResults = [];
