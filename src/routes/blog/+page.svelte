@@ -201,7 +201,7 @@
             <button 
                 class="pagination-btn" 
                 disabled={currentPage === 1} 
-                on:click={goToPrevPage}
+                onclick={goToPrevPage}
             >
                 &lt;
             </button>
@@ -209,7 +209,7 @@
             {#each pageButtons as page}
                 <button 
                     class="pagination-btn {page === currentPage ? 'active' : ''}" 
-                    on:click={() => goToPage(page)}
+                    onclick={() => goToPage(page)}
                 >
                     {page}
                 </button>
@@ -218,7 +218,7 @@
             <button 
                 class="pagination-btn" 
                 disabled={currentPage === totalPages} 
-                on:click={goToNextPage}
+                onclick={goToNextPage}
             >
                 &gt;
             </button>
