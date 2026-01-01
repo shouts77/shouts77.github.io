@@ -159,9 +159,9 @@
 
     <!-- Giscus 댓글 시스템 추가 -->
     <Giscus
-        repo="shouts77/svlog"
+        repo="shouts77/shouts77.github.io"
         repoId="R_kgDOOjOFgQ"
-        category="Announcements"
+        category="General"
         categoryId="DIC_kwDOOjOFgc4CqaMe"
         mapping="pathname"
         reactionsEnabled="1"
