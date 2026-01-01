@@ -160,9 +160,9 @@
     <!-- Giscus 댓글 시스템 추가 -->
     <Giscus
         repo="shouts77/shouts77.github.io"
-        repoId="R_kgDOOjOFgQ"
+        repoId="R_kgDOO2PVag"
         category="General"
-        categoryId="DIC_kwDOOjOFgc4CqaMe"
+        categoryId="DIC_kwDOO2PVas4C0dIL"
         mapping="pathname"
         reactionsEnabled="1"
         theme={giscusTheme}
