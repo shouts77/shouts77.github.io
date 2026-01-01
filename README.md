@@ -1,38 +1,6 @@
-# sv
+# svlong
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+일상을 돌아보며 간단하게 생각을 정리하고자 만든 블로그입니다.      
 
-## Creating a project
+svelte 공식 문서를 보며 만들기 시작했지만, AI의 도움을 받아서 필요한 최소의 기능만 추가하고 있습니다.   
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
