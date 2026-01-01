@@ -3,20 +3,18 @@
     import { page } from '$app/stores';
     import { onMount } from 'svelte';
     import { getCategoryColorClass } from '$lib/utils/categoryStyles.js';
-    let { children } = $props();
     
     // 검색 모달 상태 관리
-    let showSearchModal = $state(false);
-    let searchQuery = $state('');
-    let searchResults = $state([]);
-    let isSearching = $state(false);
-    let searchIndex = $state([]); // 기본 메타데이터 (색인)
+    let showSearchModal = false;
+    let searchQuery = '';
+    let searchResults = [];
+    let isSearching = false;
+    let searchIndex = []; // 기본 메타데이터 (색인)
     let allPostsData = []; // 모든 포스트 데이터 (전체 검색 데이터)
     
     // 페이지 로드 시 검색 데이터 가져오기
     onMount(async () => {
         try {
-            console.log('검색 데이터 로드 시도...');
             const response = await fetch('/search-data.json');
             if (response.ok) {
                 allPostsData = await response.json();
@@ -24,7 +22,6 @@
                     const { content, ...metadata } = post;
                     return metadata;
                 });
-                console.log(`검색 데이터 로드 완료: ${searchIndex.length}개 포스트 메타데이터`);
             } else {
                 console.error('검색 데이터를 찾을 수 없습니다.');
             }
@@ -47,7 +44,6 @@
         try {
             // 검색 데이터가 없으면 빈 결과 반환
             if (!allPostsData || allPostsData.length === 0) {
-                console.log('검색 데이터가 로드되지 않았습니다.');
                 searchResults = [];
                 isSearching = false;
                 return;
@@ -63,19 +59,12 @@
     
     // 실제 검색 실행 함수 (별도로 분리)
     function executeSearch(query) {
-        console.log(`검색어: "${query}"`);
-        
         searchResults = allPostsData
             .filter(post => {
                 const titleMatch = post.title && post.title.toLowerCase().includes(query);
                 const contentMatch = post.content && post.content.toLowerCase().includes(query);
                 const summaryMatch = post.summary && post.summary.toLowerCase().includes(query);
                 const categoryMatch = post.category && post.category.toLowerCase().includes(query);
-                
-                // 디버깅용 로그
-                if (post.content && post.content.toLowerCase().includes(query)) {
-                    console.log(`포스트 '${post.title}'에서 '${query}' 키워드 발견`);
-                }
                 
                 return titleMatch || contentMatch || summaryMatch || categoryMatch;
             })
@@ -85,7 +74,6 @@
                 
                 if (post.content && post.content.toLowerCase().includes(query)) {
                     matchContext = extractContextForKeyword(post.content, query, 60);
-                    console.log(`컨텍스트 추출: "${matchContext}"`);
                 } else if (post.summary && post.summary.toLowerCase().includes(query)) {
                     matchContext = extractContextForKeyword(post.summary, query, 60);
                 }
@@ -101,7 +89,6 @@
             })
             .sort((a, b) => new Date(b.date) - new Date(a.date));
         
-        console.log(`검색 결과: ${searchResults.length}개 포스트 찾음`);
         isSearching = false;
     }
     
@@ -131,9 +118,17 @@
         return context;
     }
     
+    // 배경 클릭 핸들러
+    function handleBackgroundClick(e) {
+        if (e.target === e.currentTarget) {
+            toggleSearchModal();
+        }
+    }
+    
     // 모달 열기/닫기
     function toggleSearchModal() {
         showSearchModal = !showSearchModal;
+        
         if (!showSearchModal) {
             // 모달 닫을 때 상태 초기화
             searchQuery = '';
@@ -195,7 +190,11 @@
         <div class="flex items-center space-x-1">
             <!-- 검색 버튼 -->
             <button
-                onclick={toggleSearchModal}
+                onclick={(e) => { 
+                    e.preventDefault();
+                    e.stopPropagation();
+                    toggleSearchModal(); 
+                }}
                 class="px-1 py-1 text-sm hover:text-blue-600"
                 aria-label="검색"
                 title="검색"
@@ -239,20 +238,22 @@
 <!-- 검색 모달 -->
 {#if showSearchModal}
     <div 
-        class="fixed inset-0 bg-black bg-opacity-30 z-40 flex items-start justify-center pt-14"
+        class="fixed inset-0 bg-gray-100 bg-opacity-80 z-[9999] flex items-start justify-center pt-14"
         role="button"
         tabindex="0"
-        onclick={toggleSearchModal}
+        onclick={handleBackgroundClick}
         onkeydown={(e) => e.key === 'Escape' && toggleSearchModal()}
+        style="pointer-events: auto;"
     >
         <div 
             id="search-modal"
-            class="bg-white rounded-md shadow-lg w-[80%] max-w-sm max-h-[75vh] overflow-hidden flex flex-col font-yoo animate-fadeIn"
+            class="bg-white rounded-md shadow-2xl w-[80%] max-w-sm max-h-[75vh] overflow-hidden flex flex-col font-yoo animate-fadeIn z-[10000]"
             role="dialog"
             aria-modal="true"
             tabindex="-1"
             onclick={(e) => e.stopPropagation()}
             onkeydown={(e) => e.key === 'Escape' && toggleSearchModal()}
+            style="pointer-events: auto;"
         >
             <div class="p-2 border-b border-gray-100">
                 <div class="flex justify-between items-center mb-1.5">
@@ -377,7 +378,7 @@
     </div>
 {/if}
 
-{@render children()}
+<slot></slot>
 
 <style>
     /* 애니메이션 정의 */
