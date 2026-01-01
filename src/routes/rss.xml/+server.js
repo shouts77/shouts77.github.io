@@ -5,59 +5,24 @@ import path from 'path';
 import matter from 'gray-matter';
 import { marked } from 'marked'; // 이 줄 추가
 
-// posts.js 파일 대신 직접 구현
+// posts는 공통 라이브러리에서 가져옵니다.
+import { getPosts as getPostsMeta, getPost } from '$lib/posts';
+
 async function getPosts() {
   try {
-    const postsDirectory = path.resolve('src/posts');
-    const filenames = fs.readdirSync(postsDirectory);
-    
-    const posts = filenames
-      .filter((file) => file.endsWith('.md'))
-      .map((filename) => {
-        const filePath = path.join(postsDirectory, filename);
-        const fileContents = fs.readFileSync(filePath, 'utf-8');
-        
-        try {
-          const { data, content } = matter(fileContents);
-          
-          // 날짜 포맷팅
-          let formattedDate = 'Unknown';
-          if (data.date) {
-            const date = new Date(data.date);
-            if (!isNaN(date.getTime())) {
-              formattedDate = date.toISOString().split('T')[0];
-            } else {
-              formattedDate = data.date;
-            }
-          }
-          
-          // 콘텐츠에서 HTML 태그 제거 및 요약 생성
-          const cleanContent = content
-            .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-            .replace(/<[^>]*>/g, ' ')
-            .trim();
-          
-          const excerpt = cleanContent.length > 200 
-            ? cleanContent.substring(0, 200) + '...' 
-            : cleanContent;
-          
-          return {
-            slug: filename.replace('.md', ''),
-            title: data.title || filename.replace('.md', ''),
-            date: formattedDate,
-            category: data.category || '미분류',
-            summary: data.summary || '',
-            excerpt: excerpt,
-            content: cleanContent // 전체 콘텐츠 추가
-          };
-        } catch (e) {
-          console.error(`Error parsing ${filename}:`, e);
-          return null;
-        }
-      })
-      .filter(Boolean)
-      .sort((a, b) => new Date(b.date) - new Date(a.date));
-    
+    const metaList = await getPostsMeta();
+    // 각 포스트의 콘텐츠를 함께 가져옵니다.
+    const posts = await Promise.all(metaList.map(async (meta) => {
+      const full = await getPost(meta.slug);
+      return {
+        slug: meta.slug,
+        title: meta.title,
+        date: meta.date,
+        category: meta.category,
+        summary: meta.summary,
+        content: full ? full.content : ''
+      };
+    }));
     return posts;
   } catch (error) {
     console.error('포스트 로드 중 오류 발생:', error);
@@ -86,7 +51,7 @@ export async function GET({ url }) {
         <title>${escapeXml(post.title)}</title>
         <link>${baseUrl}/blog/${post.slug}</link>
         <guid isPermaLink="true">${baseUrl}/blog/${post.slug}</guid>
-        <pubDate>${new Date(post.date).toUTCString()}</pubDate>
+        <pubDate>${formatDateForRss(post.date)}</pubDate>
         <description><![CDATA[${post.summary || generateExcerpt(post.content) || ''}]]></description>
         <content:encoded><![CDATA[${processContentForRss(post.content)}]]></content:encoded>
       </item>
@@ -104,7 +69,8 @@ export async function GET({ url }) {
 
 // XML 특수 문자 이스케이프 함수
 function escapeXml(unsafe) {
-  return unsafe.replace(/[<>&'"]/g, c => {
+  if (!unsafe) return '';
+  return String(unsafe).replace(/[<>&'\"]/g, c => {
     switch (c) {
       case '<': return '&lt;';
       case '>': return '&gt;';
@@ -113,6 +79,12 @@ function escapeXml(unsafe) {
       case '"': return '&quot;';
     }
   });
+}
+
+// 날짜 포맷팅 안전 처리
+function formatDateForRss(date) {
+  const d = new Date(date);
+  return !isNaN(d.getTime()) ? d.toUTCString() : new Date().toUTCString();
 }
 
 // 콘텐츠 발췌 함수 추가
