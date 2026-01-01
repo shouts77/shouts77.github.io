@@ -161,8 +161,8 @@
     <Giscus
         repo="shouts77/shouts77.github.io"
         repoId="R_kgDOO2PVag"
-        category="General"
-        categoryId="DIC_kwDOO2PVas4C0dIL"
+        category="Announcements"
+        categoryId="DIC_kwDOO2PVas4C0dIK"
         mapping="pathname"
         reactionsEnabled="1"
         theme={giscusTheme}
