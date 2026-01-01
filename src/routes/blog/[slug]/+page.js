@@ -10,19 +10,18 @@ export async function entries() {
 }
 
 async function findPostModule(slug) {
-    // 연도별 폴더에서 파일 찾기
-    const years = ['2025']; // 필요시 연도 추가
-    
-    for (const year of years) {
-        try {
-            const post = await import(`../../../posts/${year}/${slug}.md`);
+    // Vite의 glob import로 모든 연도별 폴더의 마크다운 파일들을 가져오기
+    const allPosts = import.meta.glob('../../../posts/*/*.md');
+
+    // 해당 slug와 일치하는 파일 찾기
+    for (const [path, importFn] of Object.entries(allPosts)) {
+        const filename = path.split('/').pop().replace('.md', '');
+        if (filename === slug) {
+            const post = await importFn();
             return post;
-        } catch (e) {
-            // 해당 연도 폴더에 파일이 없으면 다음 연도 시도
-            continue;
         }
     }
-    
+
     // 연도별 폴더에서 찾지 못한 경우 루트에서 시도 (하위 호환성)
     try {
         const post = await import(`../../../posts/${slug}.md`);
@@ -34,10 +33,10 @@ async function findPostModule(slug) {
 
 export async function load({ params, parent }) {
     const parentData = await parent();
-    
+
     try {
         const post = await findPostModule(params.slug);
-        
+
         return {
             content: post.default,
             meta: parentData.meta,
