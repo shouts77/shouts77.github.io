@@ -5,8 +5,22 @@
       <description>SvelteKit으로 만든 개인 블로그</description>
       <link>https://shouts77.github.io</link>
       <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-      <pubDate>Thu, 01 Jan 2026 13:03:32 GMT</pubDate>
+      <pubDate>Thu, 01 Jan 2026 13:14:36 GMT</pubDate>
       
+      
+      <item>
+        <title>2026년 메모(1~3월)</title>
+        <link>https://shouts77.github.io/blog/260101_memo1</link>
+        <guid isPermaLink="true">https://shouts77.github.io/blog/260101_memo1</guid>
+        <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
+        <description><![CDATA[2026년 1분기 일상의 기록 모음]]></description>
+        <content:encoded><![CDATA[<h2>2026-01-01 목</h2>
+<ol>
+<li>블로그 저장소의 readme 파일을 드디어 업데이트 했다. 짧은 소개 글을 다는게 왜 그리도 어려웠을까. giscuss도 설정이 안되어 있었고, 검색 버튼도 제대로 작동하지 않아서 ai의 도움을 받아 수정했다. rss 피드 오류도 고쳤다. 새해에는 블로그도 더 잘 가꿔보고 싶다.</li>
+<li>업무가 피크인 시기인데, 경험이 많은 팀원까지 전보를 가는 바람에 뭐부터 손을 대야 할지 막막하다. 뭔가 복잡하고 부담스럽긴 한데 새해를 맞이해서 그런지 새롭게 다시 잘 시작해보고 싶은 마음이 생겨서 다행인 것 같다.</li>
+</ol>
+]]></content:encoded>
+      </item>
       
       <item>
         <title>2025년 메모(10~12월)</title>
