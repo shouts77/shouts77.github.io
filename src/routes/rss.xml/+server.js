@@ -32,36 +32,35 @@ async function getPosts() {
 
 export async function GET({ url }) {
   const posts = await getPosts();
-  
+
   // GitHub Pages URL로 변경
   const baseUrl = 'https://shouts77.github.io';
-  
-  const xml = `
-  <?xml version="1.0" encoding="UTF-8" ?>
-  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-    <channel>
-      <title>Slog</title>
-      <description>SvelteKit으로 만든 개인 블로그</description>
-      <link>${baseUrl}</link>
-      <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml"/>
-      <pubDate>${new Date().toUTCString()}</pubDate>
-      
-      ${posts.map(post => `
-      <item>
-        <title>${escapeXml(post.title)}</title>
-        <link>${baseUrl}/blog/${post.slug}</link>
-        <guid isPermaLink="true">${baseUrl}/blog/${post.slug}</guid>
-        <pubDate>${formatDateForRss(post.date)}</pubDate>
-        <description><![CDATA[${post.summary || generateExcerpt(post.content) || ''}]]></description>
-        <content:encoded><![CDATA[${processContentForRss(post.content)}]]></content:encoded>
-      </item>
-      `).join('')}
-    </channel>
-  </rss>`.trim();
-  
+
+  const xml = `<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Slog</title>
+    <description>SvelteKit으로 만든 개인 블로그</description>
+    <link>${baseUrl}</link>
+    <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>${new Date().toUTCString()}</pubDate>
+    
+    ${posts.map(post => `
+    <item>
+      <title>${escapeXml(post.title)}</title>
+      <link>${baseUrl}/blog/${post.slug}</link>
+      <guid isPermaLink="true">${baseUrl}/blog/${post.slug}</guid>
+      <pubDate>${formatDateForRss(post.date)}</pubDate>
+      <description><![CDATA[${post.summary || generateExcerpt(post.content) || ''}]]></description>
+      <content:encoded><![CDATA[${processContentForRss(post.content)}]]></content:encoded>
+    </item>
+    `).join('')}
+  </channel>
+</rss>`;
+
   return new Response(xml, {
     headers: {
-      'Content-Type': 'application/xml',
+      'Content-Type': 'application/xml; charset=utf-8',
       'Cache-Control': 'max-age=0, s-maxage=3600'
     }
   });
@@ -90,29 +89,29 @@ function formatDateForRss(date) {
 // 콘텐츠 발췌 함수 추가
 function generateExcerpt(content, maxLength = 150) {
   if (!content) return '';
-  
+
   // HTML 태그 제거 및 공백 정리
   const cleanText = content
     .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
     .replace(/<[^>]*>/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
-  
+
   if (cleanText.length <= maxLength) return cleanText;
-  
+
   // 적절한 길이로 자르기
   const excerpt = cleanText.substring(0, maxLength);
   const lastSpace = excerpt.lastIndexOf(' ');
-  
-  return lastSpace > maxLength * 0.8 
-    ? excerpt.substring(0, lastSpace) + '...' 
+
+  return lastSpace > maxLength * 0.8
+    ? excerpt.substring(0, lastSpace) + '...'
     : excerpt + '...';
 }
 
 // RSS용 콘텐츠 처리 함수 개선
 function processContentForRss(content) {
   if (!content) return '';
-  
+
   // marked를 사용하여 마크다운을 HTML로 변환
   return marked(content, {
     gfm: true,        // GitHub Flavored Markdown 지원
