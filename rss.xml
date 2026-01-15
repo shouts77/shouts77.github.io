@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-    <channel>
-      <title>Slog</title>
-      <description>SvelteKit으로 만든 개인 블로그</description>
-      <link>https://shouts77.github.io</link>
-      <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-      <pubDate>Wed, 14 Jan 2026 12:05:36 GMT</pubDate>
-      
-      
-      <item>
-        <title>2026년 메모(1~3월)</title>
-        <link>https://shouts77.github.io/blog/260101_memo1</link>
-        <guid isPermaLink="true">https://shouts77.github.io/blog/260101_memo1</guid>
-        <pubDate>Wed, 14 Jan 2026 00:00:00 GMT</pubDate>
-        <description><![CDATA[2026년 1분기 일상의 기록 모음]]></description>
-        <content:encoded><![CDATA[<h2>2026-01-14 수</h2>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Slog</title>
+    <description>SvelteKit으로 만든 개인 블로그</description>
+    <link>https://shouts77.github.io</link>
+    <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 15 Jan 2026 23:03:55 GMT</pubDate>
+    
+    
+    <item>
+      <title>2026년 메모(1~3월)</title>
+      <link>https://shouts77.github.io/blog/260101_memo1</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/260101_memo1</guid>
+      <pubDate>Wed, 14 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[2026년 1분기 일상의 기록 모음]]></description>
+      <content:encoded><![CDATA[<h2>2026-01-14 수</h2>
 <ol>
 <li>지난 주부터 계속 야근에 주말 출근을 하다보니 몸이 많이 지친다. 오늘은 우려했던 것보다 일찍 집에 갈 수는 있을 것 같다. 이렇게 잠시 메모를 남길 틈도 있다. 다음 주 목요일에 마지막 회의가 있는데, 그 날만 지나면 좀 나아지려나.</li>
 <li>오늘 친한 동료와 점심을 먹으며 마음속 힘든 이야기들을 다 털어놨다. 속마음을 이야기하다보면 후련하기도 하지만, 원망, 불평 등이 쏟아져 나와서 가끔씩은 후회가 되기도 한다.</li>
@@ -26,15 +26,15 @@
 <li>업무가 피크인 시기인데, 경험이 많은 팀원까지 전보를 가는 바람에 뭐부터 손을 대야 할지 막막하다. 뭔가 복잡하고 부담스럽긴 한데 새해를 맞이해서 그런지 새롭게 다시 잘 시작해보고 싶은 마음이 생겨서 다행인 것 같다.</li>
 </ol>
 ]]></content:encoded>
-      </item>
-      
-      <item>
-        <title>2025년 메모(10~12월)</title>
-        <link>https://shouts77.github.io/blog/251001_memo4</link>
-        <guid isPermaLink="true">https://shouts77.github.io/blog/251001_memo4</guid>
-        <pubDate>Sun, 28 Dec 2025 00:00:00 GMT</pubDate>
-        <description><![CDATA[2025년 4분기 일상의 기록 모음]]></description>
-        <content:encoded><![CDATA[<h2>2025-12-29 월</h2>
+    </item>
+    
+    <item>
+      <title>2025년 메모(10~12월)</title>
+      <link>https://shouts77.github.io/blog/251001_memo4</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/251001_memo4</guid>
+      <pubDate>Sun, 28 Dec 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[2025년 4분기 일상의 기록 모음]]></description>
+      <content:encoded><![CDATA[<h2>2025-12-29 월</h2>
 <ol>
 <li>2025년이 얼마 남지 않았다. 올해는 지난 7월에 부서를 옮기면서 회사 업무에 많은 변화가 있었고, 가정에서는 아버지와 남편으로서, 한편으로는 연로하신 부모님의 자녀로서 나에 대해 많은 것들을 돌아보게 된 해였던 것 같다. 해가 갈수록 자기 자신을 희생하면서 사는게 싫어지는 것 같아 한편으로는 걱정도 된다. 프로그래밍에 대한 관심도 줄었고, 음악에 대한 열정도 많이 식었다. 자기계발로는 업무와 관련된 서적을 읽는 게 전부였던 것 같다. 가족과 이웃에게 큰 나무같은 사람이 되고 싶었지만, 여전히 나는 이기적이다. 그럼에도 불구하고 내년에는 좀 더 나은 삶을 살기를 소망한다. 무엇이 내게 참된 기쁨과 안식을 주는지 잊지 않고 세상의 가치에 휩쓸리지 않기를, 넘어지더라도 날마다 다시 일어나 끝까지 경주하며 조금씩 더 자라나기를 소망한다.</li>
 </ol>
@@ -64,15 +64,15 @@
 <li>퇴근길에 챗GPT를 활용해 영어로 대화를 해보고 있다. 아직 표현이 서툴러서 그런지 긴 대화를 하지는 못하지만, 생각보다 내 말을 잘 알아듣는 것 같다.</li>
 </ol>
 ]]></content:encoded>
-      </item>
-      
-      <item>
-        <title>이른 아침 출근길 사진</title>
-        <link>https://shouts77.github.io/blog/251001_ontheway-towork</link>
-        <guid isPermaLink="true">https://shouts77.github.io/blog/251001_ontheway-towork</guid>
-        <pubDate>Wed, 01 Oct 2025 00:00:00 GMT</pubDate>
-        <description><![CDATA[출근길 거리 사진]]></description>
-        <content:encoded><![CDATA[<script>
+    </item>
+    
+    <item>
+      <title>이른 아침 출근길 사진</title>
+      <link>https://shouts77.github.io/blog/251001_ontheway-towork</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/251001_ontheway-towork</guid>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[출근길 거리 사진]]></description>
+      <content:encoded><![CDATA[<script>
     export let src;
 </script>
 <p> 이른 아침에 출근하면서 찍은 사진. 놓치면 다시 만나기 어려울 것 같은 순간.</p>
@@ -83,15 +83,15 @@
     loading="lazy"
 /></p>
 ]]></content:encoded>
-      </item>
-      
-      <item>
-        <title>2025년 메모(7~9월)</title>
-        <link>https://shouts77.github.io/blog/250713_memo3</link>
-        <guid isPermaLink="true">https://shouts77.github.io/blog/250713_memo3</guid>
-        <pubDate>Tue, 23 Sep 2025 00:00:00 GMT</pubDate>
-        <description><![CDATA[2025년 3분기 일상의 기록 모음]]></description>
-        <content:encoded><![CDATA[<h2>2025-09-23 화</h2>
+    </item>
+    
+    <item>
+      <title>2025년 메모(7~9월)</title>
+      <link>https://shouts77.github.io/blog/250713_memo3</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/250713_memo3</guid>
+      <pubDate>Tue, 23 Sep 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[2025년 3분기 일상의 기록 모음]]></description>
+      <content:encoded><![CDATA[<h2>2025-09-23 화</h2>
 <ol>
 <li>오후에 회의를 했는데, 회의를 끝나고 난 후에 기분이 너무 꿀꿀했다. 퇴근하고 집에 오는 내내, 집에 와서도 여전히 기분이 별로다.</li>
 <li>날씨가 선선해 지면서 저녁엔 짧게나마 운동장을 달려보고 있다.</li>
@@ -133,15 +133,15 @@
 <li>어제 &#39;더 베어&#39;라는 드라마를 보는 중에 고객을 위한 특별 이벤트를 진심을 다해 제공하는 모습을 보면서 문득 회사 생각이 났다. 이렇게 모두가 진심을 다해 일할 수 있을까.</li>
 </ol>
 ]]></content:encoded>
-      </item>
-      
-      <item>
-        <title>사내 카페 미술 전시회</title>
-        <link>https://shouts77.github.io/blog/250923_exhibition</link>
-        <guid isPermaLink="true">https://shouts77.github.io/blog/250923_exhibition</guid>
-        <pubDate>Tue, 23 Sep 2025 00:00:00 GMT</pubDate>
-        <description><![CDATA[사내 카페 미술 전시회]]></description>
-        <content:encoded><![CDATA[<script>
+    </item>
+    
+    <item>
+      <title>사내 카페 미술 전시회</title>
+      <link>https://shouts77.github.io/blog/250923_exhibition</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/250923_exhibition</guid>
+      <pubDate>Tue, 23 Sep 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[사내 카페 미술 전시회]]></description>
+      <content:encoded><![CDATA[<script>
     export let src;
 </script>
 <p> 오후에 사내 카페에 커피를 주문하러 갔는데, 전시하고 있는 그림이 너무 이뻐서 사진에 담아보았다. </p>
@@ -158,15 +158,15 @@
     loading="lazy"
 /></p>
 ]]></content:encoded>
-      </item>
-      
-      <item>
-        <title>구읍뱃터</title>
-        <link>https://shouts77.github.io/blog/250910_ferry-port</link>
-        <guid isPermaLink="true">https://shouts77.github.io/blog/250910_ferry-port</guid>
-        <pubDate>Sun, 14 Sep 2025 00:00:00 GMT</pubDate>
-        <description><![CDATA[구읍뱃터 사진]]></description>
-        <content:encoded><![CDATA[<script>
+    </item>
+    
+    <item>
+      <title>구읍뱃터</title>
+      <link>https://shouts77.github.io/blog/250910_ferry-port</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/250910_ferry-port</guid>
+      <pubDate>Sun, 14 Sep 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[구읍뱃터 사진]]></description>
+      <content:encoded><![CDATA[<script>
     export let src;
 </script>
 <p>지지난주부터 바닷가에 가보고 싶어서 마음이 들썩들썩했었는데, 어제 마침내 영종도에 다녀왔다. 멍하니 경치를 바라보고 있으면 복잡한 마음과 생각이 차분히 가라앉는 것 같아서 좋다.</p>
@@ -183,15 +183,15 @@
    loading="lazy"
 /></p>
 ]]></content:encoded>
-      </item>
-      
-      <item>
-        <title>점심시간에 누리는 여유</title>
-        <link>https://shouts77.github.io/blog/250912_lunch-time-scenery</link>
-        <guid isPermaLink="true">https://shouts77.github.io/blog/250912_lunch-time-scenery</guid>
-        <pubDate>Fri, 12 Sep 2025 00:00:00 GMT</pubDate>
-        <description><![CDATA[일상 풍경 사진]]></description>
-        <content:encoded><![CDATA[<script>
+    </item>
+    
+    <item>
+      <title>점심시간에 누리는 여유</title>
+      <link>https://shouts77.github.io/blog/250912_lunch-time-scenery</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/250912_lunch-time-scenery</guid>
+      <pubDate>Fri, 12 Sep 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[일상 풍경 사진]]></description>
+      <content:encoded><![CDATA[<script>
     export let src;
 </script>
 <p>어제 오전에 다른 부서와 회의를 하면서 화를 많이 냈었는데, 동료들과 같이 점심을 먹고 차를 마시며 이야기를 나누다 보니 사소한 풍경이 눈에 들어와 사진 찍을 여유도 생겼다. 그저 그런 일상의 한 장면이지만 이 순간만큼은 나에게 왠지 모를 위안을 줬다.</p>
@@ -202,15 +202,15 @@
     loading="lazy"
 /></p>
 ]]></content:encoded>
-      </item>
-      
-      <item>
-        <title>여름의 끝</title>
-        <link>https://shouts77.github.io/blog/250910_sunset</link>
-        <guid isPermaLink="true">https://shouts77.github.io/blog/250910_sunset</guid>
-        <pubDate>Wed, 10 Sep 2025 00:00:00 GMT</pubDate>
-        <description><![CDATA[여름 일몰 사진]]></description>
-        <content:encoded><![CDATA[<script>
+    </item>
+    
+    <item>
+      <title>여름의 끝</title>
+      <link>https://shouts77.github.io/blog/250910_sunset</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/250910_sunset</guid>
+      <pubDate>Wed, 10 Sep 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[여름 일몰 사진]]></description>
+      <content:encoded><![CDATA[<script>
     export let src;
 </script>
 <p>지난 주일 저녁 운동장을 걸으며 찍은 일몰 사진. 여름은 이렇게 지나가고 있다.</p>
@@ -221,15 +221,15 @@
     loading="lazy"
 /></p>
 ]]></content:encoded>
-      </item>
-      
-      <item>
-        <title>윤동주의 서시</title>
-        <link>https://shouts77.github.io/blog/250812_prologue</link>
-        <guid isPermaLink="true">https://shouts77.github.io/blog/250812_prologue</guid>
-        <pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate>
-        <description><![CDATA[윤동주의 서시 감상]]></description>
-        <content:encoded><![CDATA[<p>매일 아침마다 깨끗한 마음과 바른 생각으로 하루를 살아보려고 마음먹지만, 저녁이 되면 다시 먼지 투성이인 내 모습을 돌아보게 된다. 시간이 지날 수록 &#39;하늘을 우러러 한 점 부끄럼 없이&#39; 사는 것을 바라며 &#39;잎새에 이는 바람에도 괴로워한&#39; 시인의 마음이 어땠을지 더 공감이 간다. 그래도 포기하지 않고 더 나은 내일을 기대하며 날마다 마음과 생각을 닦아내야겠다.</p>
+    </item>
+    
+    <item>
+      <title>윤동주의 서시</title>
+      <link>https://shouts77.github.io/blog/250812_prologue</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/250812_prologue</guid>
+      <pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[윤동주의 서시 감상]]></description>
+      <content:encoded><![CDATA[<p>매일 아침마다 깨끗한 마음과 바른 생각으로 하루를 살아보려고 마음먹지만, 저녁이 되면 다시 먼지 투성이인 내 모습을 돌아보게 된다. 시간이 지날 수록 &#39;하늘을 우러러 한 점 부끄럼 없이&#39; 사는 것을 바라며 &#39;잎새에 이는 바람에도 괴로워한&#39; 시인의 마음이 어땠을지 더 공감이 간다. 그래도 포기하지 않고 더 나은 내일을 기대하며 날마다 마음과 생각을 닦아내야겠다.</p>
 <p><img 
     src="/images/2025/250812_prologue.png" 
     alt="prologue" 
@@ -237,26 +237,26 @@
     loading="lazy"
 /></p>
 ]]></content:encoded>
-      </item>
-      
-      <item>
-        <title>베드로의 믿음</title>
-        <link>https://shouts77.github.io/blog/250730_faith</link>
-        <guid isPermaLink="true">https://shouts77.github.io/blog/250730_faith</guid>
-        <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
-        <description><![CDATA[파도가 치는 바다를 보고도 걸음을 내디딜 수 있는 믿음이 있는가]]></description>
-        <content:encoded><![CDATA[<p>마태복음에는 베드로가 예수님의 말씀을 듣고 바다 위를 걷다가 바람을 보고 무서워 바다에 빠진 이야기가 나온다. 예수님을 믿는다는 건 파도가 치는 바다를 보고도 걸음을 내디딜 수 있는 것이 아닐까.  </p>
+    </item>
+    
+    <item>
+      <title>베드로의 믿음</title>
+      <link>https://shouts77.github.io/blog/250730_faith</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/250730_faith</guid>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[파도가 치는 바다를 보고도 걸음을 내디딜 수 있는 믿음이 있는가]]></description>
+      <content:encoded><![CDATA[<p>마태복음에는 베드로가 예수님의 말씀을 듣고 바다 위를 걷다가 바람을 보고 무서워 바다에 빠진 이야기가 나온다. 예수님을 믿는다는 건 파도가 치는 바다를 보고도 걸음을 내디딜 수 있는 것이 아닐까.  </p>
 <p>예수님을 믿고 산다고 이야기 하면서도 지금까지 살면서 그런 걸음을 내디뎌 본 적이 없는 것 같다. 바람과 파도가 잠잠해지기를 기도하는 것 마저도 힘겨워 했다. 여전히 나는 내 자신을 믿고, 내가 원하는 것이 이루어지기를 소망하며 살고있지 않는가.   </p>
 ]]></content:encoded>
-      </item>
-      
-      <item>
-        <title>모네에서 앤디워홀까지</title>
-        <link>https://shouts77.github.io/blog/250730_monet-to-warhol</link>
-        <guid isPermaLink="true">https://shouts77.github.io/blog/250730_monet-to-warhol</guid>
-        <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
-        <description><![CDATA[전시]]></description>
-        <content:encoded><![CDATA[<script>
+    </item>
+    
+    <item>
+      <title>모네에서 앤디워홀까지</title>
+      <link>https://shouts77.github.io/blog/250730_monet-to-warhol</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/250730_monet-to-warhol</guid>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[전시]]></description>
+      <content:encoded><![CDATA[<script>
     export let src;
 </script>
 
@@ -280,15 +280,15 @@
     loading="lazy"
 />
 </figure>]]></content:encoded>
-      </item>
-      
-      <item>
-        <title>2025년 메모(4~6월)</title>
-        <link>https://shouts77.github.io/blog/250408_memo2</link>
-        <guid isPermaLink="true">https://shouts77.github.io/blog/250408_memo2</guid>
-        <pubDate>Sun, 15 Jun 2025 00:00:00 GMT</pubDate>
-        <description><![CDATA[2025년 2분기 일상의 기록 모음]]></description>
-        <content:encoded><![CDATA[<h2>2025-06-15 일</h2>
+    </item>
+    
+    <item>
+      <title>2025년 메모(4~6월)</title>
+      <link>https://shouts77.github.io/blog/250408_memo2</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/250408_memo2</guid>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[2025년 2분기 일상의 기록 모음]]></description>
+      <content:encoded><![CDATA[<h2>2025-06-15 일</h2>
 <ol>
 <li>지난 금요일에 7월 1일자로 부서를 이동한다는 공문이 왔다. 이번에는 이동하지 않을 거라 생각해서 애써 마음을 가라앉히고 하반기에 올 해 남겨진 과제들을 어떻게 추진해야 할 지 고민하고 있었는데, 조금 당황스러운 소식이었다.</li>
 <li>최근 부서에서 일어난 사고들로 인해 마음과 생각이 복잡했는데, 전보 공문까지 와서 금요일은 정신적으로 매우 힘들었다. 사건이 발생한 거 자체가 너무 어이없는 실수였고, 이를 대응하기 위해 상사에게 폐를 끼치는 것도 싫었는데,  금방 해결될 것 같지 않은 사건들을 후임자에게 인계하고 떠날 수도 있다는게 너무 싫었다. 새로운 부서에 가서도 이 일을 마무리 짓기 위해 미안한 마음으로 이곳에 왔다갔다 할 수도 있다고 생각하는 것도 싫었고.</li>
@@ -364,15 +364,15 @@
 <li>1월이 엊그제 같은데 벌써 4월이다. 그동안 너무 정신 없었는데(아직도 그렇긴 하지만), 조금 여유가 생기자 갑자기 마음이 지치고 우울해져서 출근하기가 더 싫어지는 건 뭔가 아이러니하다. 긴장이 풀어져서 그런지 몸도 여기 저기 아픈 것 같고.</li>
 </ol>
 ]]></content:encoded>
-      </item>
-      
-      <item>
-        <title>새싹</title>
-        <link>https://shouts77.github.io/blog/250520_sprout</link>
-        <guid isPermaLink="true">https://shouts77.github.io/blog/250520_sprout</guid>
-        <pubDate>Tue, 20 May 2025 00:00:00 GMT</pubDate>
-        <description><![CDATA[새싹 사진]]></description>
-        <content:encoded><![CDATA[<script>
+    </item>
+    
+    <item>
+      <title>새싹</title>
+      <link>https://shouts77.github.io/blog/250520_sprout</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/250520_sprout</guid>
+      <pubDate>Tue, 20 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[새싹 사진]]></description>
+      <content:encoded><![CDATA[<script>
     export let src;
 </script>
 
@@ -384,15 +384,15 @@
     loading="lazy"
 /></p>
 ]]></content:encoded>
-      </item>
-      
-      <item>
-        <title>사진찍기</title>
-        <link>https://shouts77.github.io/blog/250519_takingpicture</link>
-        <guid isPermaLink="true">https://shouts77.github.io/blog/250519_takingpicture</guid>
-        <pubDate>Mon, 19 May 2025 00:00:00 GMT</pubDate>
-        <description><![CDATA[건물 사진]]></description>
-        <content:encoded><![CDATA[<script>
+    </item>
+    
+    <item>
+      <title>사진찍기</title>
+      <link>https://shouts77.github.io/blog/250519_takingpicture</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/250519_takingpicture</guid>
+      <pubDate>Mon, 19 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[건물 사진]]></description>
+      <content:encoded><![CDATA[<script>
     export let src;
 </script>
 
@@ -404,17 +404,17 @@
     loading="lazy"
 /></p>
 ]]></content:encoded>
-      </item>
-      
-      <item>
-        <title>about</title>
-        <link>https://shouts77.github.io/blog/250514_about</link>
-        <guid isPermaLink="true">https://shouts77.github.io/blog/250514_about</guid>
-        <pubDate>Wed, 14 May 2025 00:00:00 GMT</pubDate>
-        <description><![CDATA[블로그 소개]]></description>
-        <content:encoded><![CDATA[<p>코딩을 취미로 공부하고 있습니다. SvelteKit을 공부하면서 가장 기본적인 내용을 토대로 github copilot의 도움을 받아 블로그를 만들었습니다. 일상의 기록을 정리하며 필요한 기능이 있다면 계속 추가하면서 업그레이드할 계획입니다.</p>
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>https://shouts77.github.io/blog/250514_about</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/250514_about</guid>
+      <pubDate>Wed, 14 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[블로그 소개]]></description>
+      <content:encoded><![CDATA[<p>코딩을 취미로 공부하고 있습니다. SvelteKit을 공부하면서 가장 기본적인 내용을 토대로 github copilot의 도움을 받아 블로그를 만들었습니다. 일상의 기록을 정리하며 필요한 기능이 있다면 계속 추가하면서 업그레이드할 계획입니다.</p>
 ]]></content:encoded>
-      </item>
-      
-    </channel>
-  </rss>
+    </item>
+    
+  </channel>
+</rss>
