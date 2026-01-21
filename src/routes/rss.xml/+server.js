@@ -39,7 +39,7 @@ export async function GET({ url }) {
   const xml = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Slog</title>
+    <title>svlog</title>
     <description>SvelteKit으로 만든 개인 블로그</description>
     <link>${baseUrl}</link>
     <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml"/>
