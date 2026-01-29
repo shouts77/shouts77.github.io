@@ -5,16 +5,20 @@
     <description>SvelteKit으로 만든 개인 블로그</description>
     <link>https://shouts77.github.io</link>
     <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Jan 2026 01:13:16 GMT</pubDate>
+    <pubDate>Thu, 29 Jan 2026 00:35:14 GMT</pubDate>
     
     
     <item>
       <title>2026년 메모(1~3월)</title>
       <link>https://shouts77.github.io/blog/260101_memo1</link>
       <guid isPermaLink="true">https://shouts77.github.io/blog/260101_memo1</guid>
-      <pubDate>Sat, 24 Jan 2026 00:00:00 GMT</pubDate>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[2026년 1분기 일상의 기록 모음]]></description>
-      <content:encoded><![CDATA[<h2>2026-01-24 토</h2>
+      <content:encoded><![CDATA[<h2>2026-01-29 수</h2>
+<ol>
+<li>vim에서 Copilot 플러그인을 설치해서 사용해 보기 위해 Neovim으로 갈아탔다. Copilot 플러그인을 적용하니, 블로그에 글을 쓸 때도 추천 문구가 나온다. vs-code보다 편한지는 조금 더 사용해 봐야 알 것 같다.</li>
+</ol>
+<h2>2026-01-24 토</h2>
 <ol>
 <li>넷플릭스에서 &#39;Love me&#39;라는 드라마를 마지막회까지 시청했다. 한 가족이 겪는 삶의 아픔과 기쁨, 사랑, 미움 등을 잘 그려낸 드라마로 끝까지 재미있게 때론 눈시울을 붉혀가며 봤다. 아름다운 장면 연출도 많았고, 너무 가볍지도 너무 무겁지도 않으면서 잔잔하게 감동을 주는 드라마였던 같다. </li>
 <li>업무로 몰아쳤던 1월이 지나가고 있다. 지난 주엔 몸도 아파서 병원도 다녀왔었고... 업무 뿐만 아니라 마음으로도 무거운 짐을 짋어졌어야 했던 한 달이 아니었나 싶다. 아직 모든게 끝난 건 아니고, 어떤 후폭풍이 있을지는 모르겠지만, 일단 큰 고비는 넘겼다. 큰 일을 겪어서인지 자잘한 이슈들은 이제 대수롭지 않게 넘길 수 있을 것 같다.</li>
