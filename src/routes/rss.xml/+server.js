@@ -35,9 +35,10 @@ export async function GET({ url }) {
 
   // GitHub Pages URL로 변경
   const baseUrl = 'https://shouts77.github.io';
+  const defaultThumbnail = `${baseUrl}/mainpage/universe.png`;
 
   const xml = `<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>svlog</title>
     <description>SvelteKit으로 만든 개인 블로그</description>
@@ -45,16 +46,22 @@ export async function GET({ url }) {
     <atom:link href="${baseUrl}/rss.xml" rel="self" type="application/rss+xml"/>
     <pubDate>${new Date().toUTCString()}</pubDate>
     
-    ${posts.map(post => `
+    ${posts.map(post => {
+    // 콘텐츠에서 이미지가 있는지 확인
+    const hasImage = post.content?.match(/<img[^>]+src=["']([^"']+)["']/i);
+
+    return `
     <item>
       <title>${escapeXml(post.title)}</title>
       <link>${baseUrl}/blog/${post.slug}</link>
       <guid isPermaLink="true">${baseUrl}/blog/${post.slug}</guid>
       <pubDate>${formatDateForRss(post.date)}</pubDate>
       <description><![CDATA[${post.summary || generateExcerpt(post.content) || ''}]]></description>
-      <content:encoded><![CDATA[${processContentForRss(post.content)}]]></content:encoded>
+      <content:encoded><![CDATA[${processContentForRss(post.content)}]]></content:encoded>${!hasImage ? `
+      <media:thumbnail url="${defaultThumbnail}" />` : ''}
     </item>
-    `).join('')}
+    `;
+  }).join('')}
   </channel>
 </rss>`;
 
