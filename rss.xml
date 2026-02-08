@@ -5,46 +5,20 @@
     <description>SvelteKit으로 만든 개인 블로그</description>
     <link>https://shouts77.github.io</link>
     <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Feb 2026 23:08:37 GMT</pubDate>
+    <pubDate>Sun, 08 Feb 2026 23:50:36 GMT</pubDate>
     
-    
-    <item>
-      <title>2026년 책과 미디어</title>
-      <link>https://shouts77.github.io/blog/260209_book-and-media</link>
-      <guid isPermaLink="true">https://shouts77.github.io/blog/260209_book-and-media</guid>
-      <pubDate>Mon, 09 Feb 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[2026년 책과 미디어 기록들]]></description>
-      <content:encoded><![CDATA[<h2>Book</h2>
-<ul>
-<li>1월<ul>
-<li>숫자없는 경제학, 금융 오디세이 (차현진)</li>
-</ul>
-</li>
-</ul>
-<h2>Media</h2>
-<ul>
-<li>1월<ul>
-<li>Love Me (넷플릭스 드라마)</li>
-<li>Killing Eve (넷플릭스 드라마)</li>
-</ul>
-</li>
-<li>2월<ul>
-<li>어쩔수가 없다 (박찬욱 감독 영화)</li>
-<li>스토브리그 (넷플릭스 드라마)</li>
-</ul>
-</li>
-</ul>
-]]></content:encoded>
-      <media:thumbnail url="https://shouts77.github.io/mainpage/universe.png" />
-    </item>
     
     <item>
       <title>2026년 메모(1~3월)</title>
       <link>https://shouts77.github.io/blog/260101_memo1</link>
       <guid isPermaLink="true">https://shouts77.github.io/blog/260101_memo1</guid>
-      <pubDate>Thu, 29 Jan 2026 00:00:00 GMT</pubDate>
+      <pubDate>Mon, 09 Feb 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[2026년 1분기 일상의 기록 모음]]></description>
-      <content:encoded><![CDATA[<h2>2026-01-29 수</h2>
+      <content:encoded><![CDATA[<h2>2026-02-09 월</h2>
+<ol>
+<li>지난 주 금요일 회의 발표까지 마치고 나니 마음이 한결 가벼워졌다. 야구에서 &#39;스토브리그&#39;가 있다면 나에게도 지금이 지난 한해를 정리하고 내년을 준비하는 시기가 아닐까 생각해본다. 그동안 쌓여있던 서류들과 파일들, 묵혀있던 업무들을 하나씩 정리하며 다음 학년도를 잘 맞이했으면 좋겠다.</li>
+</ol>
+<h2>2026-01-29 수</h2>
 <ol>
 <li>vim에서 Copilot 플러그인을 설치해서 사용해 보기 위해 Neovim으로 갈아탔다. Copilot 플러그인을 적용하니, 블로그에 글을 쓸 때도 추천 문구가 나온다. vs-code보다 편한지는 조금 더 사용해 봐야 알 것 같다.</li>
 </ol>
@@ -64,6 +38,27 @@
 <li>블로그 저장소의 readme 파일을 드디어 업데이트 했다. 짧은 소개 글을 다는게 왜 그리도 어려웠을까. giscuss도 설정이 안되어 있었고, 검색 버튼도 제대로 작동하지 않아서 ai의 도움을 받아 수정했다. rss 피드 오류도 고쳤다. 새해에는 블로그도 더 잘 가꿔보고 싶다.</li>
 <li>업무가 피크인 시기인데, 경험이 많은 팀원까지 전보를 가는 바람에 뭐부터 손을 대야 할지 막막하다. 뭔가 복잡하고 부담스럽긴 한데 새해를 맞이해서 그런지 새롭게 다시 잘 시작해보고 싶은 마음이 생겨서 다행인 것 같다.</li>
 </ol>
+]]></content:encoded>
+      <media:thumbnail url="https://shouts77.github.io/mainpage/universe.png" />
+    </item>
+    
+    <item>
+      <title>2026년 책과 미디어</title>
+      <link>https://shouts77.github.io/blog/260209_book-and-media</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/260209_book-and-media</guid>
+      <pubDate>Mon, 09 Feb 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[2026년 책과 미디어 기록들]]></description>
+      <content:encoded><![CDATA[<h2>Book</h2>
+<ul>
+<li>[1월] 숫자없는 경제학, 금융 오디세이 (차현진)</li>
+</ul>
+<h2>Media</h2>
+<ul>
+<li>[1월] Love Me (넷플릭스 드라마)</li>
+<li>[1월] Killing Eve (넷플릭스 드라마)</li>
+<li>[2월] 어쩔수가 없다 (박찬욱 감독 영화)</li>
+<li>[2월] 스토브리그 (넷플릭스 드라마)</li>
+</ul>
 ]]></content:encoded>
       <media:thumbnail url="https://shouts77.github.io/mainpage/universe.png" />
     </item>
