@@ -5,7 +5,7 @@
     <description>SvelteKit으로 만든 개인 블로그</description>
     <link>https://shouts77.github.io</link>
     <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Feb 2026 22:53:26 GMT</pubDate>
+    <pubDate>Sun, 08 Feb 2026 23:00:48 GMT</pubDate>
     
     
     <item>
@@ -14,15 +14,11 @@
       <guid isPermaLink="true">https://shouts77.github.io/blog/260209_book-and-media</guid>
       <pubDate>Mon, 09 Feb 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[2026년 책과 미디어 기록들]]></description>
-      <content:encoded><![CDATA[<ol>
-<li>Book</li>
-</ol>
+      <content:encoded><![CDATA[<h2>Book</h2>
 <ul>
 <li>숫자없는 경제학, 금융 오디세이 (차현진)</li>
 </ul>
-<ol start="2">
-<li>Media</li>
-</ol>
+<h2>Media</h2>
 <ul>
 <li>어쩔수가 없다 (박찬욱 감독 영화)</li>
 <li>Love Me (넷플릭스 드라마)</li>
