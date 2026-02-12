@@ -9,6 +9,28 @@ if [ -n "$CHANGED_POSTS" ]; then
     echo "📝 포스트 파일 변경 감지:"
     echo "$CHANGED_POSTS"
     echo ""
+    
+    # 현재 날짜 (YYYY-MM-DD 형식)
+    TODAY=$(date +%Y-%m-%d)
+    
+    # date 필드 업데이트
+    echo "📅 포스트 date 필드 업데이트 중..."
+    while IFS= read -r file; do
+        if [ -f "$file" ]; then
+            # frontmatter의 date 필드를 현재 날짜로 업데이트
+            if [[ "$OSTYPE" == "darwin"* ]]; then
+                # macOS용
+                sed -i '' "s/^date: .*/date: $TODAY/" "$file"
+            else
+                # Linux용
+                sed -i "s/^date: .*/date: $TODAY/" "$file"
+            fi
+            git add "$file"
+            echo "  ✏️  $file"
+        fi
+    done <<< "$CHANGED_POSTS"
+    echo ""
+    
     echo "🔄 검색 데이터 업데이트 중..."
     
     # Node.js로 검색 데이터 생성
