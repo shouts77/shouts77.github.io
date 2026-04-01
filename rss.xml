@@ -5,8 +5,27 @@
     <description>SvelteKit으로 만든 개인 블로그</description>
     <link>https://shouts77.github.io</link>
     <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 22 Mar 2026 12:05:14 GMT</pubDate>
+    <pubDate>Wed, 01 Apr 2026 23:17:09 GMT</pubDate>
     
+    
+    <item>
+      <title>퇴근 중에 만난 벚꽃</title>
+      <link>https://shouts77.github.io/blog/260402_cherry-blossom</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/260402_cherry-blossom</guid>
+      <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[벚꽃 사진]]></description>
+      <content:encoded><![CDATA[<script>
+    export let src;
+</script>
+<p> 퇴근 길에 벚꽃이 핀 모습을 보고 그냥 지나칠 수가 없었음</p>
+<p><img 
+    src="/images/2026/260402_cherry-blossom.jpg" 
+    alt="cherry-blossom" 
+    class="post-vertical"
+    loading="lazy"
+/></p>
+]]></content:encoded>
+    </item>
     
     <item>
       <title>2026년 미디어 노트(1월~3월)</title>
