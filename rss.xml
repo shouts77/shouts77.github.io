@@ -5,11 +5,11 @@
     <description>SvelteKit으로 만든 개인 블로그</description>
     <link>https://shouts77.github.io</link>
     <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Apr 2026 10:46:29 GMT</pubDate>
+    <pubDate>Sun, 12 Apr 2026 10:52:20 GMT</pubDate>
     
     
     <item>
-      <title>2026년 미디어 노트(4월~6월)</title>
+      <title>2026년 미디어 감상 기록(4월~6월)</title>
       <link>https://shouts77.github.io/blog/260412_media2</link>
       <guid isPermaLink="true">https://shouts77.github.io/blog/260412_media2</guid>
       <pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate>
@@ -54,7 +54,7 @@
     </item>
     
     <item>
-      <title>2026년 미디어 노트(1월~3월)</title>
+      <title>2026년 미디어 감상 기록(1월~3월)</title>
       <link>https://shouts77.github.io/blog/260209_media1</link>
       <guid isPermaLink="true">https://shouts77.github.io/blog/260209_media1</guid>
       <pubDate>Sun, 22 Mar 2026 00:00:00 GMT</pubDate>
