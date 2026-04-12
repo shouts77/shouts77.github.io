@@ -1,7 +1,7 @@
 ---
 title: 2026년 좋은 글 모음
 date: 2026-02-12
-category: note
+category: memo
 summary: 2026년 기록하고 싶은 좋은 글 모음
 ---
 
