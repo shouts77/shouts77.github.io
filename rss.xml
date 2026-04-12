@@ -5,16 +5,26 @@
     <description>SvelteKit으로 만든 개인 블로그</description>
     <link>https://shouts77.github.io</link>
     <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 12 Apr 2026 10:55:21 GMT</pubDate>
+    <pubDate>Sun, 12 Apr 2026 22:42:28 GMT</pubDate>
     
     
     <item>
       <title>2026년 미디어 감상 기록(4월~6월)</title>
       <link>https://shouts77.github.io/blog/260412_media2</link>
       <guid isPermaLink="true">https://shouts77.github.io/blog/260412_media2</guid>
-      <pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[2026년 시청한 미디어에 대한 기록들]]></description>
-      <content:encoded><![CDATA[<h2>존윅4 (넷플릭스 영화)</h2>
+      <content:encoded><![CDATA[<h2>발레리나 (넷플릭스 영화)</h2>
+<ul>
+<li>왠지 존윅과 분위기가 비슷하다 했는데, &#39;루스카 로마&#39;가 나오고 존윅이 등장함</li>
+<li>알고보니 여성 주인공 스핀오프 작품이었음</li>
+<li>여기서도 &#39;폭력&#39;에서 &#39;아름다움&#39;을 추구하는 영상미를 느낄 수 있었음</li>
+</ul>
+<h2>존윅4 (넷플릭스 영화)</h2>
+<ul>
+<li>예전 팀장이 존윅 시리즈를 좋아해서 2인지 3인지는 팀 전체가 영화관에서 봤던 기억이 있음</li>
+<li>이런 표현이 맞는지 모르겠지만, &#39;폭력&#39;에서 &#39;아름다움&#39;을 추구하는 영상미가 있음</li>
+</ul>
 ]]></content:encoded>
       <media:thumbnail url="https://shouts77.github.io/mainpage/universe.png" />
     </item>
