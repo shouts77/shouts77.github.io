@@ -1,0 +1,1 @@
+import{t as e,a as o}from"./G61mcw_Q.js";import"./DQfk8U_4.js";const m={title:"2026년 미디어 노트(4월~6월)",date:"2026-04-12T00:00:00.000Z",category:"note",summary:"2026년 시청한 미디어에 대한 기록들"},{title:i,date:n,category:p,summary:c}=m;var r=e("<h2>존윅4 (넷플릭스 영화)</h2>");function l(t){var a=r();o(t,a)}export{l as default,m as metadata};

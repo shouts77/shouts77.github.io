@@ -5,8 +5,34 @@
     <description>SvelteKit으로 만든 개인 블로그</description>
     <link>https://shouts77.github.io</link>
     <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 01 Apr 2026 23:17:09 GMT</pubDate>
+    <pubDate>Sun, 12 Apr 2026 10:38:54 GMT</pubDate>
     
+    
+    <item>
+      <title>2026년 미디어 노트(4월~6월)</title>
+      <link>https://shouts77.github.io/blog/260412_media2</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/260412_media2</guid>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[2026년 시청한 미디어에 대한 기록들]]></description>
+      <content:encoded><![CDATA[<h2>존윅4 (넷플릭스 영화)</h2>
+]]></content:encoded>
+      <media:thumbnail url="https://shouts77.github.io/mainpage/universe.png" />
+    </item>
+    
+    <item>
+      <title>2026년 메모(4~6월)</title>
+      <link>https://shouts77.github.io/blog/260412_memo2</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/260412_memo2</guid>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[2026년 2분기 일상의 기록 모음]]></description>
+      <content:encoded><![CDATA[<h2>2026-04-12 일</h2>
+<ol>
+<li>일하는 것에 대해 복잡한 생각이 많은 요즘이다. 스트레스를 줄이기 위해 가능하면 집에 와서 일 생각을 안하려고 하는데, 그게 오히려 더 스트레스를 주는 건지 모르겠다. 그렇다고 주말에 집에서 일을 더 하는 것도 이제는 그만 하고 싶고.</li>
+<li>영어로 팟캐스트를 듣고 있다. 운동장을 걸을 때는 지루함을 달랠 수 있어서 좋은 것 같다. 영어를 배운지가 꽤 되었는데, 아직도 영어로 말하기, 쓰기를 못한다는게 안타까울 따름이다. 언젠가는 말이 트이고 글이 써지겠지?</li>
+</ol>
+]]></content:encoded>
+      <media:thumbnail url="https://shouts77.github.io/mainpage/universe.png" />
+    </item>
     
     <item>
       <title>퇴근 중에 만난 벚꽃</title>
