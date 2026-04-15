@@ -1,7 +1,5 @@
 import { json } from '@sveltejs/kit';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
+import { getPosts, getPost } from '$lib/posts';
 
 // 컨텍스트 추출 함수 수정
 function extractContextForKeyword(text, keyword, contextLength = 40) {
@@ -33,47 +31,19 @@ export async function GET({ url }) {
     }
     
     try {
-        // 모든 포스트 가져오기
-        const postsDirectory = path.resolve('src/posts');
-        const filenames = fs.readdirSync(postsDirectory);
-        
-        const posts = filenames
-            .filter((file) => file.endsWith('.md'))
-            .map((filename) => {
-                const filePath = path.join(postsDirectory, filename);
-                const fileContents = fs.readFileSync(filePath, 'utf-8');
-                
-                try {
-                    const { data, content } = matter(fileContents);
-                    
-                    // 날짜 포맷팅
-                    let formattedDate = 'Unknown';
-                    if (data.date) {
-                        const date = new Date(data.date);
-                        if (!isNaN(date.getTime())) {
-                            formattedDate = date.toISOString().split('T')[0];
-                        } else {
-                            formattedDate = data.date;
-                        }
-                    }
-                    
-                    return {
-                        slug: filename.replace('.md', ''),
-                        title: data.title || filename.replace('.md', ''),
-                        date: formattedDate,
-                        category: data.category || '미분류',
-                        summary: data.summary || '',
-                        // 실제 마크다운 콘텐츠만 저장 (front matter 제외)
-                        content: content,
-                        // 원본 파일 내용도 저장
-                        rawContent: fileContents
-                    };
-                } catch (e) {
-                    console.error(`Error parsing ${filename}:`, e);
-                    return null;
-                }
+        const postsMeta = await getPosts();
+        const posts = (await Promise.all(
+            postsMeta.map(async (post) => {
+                const fullPost = await getPost(post.slug);
+                if (!fullPost) return null;
+
+                return {
+                    ...post,
+                    content: fullPost.content,
+                    rawContent: fullPost.content
+                };
             })
-            .filter(Boolean);
+        )).filter(Boolean);
         
         // 검색 필터링 및 컨텍스트 추가
         const results = posts.filter(post => {
@@ -105,10 +75,7 @@ export async function GET({ url }) {
             
             // 3. 그래도 못 찾았으면 원본 파일에서 찾지만, front matter 부분은 제외
             if (!matchContext && post.rawContent.toLowerCase().includes(query)) {
-                // front matter 제거
-                const contentWithoutFrontmatter = post.rawContent.replace(/---[\s\S]*?---/, '');
-                // HTML 태그 제거
-                const cleanContent = contentWithoutFrontmatter
+                const cleanContent = post.rawContent
                     .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
                     .replace(/<[^>]*>/g, ' ');
                 

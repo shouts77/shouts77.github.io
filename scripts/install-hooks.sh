@@ -4,8 +4,8 @@ echo "🔧 Git hooks 설치 중..."
 
 # .git/hooks 디렉토리 확인
 if [ ! -d ".git/hooks" ]; then
-    echo "❌ 오류: Git 저장소가 아니거나 .git/hooks 디렉토리가 없습니다"
-    exit 1
+    echo "ℹ️ .git/hooks 디렉토리가 없어 hook 설치를 건너뜁니다"
+    exit 0
 fi
 
 # pre-commit hook 복사

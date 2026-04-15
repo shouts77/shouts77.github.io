@@ -4,19 +4,11 @@ import matter from 'gray-matter';
 
 export async function generateSearchData() {
   try {
-    console.log('검색 데이터 생성 시작...');
-    
-    // 포스트 디렉토리 경로
     const postsDirectory = path.resolve('src/posts');
-    console.log(`포스트 디렉토리: ${postsDirectory}`);
-    console.log(`디렉토리 존재 여부: ${fs.existsSync(postsDirectory)}`);
-    
     if (!fs.existsSync(postsDirectory)) {
-      console.error(`오류: 포스트 디렉토리가 존재하지 않습니다: ${postsDirectory}`);
-      return;
+      throw new Error(`포스트 디렉토리가 존재하지 않습니다: ${postsDirectory}`);
     }
-    
-    // 모든 마크다운 파일을 재귀적으로 찾기
+
     function findMarkdownFiles(dir) {
       const files = [];
       const items = fs.readdirSync(dir);
@@ -35,23 +27,15 @@ export async function generateSearchData() {
       
       return files;
     }
-    
-    // 파일 목록 가져오기
+
     const filePaths = findMarkdownFiles(postsDirectory);
-    console.log(`총 ${filePaths.length}개 파일 발견: ${filePaths.map(f => path.basename(f)).join(', ')}`);
-    
-    // 마크다운 파일 처리
     const posts = filePaths
       .map((filePath) => {
         const filename = path.basename(filePath);
-        // console.log(`처리 중: ${filename}`);
         const fileContents = fs.readFileSync(filePath, 'utf-8');
         
         try {
           const { data, content } = matter(fileContents);
-          // console.log(`${filename} frontmatter:`, data); // 파싱된 frontmatter 출력
-          
-          // 날짜 포맷팅
           let formattedDate = 'Unknown';
           let year = 'unknown';
           if (data.date) {
@@ -61,20 +45,16 @@ export async function generateSearchData() {
               year = date.getFullYear().toString();
             } else {
               formattedDate = data.date;
-              // 날짜 형식(예: 2025-05-20)에서 연도 추출
               if (data.date.match(/^\d{4}-\d{2}-\d{2}$/)) {
                 year = data.date.substring(0, 4);
               }
             }
           }
-          
-          // front matter 제외한 콘텐츠 정리
+
           const cleanContent = content
             .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
             .replace(/<[^>]*>/g, ' ');
-          
-          // console.log(`${filename}: 콘텐츠 길이 ${cleanContent.length}자`);
-          
+
           const postData = {
             slug: filename.replace('.md', ''),
             title: data.title || filename.replace('.md', ''),
@@ -84,53 +64,31 @@ export async function generateSearchData() {
             summary: data.summary || '',
             content: cleanContent
           };
-          
-          // console.log(`${filename} 요약: "${postData.summary}"`);
           return postData;
         } catch (e) {
-          // console.error(`${filename} 처리 중 오류 발생:`, e);
           return null;
         }
       })
       .filter(Boolean);
-    
-    console.log(`${posts.length}개 포스트 처리 완료`);
-    
-    // 출력 디렉토리 준비
+
     const outputDir = path.resolve('static');
-    console.log(`출력 디렉토리: ${outputDir}`);
-    console.log(`디렉토리 존재 여부: ${fs.existsSync(outputDir)}`);
-    
     if (!fs.existsSync(outputDir)) {
-      console.log(`출력 디렉토리 생성: ${outputDir}`);
       fs.mkdirSync(outputDir, { recursive: true });
     }
-    
-    // 검색 데이터 파일 저장
+
     const outputPath = path.join(outputDir, 'search-data.json');
-    console.log(`검색 데이터 파일 경로: ${outputPath}`);
-    
     fs.writeFileSync(outputPath, JSON.stringify(posts, null, 2));
-    
-    // 파일 크기 확인
-    if (fs.existsSync(outputPath)) {
-      const stats = fs.statSync(outputPath);
-      console.log(`검색 데이터 파일 생성 완료: ${outputPath} (${(stats.size / 1024).toFixed(2)} KB)`);
-    } else {
-      console.error(`오류: 파일이 생성되지 않았습니다: ${outputPath}`);
-    }
+
+    return outputPath;
   } catch (error) {
     console.error('검색 데이터 생성 중 오류 발생:', error);
+    throw error;
   }
 }
 
-// 스크립트가 직접 실행될 때 함수 호출
 if (import.meta.url === import.meta.main) {
-  console.log('스크립트 직접 실행 감지');
   generateSearchData().catch(err => {
     console.error('최상위 오류:', err);
     process.exit(1);
   });
-} else {
-  console.log('모듈로 임포트됨');
 }

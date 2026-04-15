@@ -6,14 +6,16 @@
 	"scripts": {
 		"dev": "vite dev --host 0.0.0.0 --port 3400",
 		"build": "vite build",
+		"check": "svelte-kit sync && svelte-check",
 		"preview": "vite preview",
 		"generate-search": "node -e \"import('./src/lib/generate-search-data.js').then(module => module.generateSearchData())\"",
 		"prebuild": "npm run generate-search",
 		"deploy": "gh-pages -d build",
-		 "install-hooks": "cp scripts/hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit",
+		 "install-hooks": "bash scripts/install-hooks.sh",
 		 "postinstall": "npm run install-hooks"
 	},
 	"devDependencies": {
+		"@types/node": "^24.0.0",
 		"@sveltejs/adapter-auto": "^6.0.0",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"@sveltejs/kit": "^2.16.0",

@@ -49,6 +49,8 @@ export async function GET({ url }) {
     ${posts.map(post => {
     // 콘텐츠에서 이미지가 있는지 확인
     const hasImage = post.content?.match(/<img[^>]+src=["']([^"']+)["']/i);
+    const sanitizedContent = sanitizeContent(post.content);
+    const hasMarkdownImage = sanitizedContent?.match(/!\[[^\]]*\]\(([^)]+)\)/);
 
     return `
     <item>
@@ -56,8 +58,8 @@ export async function GET({ url }) {
       <link>${baseUrl}/blog/${post.slug}</link>
       <guid isPermaLink="true">${baseUrl}/blog/${post.slug}</guid>
       <pubDate>${formatDateForRss(post.date)}</pubDate>
-      <description><![CDATA[${post.summary || generateExcerpt(post.content) || ''}]]></description>
-      <content:encoded><![CDATA[${processContentForRss(post.content)}]]></content:encoded>${!hasImage ? `
+      <description><![CDATA[${post.summary || generateExcerpt(sanitizedContent) || ''}]]></description>
+      <content:encoded><![CDATA[${processContentForRss(sanitizedContent)}]]></content:encoded>${!hasImage && !hasMarkdownImage ? `
       <media:thumbnail url="${defaultThumbnail}" />` : ''}
     </item>
     `;
@@ -115,14 +117,20 @@ function generateExcerpt(content, maxLength = 150) {
     : excerpt + '...';
 }
 
+function sanitizeContent(content) {
+  if (!content) return '';
+
+  return content
+    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+    .trim();
+}
+
 // RSS용 콘텐츠 처리 함수 개선
 function processContentForRss(content) {
   if (!content) return '';
 
-  // marked를 사용하여 마크다운을 HTML로 변환
   return marked(content, {
-    gfm: true,        // GitHub Flavored Markdown 지원
-    breaks: true,     // 줄바꿈 인식
-    sanitize: false   // HTML 태그 허용
+    gfm: true,
+    breaks: true
   });
 }
