@@ -5,6 +5,7 @@ echo "🔧 Git hooks 설치 중..."
 # .git/hooks 디렉토리 확인
 if [ ! -d ".git/hooks" ]; then
     echo "ℹ️ .git/hooks 디렉토리가 없어 hook 설치를 건너뜁니다"
+    echo "ℹ️ Git hook이 설치되지 않았습니다. Git clone 환경에서 필요하면 'npm run install-hooks'를 다시 실행하세요."
     exit 0
 fi
 
