@@ -5,8 +5,19 @@
     <description>SvelteKit으로 만든 개인 블로그</description>
     <link>https://shouts77.github.io</link>
     <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Apr 2026 23:11:57 GMT</pubDate>
+    <pubDate>Sun, 19 Apr 2026 12:57:56 GMT</pubDate>
     
+    
+    <item>
+      <title>김애란 작가를 만나다</title>
+      <link>https://shouts77.github.io/blog/260419_questions</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/260419_questions</guid>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[김애란 작가를 만나다]]></description>
+      <content:encoded><![CDATA[<p>유튜브 알고리즘 덕분에 손석희의 &#39;질문들&#39;이라는 프로그램을 처음으로 보게 되었다. 게스트로 나온 분이 김애란 작가였다. 소설을 잘 읽지 않는 편이어서, 내 관심의 무게는 처음보는 게스트 보다는 오랜만에 보는 진행자에 쏠려 있었다. 인터뷰가 진행될수록 김애란 작가의 표현과 생각에 마음이 움직이기 시작했고 작가의 글을 읽어보고 싶다는 생각까지 들었다. 사회의 아픔에 작가가 어떤 마음으로 다가가고자 하는지, 독자가 작품을 읽고 어떤 방식으로 그것을 느꼈으면 좋겠는지 이야기했던 부분이 인상적이었고, AI에 대한 생각도 기억에 담아두고 싶었다.</p>
+]]></content:encoded>
+      <media:thumbnail url="https://shouts77.github.io/mainpage/universe.png" />
+    </item>
     
     <item>
       <title>2026년 미디어 감상 기록(4월~6월)</title>
