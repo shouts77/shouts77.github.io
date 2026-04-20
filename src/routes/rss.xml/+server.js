@@ -60,7 +60,9 @@ export async function GET({ url }) {
       <pubDate>${formatDateForRss(post.date)}</pubDate>
       <description><![CDATA[${post.summary || generateExcerpt(sanitizedContent) || ''}]]></description>
       <content:encoded><![CDATA[${processContentForRss(sanitizedContent)}]]></content:encoded>${!hasImage && !hasMarkdownImage ? `
-      <media:thumbnail url="${defaultThumbnail}" />` : ''}
+      <enclosure url="${defaultThumbnail}" type="image/png" length="0"/>
+      <media:content url="${defaultThumbnail}" medium="image"/>
+      <media:thumbnail url="${defaultThumbnail}"/>` : ''}
     </item>
     `;
   }).join('')}
