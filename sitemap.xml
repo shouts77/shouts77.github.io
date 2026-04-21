@@ -17,6 +17,13 @@
     <!-- 각 블로그 포스트 -->
     
     <url>
+      <loc>https://shouts77.github.io/blog/260412_memo2</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+    </url>
+    
+    <url>
       <loc>https://shouts77.github.io/blog/260422_reading-books</loc>
       <lastmod>2026-04-22</lastmod>
       <changefreq>monthly</changefreq>
@@ -40,13 +47,6 @@
     <url>
       <loc>https://shouts77.github.io/blog/260412_media2</loc>
       <lastmod>2026-04-13</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-    </url>
-    
-    <url>
-      <loc>https://shouts77.github.io/blog/260412_memo2</loc>
-      <lastmod>2026-04-12</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
