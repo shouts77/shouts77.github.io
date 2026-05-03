@@ -5,8 +5,24 @@
     <description>SvelteKit으로 만든 개인 블로그</description>
     <link>https://shouts77.github.io</link>
     <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 29 Apr 2026 22:43:08 GMT</pubDate>
+    <pubDate>Sun, 03 May 2026 08:42:52 GMT</pubDate>
     
+    
+    <item>
+      <title>걷기에 완벽했던 날</title>
+      <link>https://shouts77.github.io/blog/260501_perfect-day-for-walk</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/260501_perfect-day-for-walk</guid>
+      <pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[걷기에 완벽했던 날]]></description>
+      <content:encoded><![CDATA[<p>심란한 마음을 꾹 누르고 갇기에 모든 것이 완벽했던 날</p>
+<p><img 
+    src="/images/2026/260501_perfect-day-for-walk.JPEG" 
+    alt="perfect day for walk" 
+    class="post-vertical"
+    loading="lazy"
+/></p>
+]]></content:encoded>
+    </item>
     
     <item>
       <title>무너진 마음</title>
