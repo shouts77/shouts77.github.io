@@ -30,24 +30,6 @@ if [ -n "$CHANGED_POSTS" ]; then
         fi
     done <<< "$CHANGED_POSTS"
     echo ""
-    
-    echo "🔄 검색 데이터 업데이트 중..."
-    
-    # Node.js로 검색 데이터 생성
-    if node src/lib/generate-search-data.js; then
-        echo ""
-        echo "✅ 검색 데이터 생성 완료"
-        
-        # search-data.json을 staging area에 추가
-        if [ -f "static/search-data.json" ]; then
-            git add static/search-data.json
-            echo "📋 search-data.json을 커밋에 포함"
-        fi
-    else
-        echo ""
-        echo "❌ 검색 데이터 생성 실패"
-        exit 1
-    fi
 else
     echo "ℹ️ 포스트 파일 변경 없음"
 fi

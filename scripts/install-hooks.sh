@@ -14,4 +14,4 @@ cp scripts/hooks/pre-commit .git/hooks/pre-commit
 chmod +x .git/hooks/pre-commit
 
 echo "✅ Git hooks 설치 완료!"
-echo "이제 포스트를 수정하고 커밋할 때 자동으로 검색 데이터가 업데이트됩니다."
+echo "이제 포스트를 수정하고 커밋할 때 date 필드가 자동으로 업데이트됩니다."

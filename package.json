@@ -9,6 +9,7 @@
 		"check": "svelte-kit sync && svelte-check",
 		"preview": "vite preview",
 		"generate-search": "node -e \"import('./src/lib/generate-search-data.js').then(module => module.generateSearchData())\"",
+		"predev": "npm run generate-search",
 		"prebuild": "npm run generate-search",
 		"deploy": "gh-pages -d build",
 		 "install-hooks": "bash scripts/install-hooks.sh",
