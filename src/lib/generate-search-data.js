@@ -36,6 +36,7 @@ export async function generateSearchData() {
         
         try {
           const { data, content } = matter(fileContents);
+          if (data.draft === true) return null;
           let formattedDate = 'Unknown';
           let year = 'unknown';
           if (data.date) {

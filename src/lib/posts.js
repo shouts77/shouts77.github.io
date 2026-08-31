@@ -42,6 +42,7 @@ function parsePostFile(filePath) {
     date: formatPostDate(data.date),
     category: data.category || '미분류',
     summary: data.summary || '',
+    draft: data.draft === true,
     content,
     filePath
   };
@@ -63,6 +64,7 @@ export async function getPosts() {
       }
     })
     .filter(Boolean)
+    .filter(post => !post.draft)
     .sort((a, b) => new Date(b.date) - new Date(a.date));
   
   return posts;
@@ -100,7 +102,9 @@ export async function getPost(slug) {
       return null;
     }
 
-    return parsePostFile(filePath);
+    const post = parsePostFile(filePath);
+    if (post.draft) return null;
+    return post;
   } catch (e) {
     console.error(`Error getting post ${slug}:`, e);
     return null;
