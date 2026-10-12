@@ -5,8 +5,22 @@
     <description>SvelteKit으로 만든 개인 블로그</description>
     <link>https://shouts77.github.io</link>
     <atom:link href="https://shouts77.github.io/rss.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 17 Sep 2026 21:34:09 GMT</pubDate>
+    <pubDate>Mon, 12 Oct 2026 23:37:56 GMT</pubDate>
     
+    
+    <item>
+      <title>2026년 메모(10~12월)</title>
+      <link>https://shouts77.github.io/blog/261013_memo4</link>
+      <guid isPermaLink="true">https://shouts77.github.io/blog/261013_memo4</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[2026년 4분기 일상의 기록 모음]]></description>
+      <content:encoded><![CDATA[<h2>2026-10-13 화</h2>
+<p>무거운 짐들을 다 내려놓고 싶은 마음이 불쑥불쑥 찾아온다. 참고 버티는 것이 정답일까. 그게 하나님이 원하시는 것일까. 이렇게 사는게 맞는 건가.</p>
+]]></content:encoded>
+      <enclosure url="https://shouts77.github.io/mainpage/universe.png" type="image/png" length="0"/>
+      <media:content url="https://shouts77.github.io/mainpage/universe.png" medium="image"/>
+      <media:thumbnail url="https://shouts77.github.io/mainpage/universe.png"/>
+    </item>
     
     <item>
       <title>2026년 메모(7~9월)</title>
